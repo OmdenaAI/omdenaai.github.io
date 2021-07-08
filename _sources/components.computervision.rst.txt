@@ -1,0 +1,45 @@
+components.computervision package
+=================================
+
+Submodules
+----------
+
+components.computervision.activation\_functions module
+------------------------------------------------------
+
+.. automodule:: components.computervision.activation_functions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+components.computervision.image\_features module
+------------------------------------------------
+
+.. automodule:: components.computervision.image_features
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+components.computervision.object\_detection module
+--------------------------------------------------
+
+.. automodule:: components.computervision.object_detection
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+components.computervision.utils module
+--------------------------------------
+
+.. automodule:: components.computervision.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: components.computervision
+   :members:
+   :undoc-members:
+   :show-inheritance:

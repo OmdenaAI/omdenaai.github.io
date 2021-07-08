@@ -1,0 +1,10 @@
+components.datasets package
+===========================
+
+Module contents
+---------------
+
+.. automodule:: components.datasets
+   :members:
+   :undoc-members:
+   :show-inheritance:

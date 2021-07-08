@@ -1,0 +1,228 @@
+OmdenaLore Guidelines
+========================
+
+Introduction:
+------------------------
+
+
+As the name suggests, OmdenaLore is a body of knowledge held by Omdena. OmdenaLore is a library/package that contains code knowledge base gathered in completed and ongoing projects. The code knowledge base increases and gets updated as collaborators add their knowledge in future projects. OmdenaLore is a collaborator sourced structured library. It is closed for Omdena community members.
+
+OmdenaLore Structure
+------------------------
+
+**OmdenaLore**
+
+     1. Configurations
+
+        a. CVconfig.py
+
+        b. NLPconfig.py
+
+     2. Readme.md
+
+     3. Requirements.txt
+
+     4. Setup.py
+
+     5. Tools
+
+        a. __init__.py (not allowed)
+
+     6. Docs
+
+        a. Changelog.txt
+
+     7. Sample
+
+     8. OmdenaLore (main components)
+
+        a. __init__.py
+
+        b. computerVision
+
+          i. __init__.py
+
+          ii. Utils.py
+
+          iii. Loadingimages.py
+
+          iv. Object_Detection.py
+
+        c. NLP
+
+        d. DataSets
+
+        e. Satellite 
+
+        f. Cloud(aws, azure)
+
+        g. satellite
+
+        h. Utils.py
+
+        i. activation_functions.py
+
+     9. Tests
+
+        a. basic_text
+
+        b. advance
+
+     10. Makefile
+
+
+
+Description of Structure components
+------------------------------------
+
+1. **Configurations**: All config.py / config.json files containing static variable, paths etc to be stored here. The configs can be stored in different files for different subpackages/subcomponents.
+2. **Readme.MD** : Documentation of the code.
+3. **Requirements.py**: ``pip`` requirements and dependencies management.
+4. **Setup.py**: Package distribution and management/
+5. **Tools**: This is non non-accessible module of the package from the root directory. This is where files are stored that we don’t want package installers to see or use.
+6. **Docs**: This is where log and test cases will be stored. It will tell us where our project's last testing was done and what have we done yet.
+7. **Sample**: This folder contains all the code that are not functions but complete demos of a particular task. For example, a class or function that detects cars using a particular dataset is considered a demo / reference code and should be inserted in this directory.
+8. **Components**: This is where we will collect all the usable codes. The subcomponents can be added more to what we have defined yet. All helper functions can be separated into different modules or either store them in utils. If the helper functions are insignificant and are not lengthy, my suggestion is to keep them in ``utils.py`` file.
+9. **Test**: This is the module where we’ll keep all our test cases and files. As we move ahead the number of tests will increase. We can create as many test cases as possible to make sure that the functions do not crash with later updates.
+10. **Makefile**: Defining generic tasks for the project like ``pip install -r requirements.txt``
+
+Guidelines
+-----------
+
+How to contribute to OmdenaLore
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you have a code block that can help collaborators in current or future projects, you can add that code block to the OmdenaLore repository. The contributions to OmdenaLore repository go through peer-to-peer reviews, more details below. To make sure a valid contribution is made, please follow the steps below.
+
+
+1. Create a fork of the repository. In the top right of the GitHub repository (https://github.com/OmdenaAI/OmdenaLore), you will see the fork option. This creates a copy of the repository in your GitHub account.
+     .. figure:: /images/star.png
+       :alt: Stars and forks
+2. In your local copy of the repository (your_username/OmdenaLore), clone the repository locally with your preferred method.
+     a. You can clone the repository locally with the following command in your terminal/Powershell: ``git clone https://github.com/{your_username}/OmdenaLore.git``
+     b. If you are not comfortable with the terminal, you can use the GitHub desktop option as well.
+
+     .. figure:: /images/2.png
+       :alt: clone
+
+3. Work on your improvement and enhancement code in the different folders in the directories and subdirectories locally. An ideal way to have a manageable and reviewable Pull Request is to make small concise changes to the repository. Once you are satisfied with the changes you have made, follow to the next step to push it to the remote repository.
+
+4. To push your changes to the repository on your account, you can use GitHub desktop to add, commit, and push your changes or use your terminal/Powershell. For more information on how to use git, please refer to these docs: https://github.com/git-guides/git-add, https://github.com/git-guides/git-commit, https://github.com/git-guides/git-push
+
+5. You can find your forked repository on ``https://github.com/{your_username}/OmdenaLore``. To make a Pull Request of your changes to the **main branch** under the official repository under OmdenaAI:
+    a. Click in **Contribute** on your repository
+
+    .. figure:: /images/3.png
+       :alt: branch is ahead
+
+    b. Click on **Open Pull Request**
+
+    .. figure:: /images/4.png
+       :alt: open PR
+
+    c. You can review your changes here in all the files you have modified. Notice the Pull Request configuration of your changes being requested to be pulled into the official repository under OmdenaAI. Once you are satisfied with your changes, click on **Create pull request**.
+  
+    .. figure:: /images/5.png
+       :alt: create PR
+
+    d. **IMPORTANT**: This step is of utmost importance for your Pull Request’s final phase. Make sure you are adequately documenting your Pull Request with clear and concise summary points on the changes you have made. This will help the Pull Request reviewers understand the changes and request any changes if required. Towards the right side of the page you will see a section of **Reviewers**. Here you have to request at least one person from OmdenaAI to review your pull request before the PR can be merged into the main branch of the official repository.
+  
+   .. figure:: /images/6.png
+       :alt: PR description
+
+   .. figure:: /images/7.png
+       :alt: Reviewers
+
+6. That’s it! Now you can click **Create Pull Request** and wait until your PR is reviewed and make any changes that your reviewers might request. After that, your PR will be eligible for being merged into the official repository.
+
+
+Guidelines to be followed for your code to get accepted
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. "TODO(author):" Add this when you have to take up an edit to a function in future.
+
+2. Try to avoid circular dependencies. In this case, include common dependencies in a single utils files
+
+3. Avoid global variable and it’s accessibility
+
+4. To keep in line with the style guide, keep module names short, lowercase, and be sure to avoid using special symbols 
+
+5. Use time, tqdm and log decorators where necessary
+
+6. Keep return types immutable if possible
+
+7. If a function take an input of another function, extensively check the format and type of input to avoid any crashes in future
+
+8. Constantly test your code by adding test cases in the tests module
+
+9. Never miss out on adding doc strings. This will help us to create documentation automatically once the package is done. 
+
+Please find the doc string format for functions at the end of this document.
+
+Additionally, please check your code for points below
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+1. Do not work on the main branch of the repository. Please create your own branch and merge it with a pull request.
+
+2. Do not publish your github ids or password in your code
+
+   a. Double check any configuration file which may contain any confidential information
+
+3. Make sure not to upload any datasets, images, csv or any files which are not code.
+
+   a. If you want to reference a dataset for your sample code, you can reference a public link of the dataset inside the doc string of your functions.
+
+4. Make sure your function is properly named and does not contain the same characters as another function in the same module.
+
+
+5. Please check if a similar function is available in the repository before pushing your code.
+
+
+6. Do not change the directory structure of the repository.
+
+7. Fetch from the main branch before making a pull request.
+
+
+Function description doc string format
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. figure:: /images/8.png
+    :alt: Function docstring
+
+
+FAQ
+~~~
+
+Q. Will there be a redundancy check to make sure the code pushed in the Pull Requests is verified?
+
+A. **Yes**: The main branch is protected in the repository which means that for a Pull Request to be merged into the main branch, at least one reviewer will need to review it.
+
+Q. Will we have access to the repository?
+
+A. **Yes**: Since this repository is private, you will be given push access **ON REQUEST** to the repository. To submit a request, go to https://omdena.com/omdenalore.
+
+Q. Can I push my changes to the main branch?
+
+A. **No**: In order to make sure the main branch consists of functional and usable code for all collaborators, we have protected the branch so that a proper Pull Request + review process can be used to merge new changes into the main branch.
+
+Q. Is it okay if I add code from the internet to the repository?
+
+A. **Yes**: The code taken from the internet is acceptable but please make sure that a similar or same code doesn’t exist in the repository. 
+
+Q. How do I check if a code already exists in the repository or not?
+
+A. The repository is divided into several domains and all domains contain name specific modules. According to the functionality of the code you are pushing, please check the corresponding domain folder and module to see if a similar code exists or not. 
+
+Q. Do I need to take care of any specification before I create a pull request?
+
+A. **Yes**: Please refer to the Guideline section of this document.
+
+Q. Should I add author name or credits to the code?
+
+A. **Optional**: If you wish to add credits or author name to the code, please do so in the doc string of your functions or end of the module.
+
+Q. What should I do if I don’t find any modules or domain folder for my code?
+
+A. If you don’t find an appropriate location for your code, you can create your own folder or module. If you are unsure if a similar module or domain exists, please get in touch with the repository manager or get support from the Omdena team.

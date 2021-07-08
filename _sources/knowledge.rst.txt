@@ -1,0 +1,7 @@
+Knowledge base
+==============
+
+.. toctree::
+   :maxdepth: 4
+
+   k_computervision

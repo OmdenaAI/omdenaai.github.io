@@ -1,0 +1,32 @@
+components package
+==================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   components.cloud
+   components.computervision
+   components.datasets
+   components.nlp
+
+Submodules
+----------
+
+components.utils module
+-----------------------
+
+.. automodule:: components.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: components
+   :members:
+   :undoc-members:
+   :show-inheritance:
