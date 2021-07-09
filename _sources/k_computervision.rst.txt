@@ -27,6 +27,6 @@ Example on how to use images
 How do we use hyperlinks in rst?
 ---------------------------------
 
-`This link takes us to the official OmdenaLore page<https://omdena.com/omdenalore>`__
+`This link takes us to the official OmdenaLore page <https://omdena.com/omdenalore>`__
 
 **Syntax** is: `anchor text <url-to-connect>`__ (note the two underscores after the closing backtick)
