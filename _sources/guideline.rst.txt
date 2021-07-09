@@ -201,7 +201,7 @@ A. **Yes**: The main branch is protected in the repository which means that for 
 
 Q. Will we have access to the repository?
 
-A. **Yes**: Since this repository is private, you will be given push access **ON REQUEST** to the repository. To submit a request, go to https://omdena.com/omdenalore.
+A. **Yes**: Since this repository is private, you will be given push access **ON REQUEST** to the repository. To submit a request, please fill this request form https://airtable.com/shrue8xCVpjPvDD1g.
 
 Q. Can I push my changes to the main branch?
 
