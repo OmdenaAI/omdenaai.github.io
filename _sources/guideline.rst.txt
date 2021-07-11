@@ -191,4 +191,9 @@ Function description doc string format
 .. figure:: /images/docs_string_example.png
     :alt: Function docstring
 
-The doc string follow rst format, for more information and example visit `this <https://thomas-cokelaer.info/tutorials/sphinx/docstring_python.html> `__ site.
+The doc strings follows rst format. 
+For more information and example visit these sites.
+
+`Thomas-cokelear <https://thomas-cokelaer.info/tutorials/sphinx/docstring_python.html>`_
+
+`anaconda docs <https://docs.anaconda.com/restructuredtext/detailed/>`_
