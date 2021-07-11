@@ -1,32 +1,4 @@
 Computer Vision
 ===============
 
-This documentation contains links for computer vision.
-
-
-Different CNN's
-========================
-
-Convolutional Neural Networks:
---------------------------------
-
-1. **Convolution**: A mathematical operation performed on an image.
-2. **Filters** : A 2D matrix of numbers to be learned.
-
-
-Example on how to use images
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-1. Create a fork of the repository. In the top right of the GitHub repository (https://github.com/OmdenaAI/OmdenaLore), you will see the fork option. This creates a copy of the repository in your GitHub account.
-     .. figure:: /images/star.png
-       :alt: Stars and forks
-
-
-
-How do we use hyperlinks in rst?
----------------------------------
-
-`This link takes us to the official OmdenaLore page <https://omdena.com/omdenalore>`__
-
-**Syntax** is: `anchor text <url-to-connect>`__ (note the two underscores after the closing backtick)
+This documentation contains links for computer vision

@@ -17,6 +17,7 @@ With a growing number of collaborators, the library is ever-growing and versatil
    modules
    knowledge
    guideline
+   faq
 
 Indices and tables
 ==================
