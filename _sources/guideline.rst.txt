@@ -107,7 +107,7 @@ If you have a code block that can help collaborators in current or future projec
 
 3. Work on your improvement and enhancement code in the different folders in the directories and subdirectories locally. An ideal way to have a manageable and reviewable Pull Request is to make small concise changes to the repository. Once you are satisfied with the changes you have made, follow to the next step to push it to the remote repository.
 
-4. To push your changes to the repository on your account, you can use GitHub desktop to add, commit, and push your changes or use your terminal/Powershell. For more information on how to use git, please refer to these docs: https://github.com/git-guides/git-add, https://github.com/git-guides/git-commit, https://github.com/git-guides/git-push
+4. To push your changes to the repository on your account, you can use GitHub desktop to add, commit, and push your changes or use your terminal/Powershell. For more information on how to use git, please refer to these docs: https://github.com/git-guides/git-add, https://github.com/git-guides/git-commit, https://github.com/git-guides/git-push . You might also need to make a new branch localy in git for which this resource might be useful https://git-scm.com/docs/git-branch
 
 5. You can find your forked repository on ``https://github.com/{your_username}/OmdenaLore``. To make a Pull Request of your changes to the **main branch** under the official repository under OmdenaAI:
     a. Click in **Contribute** on your repository
@@ -156,6 +156,8 @@ Guidelines to be followed for your code to get accepted
 8. Constantly test your code by adding test cases in the tests module
 
 9. Never miss out on adding doc strings. This will help us to create documentation automatically once the package is done. 
+
+10. Try to use `black`, `flake8` and `isort` for linting the code to ensure consistency across modules.
 
 Please find the doc string format for functions at the end of this document.
 

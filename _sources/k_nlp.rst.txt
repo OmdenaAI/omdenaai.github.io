@@ -27,7 +27,7 @@ Articles & Tutorials
 
 `Hugging Face	<https://huggingface.co/models?search=distil>`_
 
-`Multilingual Machine translation	<https://ai.facebook.com/research/publications/beyond-english-centric-multilingual-machine-translation>`_
+`Multilingual Machine translation paper	<https://ai.facebook.com/research/publications/beyond-english-centric-multilingual-machine-translation>`_
 
 `Zero-Shot Text Classification with Hugging Face	<https://towardsdatascience.com/zero-shot-text-classification-with-hugging-face-7f533ba83cd6>`_
 
@@ -122,15 +122,13 @@ Repos
 Research Papers
 ###############
 
-`Top2vec	<https://arxiv.org/abs/2008.09470>`_
+`Top2vec paper	<https://arxiv.org/abs/2008.09470>`_
 
 `Facebook AI Machine Multilingual translation	<https://ai.facebook.com/research/publications/beyond-english-centric-multilingual-machine-translation>`_
 
 `Text summarization using Latent Semantic Analysis	<https://www.researchgate.net/publication/220195824_Text_summarization_using_Latent_Semantic_Analysis>`_
 
 `Facebook's new AI Model that can translate100 languages	<https://ai.facebook.com/blog/introducing-many-to-many-multilingual-machine-translation/>`_
-
-`Hate Speech Dataset from a White Supremacy Forum. In: Proceedings of the 2nd Workshop on Abusive Language Online	<https://arxiv.org/abs/1809.04444>`_
 
 `Automated Hate Speech Detection and the Problem of Offensive Language	<https://ojs.aaai.org/index.php/ICWSM/article/view/14955>`_
 

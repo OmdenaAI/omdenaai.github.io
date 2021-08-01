@@ -32,7 +32,7 @@ Articles & Tutorials
 
 `Residual Networks: Implementing ResNet in Pytorch	<https://towardsdatascience.com/residual-network-implementing-resnet-a7da63c7b278>`_
 
-`Posture recognition using an RGB-D  <https://blog.waymo.com/2020/04/using-automated-data-augmentation-to.html>`_
+`Posture recognition using an RGB-D blog <https://blog.waymo.com/2020/04/using-automated-data-augmentation-to.html>`_
 
 `Detecting Weeds Through YolactEdge Instance Segmentation to Support Smart Farming	<https://omdena.com/blog/instance-segmentation/>`_
 
@@ -52,15 +52,13 @@ Repos
 
 `OpenCV C++	<https://github.com/opencv/opencv/releases/tag/4.4.0>`_
 
-`Posture recognition using an RGB-D  <https://github.com/mkocabas/VIBE>`_
+`Posture recognition using an RGB-D repository <https://github.com/mkocabas/VIBE>`_
 
 
 Research papers
 ###############
 
 `Deep Learning for 3D Point Clouds: A Survey	<https://arxiv.org/abs/1912.12033v1?fbclid=IwAR2LtMB4LH-PjspHaJ_9rljQt9h0mO32CGMW2rXJzujLQCAXu0wwtwIfNEA>`_
-
-`Deep Learning for 3D Point Clouds: A Survey	<https://arxiv.org/pdf/1912.12033v1.pdf>`_
 
 `VIBE: Video Inference for Human Body Pose and Shape Estimation	<https://arxiv.org/pdf/1912.05656.pdf>`_
 
@@ -86,8 +84,6 @@ Research papers
 `Deep retinal image understanding	<https://arxiv.org/abs/1609.01103>`_
 
 `Feature extraction, anomaly detection	<https://public.lanl.gov/jt/Papers/prasad-spie-8390-65.pdf>`_
-
-`Robust Anomaly Detection in Images using Adversarial Autoencoders	<https://arxiv.org/abs/1901.06355>`_
 
 `Deep Anomaly Detection Using Geometric Transformations	<https://paperswithcode.com/paper/deep-anomaly-detection-using-geometric>`_
 
