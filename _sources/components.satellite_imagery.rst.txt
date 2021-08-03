@@ -1,0 +1,37 @@
+components.satellite\_imagery package
+=====================================
+
+Submodules
+----------
+
+components.satellite\_imagery.find\_resolution module
+-----------------------------------------------------
+
+.. automodule:: components.satellite_imagery.find_resolution
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+components.satellite\_imagery.preprocess\_tiff module
+-----------------------------------------------------
+
+.. automodule:: components.satellite_imagery.preprocess_tiff
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+components.satellite\_imagery.utils module
+------------------------------------------
+
+.. automodule:: components.satellite_imagery.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: components.satellite_imagery
+   :members:
+   :undoc-members:
+   :show-inheritance:

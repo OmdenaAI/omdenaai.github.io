@@ -15,7 +15,7 @@
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="samples package" href="samples.html" />
+    <link rel="next" title="components.remote_sensing package" href="components.remote_sensing.html" />
     <link rel="prev" title="components.datasets package" href="components.datasets.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -35,6 +35,168 @@
             
   <section id="components-nlp-package">
 <h1>components.nlp package<a class="headerlink" href="#components-nlp-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-components.nlp.preprocess_text">
+<span id="components-nlp-preprocess-text-module"></span><h2>components.nlp.preprocess_text module<a class="headerlink" href="#module-components.nlp.preprocess_text" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="components.nlp.preprocess_text.TextPreprocessor">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.nlp.preprocess_text.</span></span><span class="sig-name descname"><span class="pre">TextPreprocessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos_tags_removal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacy_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_numbers</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_special_chars</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_stopwords</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lemmatize</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.preprocess_text.TextPreprocessor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Pre process texts</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos_tags_removal</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – list of PoS tags to remove</p></li>
+<li><p><strong>spacy_model</strong> – spaCy model to be used, default is en_core_web_sm</p></li>
+<li><p><strong>remove_numbers</strong> (<em>bool</em>) – whether or not to remove numbers from the inputs</p></li>
+<li><p><strong>remove_special_chars</strong> (<em>bool</em>) – whether or not to remove the special characters</p></li>
+<li><p><strong>remove_stopwords</strong> (<em>bool</em>) – whether or not to remove stopwords</p></li>
+<li><p><strong>lemmatize</strong> (<em>bool</em>) – whether or not to lemmatize the inputs</p></li>
+</ul>
+</dd>
+<dt class="field-even">Example</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">TextPreprocessor</span><span class="o">.</span><span class="n">load_model</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">preprocessor</span> <span class="o">=</span> <span class="n">TextPreprocessor</span><span class="p">(</span><span class="n">spacy_model</span><span class="o">=</span><span class="n">model</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sample</span> <span class="o">=</span> <span class="s2">&quot;Hello wROld! I hAvE $400 Dollars in my checking account and I am sleeping&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clean</span> <span class="o">=</span> <span class="n">preprocessor</span><span class="o">.</span><span class="n">preprocess_text</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sample: </span><span class="si">{</span><span class="n">sample</span><span class="si">}</span><span class="s2"> Cleaned: </span><span class="si">{</span><span class="n">clean</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Sample: Hello wROld! I hAvE $400 Dollars in my checking account and I am sleeping</p>
+<p>Cleaned: hello wrold dollar checking account sleep</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;my name is $Yudhiesh&quot;</span><span class="p">,</span> <span class="s2">&quot;that house is far AWAY&quot;</span><span class="p">,</span> <span class="s2">&quot;the placement @RT&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cleaned_list</span> <span class="o">=</span> <span class="n">preprocessor</span><span class="o">.</span><span class="n">preprocess_text_lists</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sample: </span><span class="si">{</span><span class="n">my_list</span><span class="si">}</span><span class="s2"> Cleaned: </span><span class="si">{</span><span class="n">cleaned_list</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Sample: [‘my name is $Yudhiesh’, ‘that house is far AWAY’, ‘the placement &#64;RT’]</p>
+<p>Cleaned: [‘yudhiesh’, ‘house far away’, ‘placement  rt’]</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.preprocess_text.TextPreprocessor.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos_tags_removal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacy_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_numbers</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_special_chars</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_stopwords</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lemmatize</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#components.nlp.preprocess_text.TextPreprocessor.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.preprocess_text.TextPreprocessor.download_spacy_model">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">download_spacy_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'en_core_web_sm'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.preprocess_text.TextPreprocessor.download_spacy_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads a spaCy model to be used for preprocessing the text inputs</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.preprocess_text.TextPreprocessor.load_model">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">load_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'en_core_web_sm'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.preprocess_text.TextPreprocessor.load_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads and returns a spaCy model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.preprocess_text.TextPreprocessor.preprocess_text">
+<span class="sig-name descname"><span class="pre">preprocess_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">str</span><a class="headerlink" href="#components.nlp.preprocess_text.TextPreprocessor.preprocess_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Preprocesses a single string</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – text string to clean</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.preprocess_text.TextPreprocessor.preprocess_text_lists">
+<span class="sig-name descname"><span class="pre">preprocess_text_lists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texts</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#components.nlp.preprocess_text.TextPreprocessor.preprocess_text_lists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Preprocesses a list of strings</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>texts</strong> – List of texts to preprocess</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of strings</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-components.nlp.utils">
+<span id="components-nlp-utils-module"></span><h2>components.nlp.utils module<a class="headerlink" href="#module-components.nlp.utils" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.utils.noise_removal">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.utils.</span></span><span class="sig-name descname"><span class="pre">noise_removal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.utils.noise_removal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove noise from the input text.
+This function can be use to remove comman english words like “is, a , the”.
+You can add your own noise words in the optional paramters “noise_list”
+default noise_list = [“is”, “a”, “this”, “the” , “an”]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_text</strong> (<em>str</em>) – Input text to remove noise from</p></li>
+<li><p><strong>noise_list</strong> (<em>list</em>) – (Optional) List of words that you want to remove from the input text</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Clean text with no noise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.utils.remove_regex_pattern">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.utils.</span></span><span class="sig-name descname"><span class="pre">remove_regex_pattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regex_pattern</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.utils.remove_regex_pattern" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove any regular expressions from the input text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_text</strong> (<em>str</em>) – Input text to remove regex from</p></li>
+<li><p><strong>noise_list</strong> (<em>string</em>) – string of regex that you want to remove from the input text</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Clean text with removed regex</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">regex_pattern</span> <span class="o">=</span> <span class="s2">&quot;#[\w]*&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">remove_regex_pattern</span><span class="p">(</span><span class="s2">&quot;remove this #hastag&quot;</span> <span class="p">,</span> <span class="n">regex_pattern</span><span class="p">)</span>
+<span class="go">&quot;remove this  hastag&quot;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.utils.standardize_words">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.utils.</span></span><span class="sig-name descname"><span class="pre">standardize_words</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lookup_dictionary</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.utils.standardize_words" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace acronyms, hastags, colloquial slangs etc with standard words</p>
+<p>Text data often contains words or phrases which are not present in any standard lexical dictionaries. 
+These pieces are not recognized by search engines and models.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_text</strong> (<em>str</em>) – Input text to remove regex from</p></li>
+<li><p><strong>lookup_dictionary</strong> (<em>dict</em>) – Dictionary with slang as index and standard word as item or value</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>text with standard words</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lookup_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;rt&#39;</span><span class="p">:</span><span class="s1">&#39;Retweet&#39;</span><span class="p">,</span> <span class="s1">&#39;dm&#39;</span><span class="p">:</span><span class="s1">&#39;direct message&#39;</span><span class="p">,</span> <span class="s2">&quot;awsm&quot;</span> <span class="p">:</span> <span class="s2">&quot;awesome&quot;</span><span class="p">,</span> <span class="s2">&quot;luv&quot;</span> <span class="p">:</span><span class="s2">&quot;love&quot;</span><span class="p">,</span> <span class="s2">&quot;...&quot;</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">standardize_words</span><span class="p">(</span><span class="n">rt</span> <span class="n">I</span> <span class="n">luv</span> <span class="n">to</span> <span class="n">dm</span><span class="p">,</span> <span class="n">it</span><span class="s1">&#39;s awsm)</span>
+<span class="go">Retweet I love to direct message, it&#39;s awesome</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
 <section id="module-components.nlp">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-components.nlp" title="Permalink to this headline">¶</a></h2>
 </section>
@@ -59,10 +221,8 @@
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Packages</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">components</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="components.html">components package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="samples.html">samples package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="knowledge.html">Knowledge base</a></li>
@@ -74,10 +234,10 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-  <li><a href="modules.html">Packages</a><ul>
+  <li><a href="modules.html">components</a><ul>
   <li><a href="components.html">components package</a><ul>
       <li>Previous: <a href="components.datasets.html" title="previous chapter">components.datasets package</a></li>
-      <li>Next: <a href="samples.html" title="next chapter">samples package</a></li>
+      <li>Next: <a href="components.remote_sensing.html" title="next chapter">components.remote_sensing package</a></li>
   </ul></li>
   </ul></li>
   </ul></li>

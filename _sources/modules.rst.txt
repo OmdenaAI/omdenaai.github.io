@@ -1,9 +1,7 @@
-Packages
-========
+components
+==========
 
 .. toctree::
    :maxdepth: 4
 
    components
-   samples
-   setup

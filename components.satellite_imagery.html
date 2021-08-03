@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>components.satellite_imagery package &#8212; OmdenaLore 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Knowledge base" href="knowledge.html" />
+    <link rel="prev" title="components.remote_sensing package" href="components.remote_sensing.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="components-satellite-imagery-package">
+<h1>components.satellite_imagery package<a class="headerlink" href="#components-satellite-imagery-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-components.satellite_imagery.find_resolution">
+<span id="components-satellite-imagery-find-resolution-module"></span><h2>components.satellite_imagery.find_resolution module<a class="headerlink" href="#module-components.satellite_imagery.find_resolution" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="components.satellite_imagery.find_resolution.resolution">
+<span class="sig-prename descclassname"><span class="pre">components.satellite_imagery.find_resolution.</span></span><span class="sig-name descname"><span class="pre">resolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_tiff</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.satellite_imagery.find_resolution.resolution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the resolution of the given TIF file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_tiff</strong> (<em>str</em>) – Path to TIF file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>resolution as a (x, y) tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-components.satellite_imagery.preprocess_tiff">
+<span id="components-satellite-imagery-preprocess-tiff-module"></span><h2>components.satellite_imagery.preprocess_tiff module<a class="headerlink" href="#module-components.satellite_imagery.preprocess_tiff" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="components.satellite_imagery.preprocess_tiff.SatelliteImage">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.satellite_imagery.preprocess_tiff.</span></span><span class="sig-name descname"><span class="pre">SatelliteImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parts</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.satellite_imagery.preprocess_tiff.SatelliteImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>SatelliteImage class is used to preprocess satellite images</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – Path of the input .tif image</p></li>
+<li><p><strong>parts</strong> (<em>int</em>) – Splits the single image into smaller images with a total of (parts * parts) images returned</p></li>
+</ul>
+</dd>
+<dt class="field-even">Example</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">si</span> <span class="o">=</span> <span class="n">SatelliteImage</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>       <span class="n">path</span><span class="o">=</span><span class="s2">&quot;sample.tif&quot;</span><span class="p">,</span> <span class="n">parts</span><span class="o">=</span><span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">si</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="components.satellite_imagery.preprocess_tiff.SatelliteImage.split">
+<span class="sig-name descname"><span class="pre">split</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#components.satellite_imagery.preprocess_tiff.SatelliteImage.split" title="Permalink to this definition">¶</a></dt>
+<dd><p>Splits a single .tif image into multiple parts in the same directory</p>
+<p>This makes it easier for
+visualising and storing in memory compared to having a single large
+image</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-components.satellite_imagery.utils">
+<span id="components-satellite-imagery-utils-module"></span><h2>components.satellite_imagery.utils module<a class="headerlink" href="#module-components.satellite_imagery.utils" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="components.satellite_imagery.utils.add_padding">
+<span class="sig-prename descclassname"><span class="pre">components.satellite_imagery.utils.</span></span><span class="sig-name descname"><span class="pre">add_padding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding_height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">0)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.satellite_imagery.utils.add_padding" title="Permalink to this definition">¶</a></dt>
+<dd><p>add padding around the image so that buildings touching the corners can be bought to center
+create new image of desired size and color (black) for padding
+This is necessary as corner buildings will not be detected by countour detection algorithm if the building edges are outsite of the image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>images</strong> – Image that you want padding around</p></li>
+<li><p><strong>padding_height</strong> (<em>int</em>) – Amount of padding in y direction</p></li>
+<li><p><strong>padding_width</strong> – Amount of padding in x direction</p></li>
+<li><p><strong>padding_width</strong> – int</p></li>
+<li><p><strong>color</strong> (<em>1x3 tuple</em>) – RGB color of the padding</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Image with padding</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.satellite_imagery.utils.convert_pixels_to_geocoordinates">
+<span class="sig-prename descclassname"><span class="pre">components.satellite_imagery.utils.</span></span><span class="sig-name descname"><span class="pre">convert_pixels_to_geocoordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_tiff_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_of_coords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.satellite_imagery.utils.convert_pixels_to_geocoordinates" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function convert pixel coordinates into geo coordinates according to the transform informaton inside the source tiff file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source_tiff_path</strong> (<em>string</em>) – The source tiff file path from which the bounding box was predicted. Tiff file should contain geo-transform information</p></li>
+<li><p><strong>list_of_coords</strong> – list of coordinates in the form of ((x1, y1), (x2,y2), (x3,y3)…(xn, yn))</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of geo-coordinates</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.satellite_imagery.utils.create_contours">
+<span class="sig-prename descclassname"><span class="pre">components.satellite_imagery.utils.</span></span><span class="sig-name descname"><span class="pre">create_contours</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.satellite_imagery.utils.create_contours" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converting the coordinates of the masks to numpy array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>coords</strong> (<em>List of lists</em>) – List of Coordinates in the form the form of ((x1, y1), (x2,y2), (x3,y3)…(xn, yn))</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of contours in numpy format</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.satellite_imagery.utils.zoom_to_fill">
+<span class="sig-prename descclassname"><span class="pre">components.satellite_imagery.utils.</span></span><span class="sig-name descname"><span class="pre">zoom_to_fill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding_val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.satellite_imagery.utils.zoom_to_fill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use the mask of the object to center the object in the image and zoom to that object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy array</em>) – Input Image</p></li>
+<li><p><strong>mask</strong> (<em>numpy array</em>) – Mask of the object that you want to center</p></li>
+<li><p><strong>padding_val</strong> (<em>int</em>) – number of pixel padding to add around the centered object</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Numpy image with centered object</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-components.satellite_imagery">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-components.satellite_imagery" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">OmdenaLore</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">components</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="components.html">components package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="knowledge.html">Knowledge base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guideline.html">OmdenaLore Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ and Support</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">components</a><ul>
+  <li><a href="components.html">components package</a><ul>
+      <li>Previous: <a href="components.remote_sensing.html" title="previous chapter">components.remote_sensing package</a></li>
+      <li>Next: <a href="knowledge.html" title="next chapter">Knowledge base</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Omdena Collaborators.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/components.satellite_imagery.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,6 +1,27 @@
 components.nlp package
 ======================
 
+Submodules
+----------
+
+components.nlp.preprocess\_text module
+--------------------------------------
+
+.. automodule:: components.nlp.preprocess_text
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :special-members:
+   :exclude-members: __dict__,__weakref__, __module__
+
+components.nlp.utils module
+---------------------------
+
+.. automodule:: components.nlp.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 

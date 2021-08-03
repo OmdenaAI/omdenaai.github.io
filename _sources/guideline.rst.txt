@@ -1,7 +1,7 @@
 OmdenaLore Guidelines
 ========================
 
-Introduction:
+Introduction
 ------------------------
 
 
@@ -70,8 +70,6 @@ OmdenaLore Structure
 
      10. Makefile
 
-
-
 Description of Structure components
 ------------------------------------
 
@@ -135,6 +133,16 @@ If you have a code block that can help collaborators in current or future projec
 
 6. That’s it! Now you can click **Create Pull Request** and wait until your PR is reviewed and make any changes that your reviewers might request. After that, your PR will be eligible for being merged into the official repository.
 
+Pull request guidelines and templates
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Whenever a pull request (PR) is generated, it's highly recommended for collaborators to include these sections in the PR description.
+It makes PR approval and review process faster and efficient.
+
+.. toctree::
+   :maxdepth: 4
+
+   pull_request_template
 
 Guidelines to be followed for your code to get accepted
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

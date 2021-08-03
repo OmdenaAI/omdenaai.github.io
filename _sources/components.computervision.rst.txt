@@ -12,10 +12,34 @@ components.computervision.activation\_functions module
    :undoc-members:
    :show-inheritance:
 
+components.computervision.aug module
+------------------------------------
+
+.. automodule:: components.computervision.aug
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 components.computervision.image\_features module
 ------------------------------------------------
 
 .. automodule:: components.computervision.image_features
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+components.computervision.losses module
+---------------------------------------
+
+.. automodule:: components.computervision.losses
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+components.computervision.metrics module
+----------------------------------------
+
+.. automodule:: components.computervision.metrics
    :members:
    :undoc-members:
    :show-inheritance:
@@ -32,6 +56,14 @@ components.computervision.utils module
 --------------------------------------
 
 .. automodule:: components.computervision.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+components.computervision.vis module
+------------------------------------
+
+.. automodule:: components.computervision.vis
    :members:
    :undoc-members:
    :show-inheritance:

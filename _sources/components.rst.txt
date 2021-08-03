@@ -11,6 +11,8 @@ Subpackages
    components.computervision
    components.datasets
    components.nlp
+   components.remote_sensing
+   components.satellite_imagery
 
 Submodules
 ----------

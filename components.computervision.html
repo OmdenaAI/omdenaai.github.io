@@ -42,205 +42,283 @@
 <span id="components-computervision-activation-functions-module"></span><h2>components.computervision.activation_functions module<a class="headerlink" href="#module-components.computervision.activation_functions" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="components.computervision.activation_functions.AconC">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">AconC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.AconC" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">AconC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.AconC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
 <p>ACON activation (activate or not).
 AconC: (p1*x-p2*x) * sigmoid(beta*(p1*x-p2*x)) + p2*x, beta is a learnable parameter
 according to “Activate or Not: Learning Customized Activation” &lt;<a class="reference external" href="https://arxiv.org/pdf/2009.04759.pdf">https://arxiv.org/pdf/2009.04759.pdf</a>&gt;.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="components.computervision.activation_functions.AconC.forward">
 <span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.AconC.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the computation performed at every call.</p>
-<p>Should be overridden by all subclasses.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Although the recipe for forward pass needs to be defined within
-this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
-instead of this since the former takes care of running the
-registered hooks while the latter silently ignores them.</p>
-</div>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="components.computervision.activation_functions.AconC.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#components.computervision.activation_functions.AconC.training" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="components.computervision.activation_functions.FReLU">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">FReLU</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.FReLU" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">FReLU</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.FReLU" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="components.computervision.activation_functions.FReLU.forward">
 <span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.FReLU.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the computation performed at every call.</p>
-<p>Should be overridden by all subclasses.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Although the recipe for forward pass needs to be defined within
-this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
-instead of this since the former takes care of running the
-registered hooks while the latter silently ignores them.</p>
-</div>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="components.computervision.activation_functions.FReLU.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#components.computervision.activation_functions.FReLU.training" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="components.computervision.activation_functions.Hardswish">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">Hardswish</span></span><a class="headerlink" href="#components.computervision.activation_functions.Hardswish" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">Hardswish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.Hardswish" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="components.computervision.activation_functions.Hardswish.forward">
 <em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.Hardswish.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the computation performed at every call.</p>
-<p>Should be overridden by all subclasses.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Although the recipe for forward pass needs to be defined within
-this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
-instead of this since the former takes care of running the
-registered hooks while the latter silently ignores them.</p>
-</div>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="components.computervision.activation_functions.Hardswish.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#components.computervision.activation_functions.Hardswish.training" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="components.computervision.activation_functions.MemoryEfficientMish">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">MemoryEfficientMish</span></span><a class="headerlink" href="#components.computervision.activation_functions.MemoryEfficientMish" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">MemoryEfficientMish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.MemoryEfficientMish" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
 <dl class="py class">
 <dt class="sig sig-object py" id="components.computervision.activation_functions.MemoryEfficientMish.F">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">F</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.MemoryEfficientMish.F" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.autograd.function.Function</span></code></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">F</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.MemoryEfficientMish.F" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.autograd.</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="components.computervision.activation_functions.MemoryEfficientMish.F.backward">
 <em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">backward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grad_output</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.MemoryEfficientMish.F.backward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines a formula for differentiating the operation.</p>
-<p>This function is to be overridden by all subclasses.</p>
-<p>It must accept a context <code class="xref py py-attr docutils literal notranslate"><span class="pre">ctx</span></code> as the first argument, followed by
-as many outputs as the <a class="reference internal" href="#components.computervision.activation_functions.MemoryEfficientMish.F.forward" title="components.computervision.activation_functions.MemoryEfficientMish.F.forward"><code class="xref py py-func docutils literal notranslate"><span class="pre">forward()</span></code></a> returned (None will be passed in
-for non tensor outputs of the forward function),
-and it should return as many tensors, as there were inputs to
-<a class="reference internal" href="#components.computervision.activation_functions.MemoryEfficientMish.F.forward" title="components.computervision.activation_functions.MemoryEfficientMish.F.forward"><code class="xref py py-func docutils literal notranslate"><span class="pre">forward()</span></code></a>. Each argument is the gradient w.r.t the given output,
-and each returned value should be the gradient w.r.t. the
-corresponding input. If an input is not a Tensor or is a Tensor not
-requiring grads, you can just pass None as a gradient for that input.</p>
-<p>The context can be used to retrieve tensors saved during the forward
-pass. It also has an attribute <code class="xref py py-attr docutils literal notranslate"><span class="pre">ctx.needs_input_grad</span></code> as a tuple
-of booleans representing whether each input needs gradient. E.g.,
-<a class="reference internal" href="#components.computervision.activation_functions.MemoryEfficientMish.F.backward" title="components.computervision.activation_functions.MemoryEfficientMish.F.backward"><code class="xref py py-func docutils literal notranslate"><span class="pre">backward()</span></code></a> will have <code class="docutils literal notranslate"><span class="pre">ctx.needs_input_grad[0]</span> <span class="pre">=</span> <span class="pre">True</span></code> if the
-first input to <a class="reference internal" href="#components.computervision.activation_functions.MemoryEfficientMish.F.forward" title="components.computervision.activation_functions.MemoryEfficientMish.F.forward"><code class="xref py py-func docutils literal notranslate"><span class="pre">forward()</span></code></a> needs gradient computated w.r.t. the
-output.</p>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="components.computervision.activation_functions.MemoryEfficientMish.F.forward">
 <em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.MemoryEfficientMish.F.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Performs the operation.</p>
-<p>This function is to be overridden by all subclasses.</p>
-<p>It must accept a context ctx as the first argument, followed by any
-number of arguments (tensors or other types).</p>
-<p>The context can be used to store arbitrary data that can be then
-retrieved during the backward pass.</p>
-</dd></dl>
+<dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="components.computervision.activation_functions.MemoryEfficientMish.forward">
 <span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.MemoryEfficientMish.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the computation performed at every call.</p>
-<p>Should be overridden by all subclasses.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Although the recipe for forward pass needs to be defined within
-this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
-instead of this since the former takes care of running the
-registered hooks while the latter silently ignores them.</p>
-</div>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="components.computervision.activation_functions.MemoryEfficientMish.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#components.computervision.activation_functions.MemoryEfficientMish.training" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="components.computervision.activation_functions.MetaAconC">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">MetaAconC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.MetaAconC" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">MetaAconC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.MetaAconC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
 <p>ACON activation (activate or not).
 MetaAconC: (p1*x-p2*x) * sigmoid(beta*(p1*x-p2*x)) + p2*x, beta is generated by a small network
 according to “Activate or Not: Learning Customized Activation” &lt;<a class="reference external" href="https://arxiv.org/pdf/2009.04759.pdf">https://arxiv.org/pdf/2009.04759.pdf</a>&gt;.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="components.computervision.activation_functions.MetaAconC.forward">
 <span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.MetaAconC.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the computation performed at every call.</p>
-<p>Should be overridden by all subclasses.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Although the recipe for forward pass needs to be defined within
-this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
-instead of this since the former takes care of running the
-registered hooks while the latter silently ignores them.</p>
-</div>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="components.computervision.activation_functions.MetaAconC.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#components.computervision.activation_functions.MetaAconC.training" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="components.computervision.activation_functions.Mish">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">Mish</span></span><a class="headerlink" href="#components.computervision.activation_functions.Mish" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">Mish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.Mish" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="components.computervision.activation_functions.Mish.forward">
 <em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.Mish.forward" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the computation performed at every call.</p>
-<p>Should be overridden by all subclasses.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Although the recipe for forward pass needs to be defined within
-this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
-instead of this since the former takes care of running the
-registered hooks while the latter silently ignores them.</p>
-</div>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="components.computervision.activation_functions.Mish.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#components.computervision.activation_functions.Mish.training" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="components.computervision.activation_functions.SiLU">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">SiLU</span></span><a class="headerlink" href="#components.computervision.activation_functions.SiLU" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">SiLU</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.SiLU" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="components.computervision.activation_functions.SiLU.forward">
 <em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.activation_functions.SiLU.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-components.computervision.aug">
+<span id="components-computervision-aug-module"></span><h2>components.computervision.aug module<a class="headerlink" href="#module-components.computervision.aug" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.aug.get_basic_train_transforms">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.aug.</span></span><span class="sig-name descname"><span class="pre">get_basic_train_transforms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">means</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stds</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.aug.get_basic_train_transforms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply only basic training transformations such as Resize and Normalize.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>height</strong> – int specifying new height</p></li>
+<li><p><strong>width</strong> – int specifying new width</p></li>
+<li><p><strong>means</strong> – List of means for normalization</p></li>
+<li><p><strong>stds</strong> – List of stds for normalization</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Albumentation compose transform object for training dataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.aug.get_mild_train_transforms">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.aug.</span></span><span class="sig-name descname"><span class="pre">get_mild_train_transforms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">means</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stds</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.aug.get_mild_train_transforms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply few mild training transformations such as Resize, horizontal and vertical, Gaussian Noise,
+Perspective Shift and Normalize.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>height</strong> – int specifying new height</p></li>
+<li><p><strong>width</strong> – int specifying new width</p></li>
+<li><p><strong>means</strong> – List of means for normalization</p></li>
+<li><p><strong>stds</strong> – List of stds for normalization</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Albumentation compose transform object for training dataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.aug.get_val_transforms">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.aug.</span></span><span class="sig-name descname"><span class="pre">get_val_transforms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">means</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stds</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.aug.get_val_transforms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply only basic transformation such as Resize and Normalize.
+:param height: int specifying new height
+:param width: int specifying new width
+:param means: List of means for normalization
+:param stds: List of stds for normalization
+:returns: Albumentation compose transform object for validation dataset</p>
+</dd></dl>
+
+</section>
+<section id="module-components.computervision.image_features">
+<span id="components-computervision-image-features-module"></span><h2>components.computervision.image_features module<a class="headerlink" href="#module-components.computervision.image_features" title="Permalink to this headline">¶</a></h2>
+<p>OmdenaLore module containing useful functions on image processing and image features</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.image_features.brief_features">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.image_features.</span></span><span class="sig-name descname"><span class="pre">brief_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.image_features.brief_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>detect BRIEF features from an image path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image_path</strong> (<em>str</em>) – Path of the input image</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>BRIEF keypoints detected from an image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.image_features.discribe_with_zernike_moments">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.image_features.</span></span><span class="sig-name descname"><span class="pre">discribe_with_zernike_moments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.image_features.discribe_with_zernike_moments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Caclulates Zernike moments of images inside a folder.
+Returns list of features and cooresponding image names
+Zernike moments are great to discribing shapes of objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image_path</strong> (<em>string</em>) – Path of images</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return a tuple of the contours and shapes (cnts, shapefeatures)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.image_features.find_contours">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.image_features.</span></span><span class="sig-name descname"><span class="pre">find_contours</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.image_features.find_contours" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detect contours from an image path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_path</strong> (<em>str</em>) – Path of the input image</p></li>
+<li><p><strong>show</strong> (<em>boolean</em>) – Whether to show the contours on a plot using matplotlib</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>contours detected from an image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.image_features.get_hough_lines">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.image_features.</span></span><span class="sig-name descname"><span class="pre">get_hough_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.image_features.get_hough_lines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detect lines from an image path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_path</strong> (<em>str</em>) – Path of the input image</p></li>
+<li><p><strong>show</strong> (<em>boolean</em>) – Whether to show the lines on a plot using matplotlib</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>lines detected from an image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.image_features.haralicks_features">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.image_features.</span></span><span class="sig-name descname"><span class="pre">haralicks_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.image_features.haralicks_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detects Harlicks features from images in meaned four directions
+inside an folder with certain extentions
+and returns array of retrieved features</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image_path</strong> (<em>string</em>) – Path of the folder which contains the png images</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>array of extracted features. The content of array is in form - (image_name , features)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.image_features.sift_features">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.image_features.</span></span><span class="sig-name descname"><span class="pre">sift_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grayscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.image_features.sift_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>detect SIFT features from an image path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_path</strong> (<em>str</em>) – Path of the input image</p></li>
+<li><p><strong>grayscale</strong> (<em>boolean</em>) – If you want to convert your image to grayscale before calculating features</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SIFT keypoints detected from an image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.image_features.surf_features">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.image_features.</span></span><span class="sig-name descname"><span class="pre">surf_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.image_features.surf_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>detect SURF features from an image path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image_path</strong> (<em>str</em>) – Path of the input image</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SURF keypoints detected from an image</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-components.computervision.losses">
+<span id="components-computervision-losses-module"></span><h2>components.computervision.losses module<a class="headerlink" href="#module-components.computervision.losses" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="components.computervision.losses.LabelSmoothingCrossEntropy">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.losses.</span></span><span class="sig-name descname"><span class="pre">LabelSmoothingCrossEntropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">smoothing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.losses.LabelSmoothingCrossEntropy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>NLL loss with label smoothing.
+Credits: timm library</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="components.computervision.losses.LabelSmoothingCrossEntropy.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.losses.LabelSmoothingCrossEntropy.forward" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines the computation performed at every call.</p>
 <p>Should be overridden by all subclasses.</p>
 <div class="admonition note">
@@ -253,15 +331,222 @@ registered hooks while the latter silently ignores them.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="components.computervision.activation_functions.SiLU.training">
-<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#components.computervision.activation_functions.SiLU.training" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="components.computervision.losses.LabelSmoothingCrossEntropy.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#components.computervision.losses.LabelSmoothingCrossEntropy.training" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 </section>
-<section id="components-computervision-image-features-module">
-<h2>components.computervision.image_features module<a class="headerlink" href="#components-computervision-image-features-module" title="Permalink to this headline">¶</a></h2>
+<section id="module-components.computervision.metrics">
+<span id="components-computervision-metrics-module"></span><h2>components.computervision.metrics module<a class="headerlink" href="#module-components.computervision.metrics" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.metrics.DSSIM">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.metrics.</span></span><span class="sig-name descname"><span class="pre">DSSIM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicted_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.metrics.DSSIM" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate Structural Dissimilarity(DSSIM) between two 3 Colored Channel/Grayscale images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predicted_image</strong> (<em>np.array</em>) – Image Data for predicted image as numpy array</p></li>
+<li><p><strong>target_image</strong> (<em>np.array</em>) – Image Data for target image as numpy array</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DSSIM SCORE  which calculated between the two input images.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.metrics.FSIM">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.metrics.</span></span><span class="sig-name descname"><span class="pre">FSIM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicted_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.metrics.FSIM" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate Feature-based similarity index (FSIM) between two 3 Colored Channel/Grayscale images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predicted_image</strong> (<em>np.array</em>) – Image Data for predicted image as numpy array</p></li>
+<li><p><strong>target_image</strong> (<em>np.array</em>) – Image Data for target image as numpy array</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>FSIM SCORE  which calculated between the two input images.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You’ll need to install image_similarity_measures library</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.metrics.ISSIM">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.metrics.</span></span><span class="sig-name descname"><span class="pre">ISSIM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicted_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.metrics.ISSIM" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate Information theoretic-based Statistic Similarity Measure (ISSM) between two 3 Colored Channel/Grayscale images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predicted_image</strong> (<em>np.array</em>) – Image Data for predicted image as numpy array</p></li>
+<li><p><strong>target_image</strong> (<em>np.array</em>) – Image Data for target image as numpy array</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ISSIM SCORE  which calculated between the two input images.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You’ll need to install image_similarity_measures library</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.metrics.IoU">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.metrics.</span></span><span class="sig-name descname"><span class="pre">IoU</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicted_box</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_box</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.metrics.IoU" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate Intersection over Union (IoU) between Predicted Bounding-box &amp; Target Bounding-box of objects in an image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predicted_box</strong> (<em>array</em>) – Array containing predicted bounding box points [x1,x2,y1,y2]</p></li>
+<li><p><strong>target_box</strong> – Array containing target bounding box points [x1,x2,y1,y2]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>IoU, Union and Intersection SCORES.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.metrics.MSE">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.metrics.</span></span><span class="sig-name descname"><span class="pre">MSE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicted_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.metrics.MSE" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate Mean Squared Error (MSE) between two 3 Colored Channel/Grayscale images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predicted_image</strong> (<em>np.array</em>) – Image Data for predicted image as numpy array</p></li>
+<li><p><strong>target_image</strong> (<em>np.array</em>) – Image Data for target image as numpy array</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>MSE SCORE  which calculated between the two input images.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.metrics.PSNR">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.metrics.</span></span><span class="sig-name descname"><span class="pre">PSNR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicted_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.metrics.PSNR" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate Peak Signal-to-Noise Ratio (PSNR) between two 3 Colored Channel/Grayscale images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predicted_image</strong> (<em>np.array</em>) – Image Data for predicted image as numpy array</p></li>
+<li><p><strong>target_image</strong> (<em>np.array</em>) – Image Data for target image as numpy array</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>PSNR SCORE  which calculated between the two input images.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.metrics.RMSE">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.metrics.</span></span><span class="sig-name descname"><span class="pre">RMSE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicted_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.metrics.RMSE" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate Root Mean Squared Error (RMSE) between two 3 Colored Channel/Grayscale images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predicted_image</strong> (<em>np.array</em>) – Image Data for predicted image as numpy array</p></li>
+<li><p><strong>target_image</strong> (<em>np.array</em>) – Image Data for target image as numpy array</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>RMSE SCORE  which calculated between the two input images.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.metrics.SAM">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.metrics.</span></span><span class="sig-name descname"><span class="pre">SAM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicted_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.metrics.SAM" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate Spectral angle mapper (SAM) between two 3 Colored Channel/Grayscale images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predicted_image</strong> (<em>np.array</em>) – Image Data for predicted image as numpy array</p></li>
+<li><p><strong>target_image</strong> (<em>np.array</em>) – Image Data for target image as numpy array</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SAM SCORE  which calculated between the two input images.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You’ll need to install image_similarity_measures library</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.metrics.SRE">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.metrics.</span></span><span class="sig-name descname"><span class="pre">SRE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicted_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.metrics.SRE" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate Signal to Reconstruction Error ratio (SRE) between two 3 Colored Channel/Grayscale images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predicted_image</strong> (<em>np.array</em>) – Image Data for predicted image as numpy array</p></li>
+<li><p><strong>target_image</strong> (<em>np.array</em>) – Image Data for target image as numpy array</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SRE SCORE  which calculated between the two input images.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You’ll need to install image_similarity_measures library</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.metrics.SSIM">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.metrics.</span></span><span class="sig-name descname"><span class="pre">SSIM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicted_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.metrics.SSIM" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate Structural Similarity Index (SSIM) between two 3 Colored Channel/Grayscale images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predicted_image</strong> (<em>np.array</em>) – Image Data for predicted image as numpy array</p></li>
+<li><p><strong>target_image</strong> (<em>np.array</em>) – Image Data for target image as numpy array</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SSIM SCORE  which calculated between the two input images.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.metrics.UIQ">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.metrics.</span></span><span class="sig-name descname"><span class="pre">UIQ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicted_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.metrics.UIQ" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate Universal image quality index (UIQ) between two 3 Colored Channel/Grayscale images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predicted_image</strong> (<em>np.array</em>) – Image Data for predicted image as numpy array</p></li>
+<li><p><strong>target_image</strong> (<em>np.array</em>) – Image Data for target image as numpy array</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>UIQ SCORE  which calculated between the two input images.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You’ll need to install image_similarity_measures library</p>
+</div>
+</dd></dl>
+
 </section>
 <section id="module-components.computervision.object_detection">
 <span id="components-computervision-object-detection-module"></span><h2>components.computervision.object_detection module<a class="headerlink" href="#module-components.computervision.object_detection" title="Permalink to this headline">¶</a></h2>
@@ -481,6 +766,62 @@ Both sets of boxes are expected to be in (x1, y1, x2, y2) format.</p>
 </dd></dl>
 
 </section>
+<section id="module-components.computervision.vis">
+<span id="components-computervision-vis-module"></span><h2>components.computervision.vis module<a class="headerlink" href="#module-components.computervision.vis" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.vis.plot_cm">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.vis.</span></span><span class="sig-name descname"><span class="pre">plot_cm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">tuple</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">(8,</span> <span class="pre">6)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.vis.plot_cm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot unnormalized confusion matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>true</strong> – List of targets</p></li>
+<li><p><strong>preds</strong> – List of predictions</p></li>
+<li><p><strong>classes</strong> – List of classes</p></li>
+<li><p><strong>figsize</strong> – Tuple specifying (height, width)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>matplotlib figure containing confusion matrix</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.vis.plot_hist">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.vis.</span></span><span class="sig-name descname"><span class="pre">plot_hist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">history</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.vis.plot_hist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plotting train acc, loss and val acc and loss stored in history dict.
+History dict contains keys = {train_acc, val_acc, train_loss, val_loss}
+Each key contains list of scores for every epoch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>history</strong> – Dict</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>plot the loss and acc plots for train and val</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.vis.unnormalize_image">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.vis.</span></span><span class="sig-name descname"><span class="pre">unnormalize_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">means</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.vis.unnormalize_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert normalized image to get unnormalized image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> – Tensor of shape (C, H, W)</p></li>
+<li><p><strong>means</strong> – List of means used for normalization</p></li>
+<li><p><strong>stds</strong> – List of stds used for normalization</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the unnormalized input tensor which can be used to display image</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 <section id="module-components.computervision">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-components.computervision" title="Permalink to this headline">¶</a></h2>
 </section>
@@ -505,10 +846,8 @@ Both sets of boxes are expected to be in (x1, y1, x2, y2) format.</p>
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Packages</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">components</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="components.html">components package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="samples.html">samples package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="setup.html">setup module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="knowledge.html">Knowledge base</a></li>
@@ -520,7 +859,7 @@ Both sets of boxes are expected to be in (x1, y1, x2, y2) format.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-  <li><a href="modules.html">Packages</a><ul>
+  <li><a href="modules.html">components</a><ul>
   <li><a href="components.html">components package</a><ul>
       <li>Previous: <a href="components.cloud.html" title="previous chapter">components.cloud package</a></li>
       <li>Next: <a href="components.datasets.html" title="next chapter">components.datasets package</a></li>
