@@ -8,7 +8,7 @@ OmdenaLore is a community-driven library build by certified Omdena collaborators
 The codebase is a mixture of tutorials and codes structured by specific domain names. 
 With a growing number of collaborators, the library is ever-growing and versatile to handle simple and complex data science tasks.
 
-**We encourage coders around the world to collaborate in the repository and make a real-world impact.** Join `here <https://omdena.com/omdenalore/>`_.
+**We encourage coders around the world to collaborate in the repository and make a real-world impact.** Get access to the repository and the community `here <https://omdena.com/omdenalore/>`_.
 
 .. toctree::
    :maxdepth: 2
@@ -17,6 +17,7 @@ With a growing number of collaborators, the library is ever-growing and versatil
    modules
    knowledge
    guideline
+   coc
    faq
 
 Indices and tables
