@@ -140,7 +140,7 @@ Whenever a pull request (PR) is generated, it's highly recommended for collabora
 It makes PR approval and review process faster and efficient.
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
 
    pull_request_template
 

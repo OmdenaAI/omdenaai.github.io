@@ -312,13 +312,27 @@ and returns array of retrieved features</p>
 <span id="components-computervision-losses-module"></span><h2>components.computervision.losses module<a class="headerlink" href="#module-components.computervision.losses" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="components.computervision.losses.LabelSmoothingCrossEntropy">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.losses.</span></span><span class="sig-name descname"><span class="pre">LabelSmoothingCrossEntropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.losses.LabelSmoothingCrossEntropy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.losses.</span></span><span class="sig-name descname"><span class="pre">LabelSmoothingCrossEntropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">smoothing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.losses.LabelSmoothingCrossEntropy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
 <p>NLL loss with label smoothing.
 Credits: timm library</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="components.computervision.losses.LabelSmoothingCrossEntropy.forward">
 <span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.losses.LabelSmoothingCrossEntropy.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="components.computervision.losses.LabelSmoothingCrossEntropy.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#components.computervision.losses.LabelSmoothingCrossEntropy.training" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -881,7 +895,7 @@ Each key contains list of scores for every epoch.</p>
       &copy;2021, Omdena Collaborators.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
