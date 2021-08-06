@@ -18,6 +18,7 @@ With a growing number of collaborators, the library is ever-growing and versatil
    knowledge
    guideline
    faq
+   coc
 
 Indices and tables
 ==================
