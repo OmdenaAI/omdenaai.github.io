@@ -1,45 +1,193 @@
 
+
 <!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>OmdenaLore Guidelines &mdash; OmdenaLore 1.0.0 documentation</title>
+  
 
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
-    <title>OmdenaLore Guidelines &#8212; OmdenaLore 1.0.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Why This PR Adds Value" href="pull_request_template.html" />
-    <link rel="prev" title="Machine Learning" href="k_ml.html" />
+    <link rel="prev" title="Machine Learning" href="k_ml.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
    
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
           
 
-          <div class="body" role="main">
+          
+            <a href="index.html" class="icon icon-home"> OmdenaLore
+          
+
+          
+          </a>
+
+          
             
-  <section id="omdenalore-guidelines">
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="modules.html">components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="knowledge.html">Knowledge base</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">OmdenaLore Guidelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#omdenalore-structure">OmdenaLore Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description-of-structure-components">Description of Structure components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#guidelines">Guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-contribute-to-omdenalore">How to contribute to OmdenaLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pull-request-guidelines-and-templates">Pull request guidelines and templates</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pull_request_template.html">Why This PR Adds Value</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pull_request_template.html#what-this-pr-adds">What This PR Adds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pull_request_template.html#screenshot">Screenshot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pull_request_template.html#how-this-pr-could-be-improved">How This PR Could Be Improved</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pull_request_template.html#issue-this-pr-closes">Issue This PR Closes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#guidelines-to-be-followed-for-your-code-to-get-accepted">Guidelines to be followed for your code to get accepted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additionally-please-check-your-code-for-points-below">Additionally, please check your code for points below</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#function-description-doc-string-format">Function description doc string format</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="coc.html">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ and Support</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OmdenaLore</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>OmdenaLore Guidelines</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/guideline.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="omdenalore-guidelines">
 <h1>OmdenaLore Guidelines<a class="headerlink" href="#omdenalore-guidelines" title="Permalink to this headline">¶</a></h1>
-<section id="introduction">
+<div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>As the name suggests, OmdenaLore is a body of knowledge held by Omdena. OmdenaLore is a library/package that contains code knowledge base gathered in completed and ongoing projects. The code knowledge base increases and gets updated as collaborators add their knowledge in future projects. OmdenaLore is a collaborator sourced structured library. It is closed for Omdena community members.</p>
-</section>
-<section id="omdenalore-structure">
+</div>
+<div class="section" id="omdenalore-structure">
 <h2>OmdenaLore Structure<a class="headerlink" href="#omdenalore-structure" title="Permalink to this headline">¶</a></h2>
 <p><strong>OmdenaLore</strong></p>
 <blockquote>
@@ -96,8 +244,8 @@
 <li><p>Makefile</p></li>
 </ol>
 </div></blockquote>
-</section>
-<section id="description-of-structure-components">
+</div>
+<div class="section" id="description-of-structure-components">
 <h2>Description of Structure components<a class="headerlink" href="#description-of-structure-components" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><p><strong>Configurations</strong>: All config.py / config.json files containing static variable, paths etc to be stored here. The configs can be stored in different files for different subpackages/subcomponents.</p></li>
@@ -111,17 +259,17 @@
 <li><p><strong>Test</strong>: This is the module where we’ll keep all our test cases and files. As we move ahead the number of tests will increase. We can create as many test cases as possible to make sure that the functions do not crash with later updates.</p></li>
 <li><p><strong>Makefile</strong>: Defining generic tasks for the project like <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p></li>
 </ol>
-</section>
-<section id="guidelines">
+</div>
+<div class="section" id="guidelines">
 <h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">¶</a></h2>
-<section id="how-to-contribute-to-omdenalore">
+<div class="section" id="how-to-contribute-to-omdenalore">
 <h3>How to contribute to OmdenaLore<a class="headerlink" href="#how-to-contribute-to-omdenalore" title="Permalink to this headline">¶</a></h3>
 <p>If you have a code block that can help collaborators in current or future projects, you can add that code block to the OmdenaLore repository. The contributions to OmdenaLore repository go through peer-to-peer reviews, more details below. To make sure a valid contribution is made, please follow the steps below.</p>
 <ol class="arabic">
 <li><dl>
-<dt>Create a fork of the repository. In the top right of the GitHub repository (<a class="reference external" href="https://github.com/OmdenaAI/OmdenaLore">https://github.com/OmdenaAI/OmdenaLore</a>), you will see the fork option. This creates a copy of the repository in your GitHub account.</dt><dd><figure class="align-default">
+<dt>Create a fork of the repository. In the top right of the GitHub repository (<a class="reference external" href="https://github.com/OmdenaAI/OmdenaLore">https://github.com/OmdenaAI/OmdenaLore</a>), you will see the fork option. This creates a copy of the repository in your GitHub account.</dt><dd><div class="figure align-default">
 <img alt="Stars and forks" src="_images/star.png" />
-</figure>
+</div>
 </dd>
 </dl>
 </li>
@@ -130,9 +278,9 @@
 <li><p>You can clone the repository locally with the following command in your terminal/Powershell: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/{your_username}/OmdenaLore.git</span></code></p></li>
 <li><p>If you are not comfortable with the terminal, you can use the GitHub desktop option as well.</p></li>
 </ol>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="clone" src="_images/2.png" />
-</figure>
+</div>
 </dd>
 </dl>
 </li>
@@ -142,37 +290,37 @@
 <dt>You can find your forked repository on <code class="docutils literal notranslate"><span class="pre">https://github.com/{your_username}/OmdenaLore</span></code>. To make a Pull Request of your changes to the <strong>main branch</strong> under the official repository under OmdenaAI:</dt><dd><ol class="loweralpha simple">
 <li><p>Click in <strong>Contribute</strong> on your repository</p></li>
 </ol>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="branch is ahead" src="_images/3.png" />
-</figure>
+</div>
 <ol class="loweralpha simple" start="2">
 <li><p>Click on <strong>Open Pull Request</strong></p></li>
 </ol>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="open PR" src="_images/4.png" />
-</figure>
+</div>
 <ol class="loweralpha simple" start="3">
 <li><p>You can review your changes here in all the files you have modified. Notice the Pull Request configuration of your changes being requested to be pulled into the official repository under OmdenaAI. Once you are satisfied with your changes, click on <strong>Create pull request</strong>.</p></li>
 </ol>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="create PR" src="_images/5.png" />
-</figure>
+</div>
 <ol class="loweralpha simple" start="4">
 <li><p><strong>IMPORTANT</strong>: This step is of utmost importance for your Pull Request’s final phase. Make sure you are adequately documenting your Pull Request with clear and concise summary points on the changes you have made. This will help the Pull Request reviewers understand the changes and request any changes if required. Towards the right side of the page you will see a section of <strong>Reviewers</strong>. Here you have to request at least one person from OmdenaAI to review your pull request before the PR can be merged into the main branch of the official repository.</p></li>
 </ol>
 </dd>
 </dl>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="PR description" src="_images/6.png" />
-</figure>
-<figure class="align-default">
+</div>
+<div class="figure align-default">
 <img alt="Reviewers" src="_images/7.png" />
-</figure>
+</div>
 </li>
 <li><p>That’s it! Now you can click <strong>Create Pull Request</strong> and wait until your PR is reviewed and make any changes that your reviewers might request. After that, your PR will be eligible for being merged into the official repository.</p></li>
 </ol>
-</section>
-<section id="pull-request-guidelines-and-templates">
+</div>
+<div class="section" id="pull-request-guidelines-and-templates">
 <h3>Pull request guidelines and templates<a class="headerlink" href="#pull-request-guidelines-and-templates" title="Permalink to this headline">¶</a></h3>
 <p>Whenever a pull request (PR) is generated, it’s highly recommended for collaborators to include these sections in the PR description.
 It makes PR approval and review process faster and efficient.</p>
@@ -185,8 +333,8 @@ It makes PR approval and review process faster and efficient.</p>
 <li class="toctree-l1"><a class="reference internal" href="pull_request_template.html#issue-this-pr-closes">Issue This PR Closes</a></li>
 </ul>
 </div>
-</section>
-<section id="guidelines-to-be-followed-for-your-code-to-get-accepted">
+</div>
+<div class="section" id="guidelines-to-be-followed-for-your-code-to-get-accepted">
 <h3>Guidelines to be followed for your code to get accepted<a class="headerlink" href="#guidelines-to-be-followed-for-your-code-to-get-accepted" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li><p>“TODO(author):” Add this when you have to take up an edit to a function in future.</p></li>
@@ -201,8 +349,8 @@ It makes PR approval and review process faster and efficient.</p>
 <li><p>Try to use <cite>black</cite>, <cite>flake8</cite> and <cite>isort</cite> for linting the code to ensure consistency across modules.</p></li>
 </ol>
 <p>Please find the doc string format for functions at the end of this document.</p>
-</section>
-<section id="additionally-please-check-your-code-for-points-below">
+</div>
+<div class="section" id="additionally-please-check-your-code-for-points-below">
 <h3>Additionally, please check your code for points below<a class="headerlink" href="#additionally-please-check-your-code-for-points-below" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Do not work on the main branch of the repository. Please create your own branch and merge it with a pull request.</p></li>
@@ -221,97 +369,66 @@ It makes PR approval and review process faster and efficient.</p>
 <li><p>Do not change the directory structure of the repository.</p></li>
 <li><p>Fetch from the main branch before making a pull request.</p></li>
 </ol>
-</section>
-<section id="function-description-doc-string-format">
+</div>
+<div class="section" id="function-description-doc-string-format">
 <h3>Function description doc string format<a class="headerlink" href="#function-description-doc-string-format" title="Permalink to this headline">¶</a></h3>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="Function docstring" src="_images/docs_string_example.png" />
-</figure>
+</div>
 <p>The doc strings follows rst format.
 For more information and example visit these sites.</p>
 <p><a class="reference external" href="https://thomas-cokelaer.info/tutorials/sphinx/docstring_python.html">Thomas-cokelear</a></p>
 <p><a class="reference external" href="https://docs.anaconda.com/restructuredtext/detailed/">anaconda docs</a></p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
+           </div>
+           
           </div>
-          
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pull_request_template.html" class="btn btn-neutral float-right" title="Why This PR Adds Value" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="k_ml.html" class="btn btn-neutral float-left" title="Machine Learning" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Omdena Collaborators.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">OmdenaLore</a></h1>
 
+    </section>
 
+  </div>
+  
 
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
 
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="modules.html">components</a></li>
-<li class="toctree-l1"><a class="reference internal" href="knowledge.html">Knowledge base</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">OmdenaLore Guidelines</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#omdenalore-structure">OmdenaLore Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#description-of-structure-components">Description of Structure components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#guidelines">Guidelines</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="coc.html">Code of Conduct</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ and Support</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="k_ml.html" title="previous chapter">Machine Learning</a></li>
-      <li>Next: <a href="pull_request_template.html" title="next chapter">Why This PR Adds Value</a></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2021, Omdena Collaborators.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.0.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/guideline.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
+  
+  
     
+   
 
-    
-  </body>
+</body>
 </html>
