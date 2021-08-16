@@ -727,6 +727,37 @@ Credits: timm library</p>
 </div>
 <div class="section" id="module-components.computervision.utils">
 <span id="components-computervision-utils-module"></span><h2>components.computervision.utils module<a class="headerlink" href="#module-components.computervision.utils" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="components.computervision.utils.Params">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.utils.</span></span><span class="sig-name descname"><span class="pre">Params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.utils.Params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class that loads hyperparameters from a json file.</p>
+<p>Example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">params</span> <span class="o">=</span> <span class="n">Params</span><span class="p">(</span><span class="n">json_path</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">params</span><span class="o">.</span><span class="n">learning_rate</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">params</span><span class="o">.</span><span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># change the value of learning_rate in params</span>
+</pre></div>
+</div>
+<dl class="py property">
+<dt class="sig sig-object py" id="components.computervision.utils.Params.dict">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dict</span></span><a class="headerlink" href="#components.computervision.utils.Params.dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives dict-like access to Params instance by <cite>params.dict[‘learning_rate’]</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.computervision.utils.Params.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.utils.Params.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves parameters to json file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.computervision.utils.Params.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.utils.Params.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads parameters from json file</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="components.computervision.utils.ap_per_class">
 <span class="sig-prename descclassname"><span class="pre">components.computervision.utils.</span></span><span class="sig-name descname"><span class="pre">ap_per_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pred_cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_cls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.utils.ap_per_class" title="Permalink to this definition">¶</a></dt>
@@ -822,6 +853,19 @@ Both sets of boxes are expected to be in (x1, y1, x2, y2) format.</p>
 </p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.utils.set_logger">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.utils.</span></span><span class="sig-name descname"><span class="pre">set_logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.utils.set_logger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the logger to log info in terminal and file <cite>log_path</cite>.
+In general, it is useful to have a logger so that every output to the terminal is saved
+in a permanent file. Here we save it to <cite>model_dir/train.log</cite>.
+Example:
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">logging.info(&quot;Starting</span> <span class="pre">training...&quot;)</span>
+<span class="pre">`</span></code>
+:param log_path: where to log</p>
 </dd></dl>
 
 <dl class="py function">

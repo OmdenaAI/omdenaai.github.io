@@ -5,6 +5,7 @@ Introduction
 ------------------------
 
 
+
 As the name suggests, OmdenaLore is a body of knowledge held by Omdena. OmdenaLore is a library/package that contains code knowledge base gathered in completed and ongoing projects. The code knowledge base increases and gets updated as collaborators add their knowledge in future projects. OmdenaLore is a collaborator sourced structured library. It is closed for Omdena community members.
 
 OmdenaLore Structure
@@ -93,45 +94,56 @@ How to contribute to OmdenaLore
 If you have a code block that can help collaborators in current or future projects, you can add that code block to the OmdenaLore repository. The contributions to OmdenaLore repository go through peer-to-peer reviews, more details below. To make sure a valid contribution is made, please follow the steps below.
 
 
-1. Create a fork of the repository. In the top right of the GitHub repository (https://github.com/OmdenaAI/OmdenaLore), you will see the fork option. This creates a copy of the repository in your GitHub account.
-     .. figure:: /images/star.png
-       :alt: Stars and forks
-2. In your local copy of the repository (your_username/OmdenaLore), clone the repository locally with your preferred method.
-     a. You can clone the repository locally with the following command in your terminal/Powershell: ``git clone https://github.com/{your_username}/OmdenaLore.git``
+1. Clone of the repository from DAGsHub https://dagshub.com/Omdena/OmdenaLore
+     a. You can clone the repository locally with the following command in your terminal/Powershell: **git clone https://dagshub.com/Omdena/OmdenaLore.git**
      b. If you are not comfortable with the terminal, you can use the GitHub desktop option as well.
 
-     .. figure:: /images/2.png
-       :alt: clone
+     .. figure:: /images/clone.png
+       :alt: Cloning repository
 
-3. Work on your improvement and enhancement code in the different folders in the directories and subdirectories locally. An ideal way to have a manageable and reviewable Pull Request is to make small concise changes to the repository. Once you are satisfied with the changes you have made, follow to the next step to push it to the remote repository.
+2. After localizing the repository, we recommend that you open a issue explaining what you are working on. Since OmdenaLore is a collaborative platform, we wish to have great communication between you and fellow contributors and opening an issue is a good way to do so.
 
-4. To push your changes to the repository on your account, you can use GitHub desktop to add, commit, and push your changes or use your terminal/Powershell. For more information on how to use git, please refer to these docs: https://github.com/git-guides/git-add, https://github.com/git-guides/git-commit, https://github.com/git-guides/git-push . You might also need to make a new branch localy in git for which this resource might be useful https://git-scm.com/docs/git-branch
+     a. To open an issue, head to `dagshub.com/omdenalore <dagshub.com/omdenalore>`__ and click on the issue section. Create or find an issue according to your problem statement. 
 
-5. You can find your forked repository on ``https://github.com/{your_username}/OmdenaLore``. To make a Pull Request of your changes to the **main branch** under the official repository under OmdenaAI:
-    a. Click in **Contribute** on your repository
+3. Once inside the local folder of the repository, make a new git branch from the main branch. Let’s say you are adding code to the nlp folder and you would like to make a **nlp-contrib** branch. You can do this with the following command - **git checkout -b nlp-contrib** . To quickly familiarize yourself with git branches, read this official primer `here <https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell>`__.
+     a. We recommend that you make a branch with your own name or the issues that you are working on. Example branch names - issues_44, john_doe, ...
 
-    .. figure:: /images/3.png
-       :alt: branch is ahead
+4. After you’ve made your desired changes in your branch, it is time to push the branch to the DAGsHub repository online. To push your changes you can use GitHub desktop to add, commit, and push your changes or use your terminal/Powershell. For more information on how to use git, please refer to these docs: https://github.com/git-guides/git-add, https://github.com/git-guides/git-commit, https://github.com/git-guides/git-push.
 
-    b. Click on **Open Pull Request**
+5. If you are the first one to work on that branch, it does not exist yet on DAGsHub. When you try the **git push** command, you might hit this error:
 
-    .. figure:: /images/4.png
-       :alt: open PR
+    .. figure:: /images/branch.png
+       :alt: branch error
 
-    c. You can review your changes here in all the files you have modified. Notice the Pull Request configuration of your changes being requested to be pulled into the official repository under OmdenaAI. Once you are satisfied with your changes, click on **Create pull request**.
-  
-    .. figure:: /images/5.png
-       :alt: create PR
+    In this example, the branch **example-branch** is unrecognized by the repository online. To fix this error, run the command git automatically recommends, which in the case shown above would be: **git push --set-upstream origin example-branch**
 
-    d. **IMPORTANT**: This step is of utmost importance for your Pull Request’s final phase. Make sure you are adequately documenting your Pull Request with clear and concise summary points on the changes you have made. This will help the Pull Request reviewers understand the changes and request any changes if required. Towards the right side of the page you will see a section of **Reviewers**. Here you have to request at least one person from OmdenaAI to review your pull request before the PR can be merged into the main branch of the official repository.
-  
-   .. figure:: /images/6.png
-       :alt: PR description
+6. Once you have pushed your branch successfully, it is time to open a Pull Request on DAGsHub.
 
-   .. figure:: /images/7.png
-       :alt: Reviewers
+     a. On the repository webpage, go to the Pull Requests section.
+    
+     .. figure:: /images/dashboard.png
+       :alt: dashboard
+     
+     b. Click on **New Pull Request**
 
-6. That’s it! Now you can click **Create Pull Request** and wait until your PR is reviewed and make any changes that your reviewers might request. After that, your PR will be eligible for being merged into the official repository.
+     .. figure:: /images/dashboard_newpr.png
+       :alt: make a new PR
+     
+     c. On the right side of the webpage, pick the branch you want to open a Pull Request with. This branch contains the changes you are requesting to be merged into the main branch of the repository. Search for the name of your branch and select it.
+
+     .. figure:: /images/pickbranch.png
+       :alt: choose the branch to open PR with
+
+     d. **IMPORTANT**: This step is of utmost importance for your Pull Request’s final phase. Make sure you are adequately documenting your Pull Request with clear and concise summary points on the changes you have made. You can even upload images in this process. This will help the Pull Request reviewers understand the changes and request any changes if required. In the example below, I am making a Pull Request for my **docs-update** branch. Please find more information on the PR template `here <https://omdenaai.github.io/pull_request_template.html>`__.
+
+     .. figure:: /images/write.png
+       :alt: Write about your PR
+
+     e. Notice the **Assignee** option on the right side. Here you can click on **Assign** and assign another collaborator you are working with if you wish to request feedback about the Pull Request or even request additional features on top of your changes. Here I assigned the Pull Request to my colleague to get this feedback on my changes.
+
+7. That’s it! Now you can click **Create Pull Request** and share your Pull Request link in the slack channel. One of the reviewers will get to it and share their feedback with you and request to make any adjustments if required. After that, your PR will be merged into the main branch.
+
+
 
 Pull request guidelines and templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
