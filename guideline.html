@@ -267,57 +267,71 @@
 <p>If you have a code block that can help collaborators in current or future projects, you can add that code block to the OmdenaLore repository. The contributions to OmdenaLore repository go through peer-to-peer reviews, more details below. To make sure a valid contribution is made, please follow the steps below.</p>
 <ol class="arabic">
 <li><dl>
-<dt>Create a fork of the repository. In the top right of the GitHub repository (<a class="reference external" href="https://github.com/OmdenaAI/OmdenaLore">https://github.com/OmdenaAI/OmdenaLore</a>), you will see the fork option. This creates a copy of the repository in your GitHub account.</dt><dd><div class="figure align-default">
-<img alt="Stars and forks" src="_images/star.png" />
-</div>
-</dd>
-</dl>
-</li>
-<li><dl>
-<dt>In your local copy of the repository (your_username/OmdenaLore), clone the repository locally with your preferred method.</dt><dd><ol class="loweralpha simple">
-<li><p>You can clone the repository locally with the following command in your terminal/Powershell: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/{your_username}/OmdenaLore.git</span></code></p></li>
+<dt>Clone of the repository from DAGsHub <a class="reference external" href="https://dagshub.com/Omdena/OmdenaLore">https://dagshub.com/Omdena/OmdenaLore</a></dt><dd><ol class="loweralpha simple">
+<li><p>You can clone the repository locally with the following command in your terminal/Powershell: <strong>git clone https://dagshub.com/Omdena/OmdenaLore.git</strong></p></li>
 <li><p>If you are not comfortable with the terminal, you can use the GitHub desktop option as well.</p></li>
 </ol>
 <div class="figure align-default">
-<img alt="clone" src="_images/2.png" />
+<img alt="Cloning repository" src="_images/clone.png" />
 </div>
 </dd>
 </dl>
 </li>
-<li><p>Work on your improvement and enhancement code in the different folders in the directories and subdirectories locally. An ideal way to have a manageable and reviewable Pull Request is to make small concise changes to the repository. Once you are satisfied with the changes you have made, follow to the next step to push it to the remote repository.</p></li>
-<li><p>To push your changes to the repository on your account, you can use GitHub desktop to add, commit, and push your changes or use your terminal/Powershell. For more information on how to use git, please refer to these docs: <a class="reference external" href="https://github.com/git-guides/git-add">https://github.com/git-guides/git-add</a>, <a class="reference external" href="https://github.com/git-guides/git-commit">https://github.com/git-guides/git-commit</a>, <a class="reference external" href="https://github.com/git-guides/git-push">https://github.com/git-guides/git-push</a> . You might also need to make a new branch localy in git for which this resource might be useful <a class="reference external" href="https://git-scm.com/docs/git-branch">https://git-scm.com/docs/git-branch</a></p></li>
-<li><dl>
-<dt>You can find your forked repository on <code class="docutils literal notranslate"><span class="pre">https://github.com/{your_username}/OmdenaLore</span></code>. To make a Pull Request of your changes to the <strong>main branch</strong> under the official repository under OmdenaAI:</dt><dd><ol class="loweralpha simple">
-<li><p>Click in <strong>Contribute</strong> on your repository</p></li>
+<li><p>After localizing the repository, we recommend that you open a issue explaining what you are working on. Since OmdenaLore is a collaborative platform, we wish to have great communication between you and fellow contributors and opening an issue is a good way to do so.</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>To open an issue, head to <a class="reference external" href="dagshub.com/omdenalore">dagshub.com/omdenalore</a> and click on the issue section. Create or find an issue according to your problem statement.</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><dl class="simple">
+<dt>Once inside the local folder of the repository, make a new git branch from the main branch. Let’s say you are adding code to the nlp folder and you would like to make a <strong>nlp-contrib</strong> branch. You can do this with the following command - <strong>git checkout -b nlp-contrib</strong> . To quickly familiarize yourself with git branches, read this official primer <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">here</a>.</dt><dd><ol class="loweralpha simple">
+<li><p>We recommend that you make a branch with your own name or the issues that you are working on. Example branch names - issues_44, john_doe, …</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>After you’ve made your desired changes in your branch, it is time to push the branch to the DAGsHub repository online. To push your changes you can use GitHub desktop to add, commit, and push your changes or use your terminal/Powershell. For more information on how to use git, please refer to these docs: <a class="reference external" href="https://github.com/git-guides/git-add">https://github.com/git-guides/git-add</a>, <a class="reference external" href="https://github.com/git-guides/git-commit">https://github.com/git-guides/git-commit</a>, <a class="reference external" href="https://github.com/git-guides/git-push">https://github.com/git-guides/git-push</a>.</p></li>
+<li><p>If you are the first one to work on that branch, it does not exist yet on DAGsHub. When you try the <strong>git push</strong> command, you might hit this error:</p>
+<blockquote>
+<div><div class="figure align-default">
+<img alt="branch error" src="_images/branch.png" />
+</div>
+<p>In this example, the branch <strong>example-branch</strong> is unrecognized by the repository online. To fix this error, run the command git automatically recommends, which in the case shown above would be: <strong>git push –set-upstream origin example-branch</strong></p>
+</div></blockquote>
+</li>
+<li><p>Once you have pushed your branch successfully, it is time to open a Pull Request on DAGsHub.</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>On the repository webpage, go to the Pull Requests section.</p></li>
 </ol>
 <div class="figure align-default">
-<img alt="branch is ahead" src="_images/3.png" />
+<img alt="dashboard" src="_images/dashboard.png" />
 </div>
 <ol class="loweralpha simple" start="2">
-<li><p>Click on <strong>Open Pull Request</strong></p></li>
+<li><p>Click on <strong>New Pull Request</strong></p></li>
 </ol>
 <div class="figure align-default">
-<img alt="open PR" src="_images/4.png" />
+<img alt="make a new PR" src="_images/dashboard_newpr.png" />
 </div>
 <ol class="loweralpha simple" start="3">
-<li><p>You can review your changes here in all the files you have modified. Notice the Pull Request configuration of your changes being requested to be pulled into the official repository under OmdenaAI. Once you are satisfied with your changes, click on <strong>Create pull request</strong>.</p></li>
+<li><p>On the right side of the webpage, pick the branch you want to open a Pull Request with. This branch contains the changes you are requesting to be merged into the main branch of the repository. Search for the name of your branch and select it.</p></li>
 </ol>
 <div class="figure align-default">
-<img alt="create PR" src="_images/5.png" />
+<img alt="choose the branch to open PR with" src="_images/pickbranch.png" />
 </div>
 <ol class="loweralpha simple" start="4">
-<li><p><strong>IMPORTANT</strong>: This step is of utmost importance for your Pull Request’s final phase. Make sure you are adequately documenting your Pull Request with clear and concise summary points on the changes you have made. This will help the Pull Request reviewers understand the changes and request any changes if required. Towards the right side of the page you will see a section of <strong>Reviewers</strong>. Here you have to request at least one person from OmdenaAI to review your pull request before the PR can be merged into the main branch of the official repository.</p></li>
+<li><p><strong>IMPORTANT</strong>: This step is of utmost importance for your Pull Request’s final phase. Make sure you are adequately documenting your Pull Request with clear and concise summary points on the changes you have made. You can even upload images in this process. This will help the Pull Request reviewers understand the changes and request any changes if required. In the example below, I am making a Pull Request for my <strong>docs-update</strong> branch. Please find more information on the PR template <a class="reference external" href="https://omdenaai.github.io/pull_request_template.html">here</a>.</p></li>
 </ol>
-</dd>
-</dl>
 <div class="figure align-default">
-<img alt="PR description" src="_images/6.png" />
+<img alt="Write about your PR" src="_images/write.png" />
 </div>
-<div class="figure align-default">
-<img alt="Reviewers" src="_images/7.png" />
-</div>
+<ol class="loweralpha simple" start="5">
+<li><p>Notice the <strong>Assignee</strong> option on the right side. Here you can click on <strong>Assign</strong> and assign another collaborator you are working with if you wish to request feedback about the Pull Request or even request additional features on top of your changes. Here I assigned the Pull Request to my colleague to get this feedback on my changes.</p></li>
+</ol>
+</div></blockquote>
 </li>
-<li><p>That’s it! Now you can click <strong>Create Pull Request</strong> and wait until your PR is reviewed and make any changes that your reviewers might request. After that, your PR will be eligible for being merged into the official repository.</p></li>
+<li><p>That’s it! Now you can click <strong>Create Pull Request</strong> and share your Pull Request link in the slack channel. One of the reviewers will get to it and share their feedback with you and request to make any adjustments if required. After that, your PR will be merged into the main branch.</p></li>
 </ol>
 </div>
 <div class="section" id="pull-request-guidelines-and-templates">
