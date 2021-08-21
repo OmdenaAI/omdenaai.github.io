@@ -12,10 +12,26 @@ components.satellite\_imagery.find\_resolution module
    :undoc-members:
    :show-inheritance:
 
+components.satellite\_imagery.geom\_to\_json module
+---------------------------------------------------
+
+.. automodule:: components.satellite_imagery.geom_to_json
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 components.satellite\_imagery.preprocess\_tiff module
 -----------------------------------------------------
 
 .. automodule:: components.satellite_imagery.preprocess_tiff
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+components.satellite\_imagery.raster\_summary module
+----------------------------------------------------
+
+.. automodule:: components.satellite_imagery.raster_summary
    :members:
    :undoc-members:
    :show-inheritance:

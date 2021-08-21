@@ -1,6 +1,17 @@
 components.datasets package
 ===========================
 
+Submodules
+----------
+
+components.datasets.download\_datasets module
+---------------------------------------------
+
+.. automodule:: components.datasets.download_datasets
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 

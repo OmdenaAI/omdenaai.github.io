@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="components.datasets package" href="components.datasets.html" />
-    <link rel="prev" title="components.cloud package" href="components.cloud.html" /> 
+    <link rel="next" title="components.computervision.inference package" href="components.computervision.inference.html" />
+    <link rel="prev" title="components package" href="components.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,11 +92,9 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">components</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="components.html">components package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="components.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="components.cloud.html">components.cloud package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">components.computervision package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="components.datasets.html">components.datasets package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="components.nlp.html">components.nlp package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="components.remote_sensing.html">components.remote_sensing package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="components.satellite_imagery.html">components.satellite_imagery package</a></li>
 </ul>
 </li>
@@ -184,6 +182,23 @@
             
   <div class="section" id="components-computervision-package">
 <h1>components.computervision package<a class="headerlink" href="#components-computervision-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="components.computervision.inference.html">components.computervision.inference package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="components.computervision.inference.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components.computervision.inference.html#module-components.computervision.inference.inferPytorch">components.computervision.inference.inferPytorch module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components.computervision.inference.html#module-components.computervision.inference.inferTensorRT">components.computervision.inference.inferTensorRT module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components.computervision.inference.html#module-components.computervision.inference.traceSaver">components.computervision.inference.traceSaver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components.computervision.inference.html#module-components.computervision.inference.trtCalibINT8">components.computervision.inference.trtCalibINT8 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components.computervision.inference.html#module-components.computervision.inference.validate_onnx_conversion">components.computervision.inference.validate_onnx_conversion module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components.computervision.inference.html#module-components.computervision.inference">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
@@ -342,6 +357,93 @@ Perspective Shift and Normalize.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="module-components.computervision.benchmark">
+<span id="components-computervision-benchmark-module"></span><h2>components.computervision.benchmark module<a class="headerlink" href="#module-components.computervision.benchmark" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="components.computervision.benchmark.BenchmarkRunner">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.benchmark.</span></span><span class="sig-name descname"><span class="pre">BenchmarkRunner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_warm_iter</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_bench_iter</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'float16'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.benchmark.BenchmarkRunner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class which can be extended to inference or traning benchmark.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_dir</strong> (<em>str</em>) – path to folder containing <cite>params.json</cite> file</p></li>
+<li><p><strong>num_warm_iter</strong> (<em>int</em>) – number of iterations as warmup</p></li>
+<li><p><strong>num_bench_iter</strong> (<em>int</em>) – number of iterations to benchmark</p></li>
+<li><p><strong>precision</strong> (<em>str</em>) – precision to use for benchmarking [“float16”, “float32”, “bfloat16”]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="components.computervision.benchmark.InferenceBenchmarkRunner">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.benchmark.</span></span><span class="sig-name descname"><span class="pre">InferenceBenchmarkRunner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'float32'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.benchmark.InferenceBenchmarkRunner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#components.computervision.benchmark.BenchmarkRunner" title="components.computervision.benchmark.BenchmarkRunner"><code class="xref py py-class docutils literal notranslate"><span class="pre">components.computervision.benchmark.BenchmarkRunner</span></code></a></p>
+<p>Inference class extended from <a class="reference internal" href="#components.computervision.benchmark.BenchmarkRunner" title="components.computervision.benchmark.BenchmarkRunner"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkRunner</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_dir</strong> (<em>str</em>) – path to folder containing <cite>params.json</cite> file</p></li>
+<li><p><strong>precision</strong> (<em>str</em>) – precision to use for benchmarking [“float16”, “float32”, “bfloat16”]</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="components.computervision.benchmark.InferenceBenchmarkRunner.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.benchmark.InferenceBenchmarkRunner.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.benchmark.count_params">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.benchmark.</span></span><span class="sig-name descname"><span class="pre">count_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.nn.modules.module.Module</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.benchmark.count_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.benchmark.cuda_timestamp">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.benchmark.</span></span><span class="sig-name descname"><span class="pre">cuda_timestamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.benchmark.cuda_timestamp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.benchmark.resolve_precision">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.benchmark.</span></span><span class="sig-name descname"><span class="pre">resolve_precision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.benchmark.resolve_precision" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.benchmark.timestamp">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.benchmark.</span></span><span class="sig-name descname"><span class="pre">timestamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.benchmark.timestamp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-components.computervision.greenpixeldetection">
+<span id="components-computervision-greenpixeldetection-module"></span><h2>components.computervision.greenpixeldetection module<a class="headerlink" href="#module-components.computervision.greenpixeldetection" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.greenpixeldetection.greenpixeldetection">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.greenpixeldetection.</span></span><span class="sig-name descname"><span class="pre">greenpixeldetection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_weights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.greenpixeldetection.greenpixeldetection" title="Permalink to this definition">¶</a></dt>
+<dd><p>detect the green pixels in an image.</p>
+<p>Originally, there’s a library, PlantCV that does this using non neural network methods, 
+since PlantCV only runs on yhe CPU, we developed this as an alternative method that could run on the GPU</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pretrained_weights</strong> (<em>numpy ndarray</em>) – pretrained weight matrix</p></li>
+<li><p><strong>input_size</strong> (<em>tuple</em>) – image dimension tuple =&gt; (img_height, img_width, input_channel)</p></li>
+<li><p><strong>optimizer</strong> (<em>optimizer object</em>) – optimization strategy</p></li>
+<li><p><strong>loss</strong> (<em>loss object</em>) – loss function</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>compiled Keras model</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Keras model object</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
 <div class="section" id="module-components.computervision.image_features">
 <span id="components-computervision-image-features-module"></span><h2>components.computervision.image_features module<a class="headerlink" href="#module-components.computervision.image_features" title="Permalink to this headline">¶</a></h2>
 <p>OmdenaLore module containing useful functions on image processing and image features</p>
@@ -457,17 +559,246 @@ and returns array of retrieved features</p>
 </dd></dl>
 
 </div>
+<div class="section" id="module-components.computervision.loss_functions_semantic">
+<span id="components-computervision-loss-functions-semantic-module"></span><h2>components.computervision.loss_functions_semantic module<a class="headerlink" href="#module-components.computervision.loss_functions_semantic" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.loss_functions_semantic.class_tversky">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.loss_functions_semantic.</span></span><span class="sig-name descname"><span class="pre">class_tversky</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.loss_functions_semantic.class_tversky" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Tversky Class for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.loss_functions_semantic.confusion">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.loss_functions_semantic.</span></span><span class="sig-name descname"><span class="pre">confusion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.loss_functions_semantic.confusion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns confusion matrix for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.loss_functions_semantic.dice_coef">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.loss_functions_semantic.</span></span><span class="sig-name descname"><span class="pre">dice_coef</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.loss_functions_semantic.dice_coef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns dice coefficent for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.loss_functions_semantic.dice_coef_loss">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.loss_functions_semantic.</span></span><span class="sig-name descname"><span class="pre">dice_coef_loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.loss_functions_semantic.dice_coef_loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns dice_coef_loss for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.loss_functions_semantic.dice_loss">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.loss_functions_semantic.</span></span><span class="sig-name descname"><span class="pre">dice_loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.loss_functions_semantic.dice_loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns dice_loss for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.loss_functions_semantic.focal_tversky">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.loss_functions_semantic.</span></span><span class="sig-name descname"><span class="pre">focal_tversky</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.loss_functions_semantic.focal_tversky" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns focal Tversky loss for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.loss_functions_semantic.focal_tversky_loss">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.loss_functions_semantic.</span></span><span class="sig-name descname"><span class="pre">focal_tversky_loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.loss_functions_semantic.focal_tversky_loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns focal Tversky loss for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.loss_functions_semantic.generalized_dice_coefficient">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.loss_functions_semantic.</span></span><span class="sig-name descname"><span class="pre">generalized_dice_coefficient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.loss_functions_semantic.generalized_dice_coefficient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns generalized_dice_coefficient for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.loss_functions_semantic.log_cosh_dice_loss">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.loss_functions_semantic.</span></span><span class="sig-name descname"><span class="pre">log_cosh_dice_loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.loss_functions_semantic.log_cosh_dice_loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns log_cosh_dice loss for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.loss_functions_semantic.true_negative">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.loss_functions_semantic.</span></span><span class="sig-name descname"><span class="pre">true_negative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.loss_functions_semantic.true_negative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true negetive for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.loss_functions_semantic.true_positive">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.loss_functions_semantic.</span></span><span class="sig-name descname"><span class="pre">true_positive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.loss_functions_semantic.true_positive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True positives for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.loss_functions_semantic.tversky_index">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.loss_functions_semantic.</span></span><span class="sig-name descname"><span class="pre">tversky_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.loss_functions_semantic.tversky_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Tversky index for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.loss_functions_semantic.tversky_loss">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.loss_functions_semantic.</span></span><span class="sig-name descname"><span class="pre">tversky_loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.loss_functions_semantic.tversky_loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Tversky loss for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
 <div class="section" id="module-components.computervision.losses">
 <span id="components-computervision-losses-module"></span><h2>components.computervision.losses module<a class="headerlink" href="#module-components.computervision.losses" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="components.computervision.losses.LabelSmoothingCrossEntropy">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.losses.</span></span><span class="sig-name descname"><span class="pre">LabelSmoothingCrossEntropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.losses.LabelSmoothingCrossEntropy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.computervision.losses.</span></span><span class="sig-name descname"><span class="pre">LabelSmoothingCrossEntropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">smoothing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.losses.LabelSmoothingCrossEntropy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
 <p>NLL loss with label smoothing.
 Credits: timm library</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="components.computervision.losses.LabelSmoothingCrossEntropy.forward">
 <span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.losses.LabelSmoothingCrossEntropy.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="components.computervision.losses.LabelSmoothingCrossEntropy.training">
+<span class="sig-name descname"><span class="pre">training</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#components.computervision.losses.LabelSmoothingCrossEntropy.training" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -722,6 +1053,27 @@ Credits: timm library</p>
 <dd class="field-odd"><p>list</p>
 </dd>
 </dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-components.computervision.semanticsegmentation">
+<span id="components-computervision-semanticsegmentation-module"></span><h2>components.computervision.semanticsegmentation module<a class="headerlink" href="#module-components.computervision.semanticsegmentation" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="components.computervision.semanticsegmentation.semantic_segmentation">
+<span class="sig-prename descclassname"><span class="pre">components.computervision.semanticsegmentation.</span></span><span class="sig-name descname"><span class="pre">semantic_segmentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_weights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_classes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.semanticsegmentation.semantic_segmentation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a Semantic segmentation model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pretrained_weights</strong> (<em>numpy ndarray</em>) – pretrained weight matrix</p></li>
+<li><p><strong>input_size</strong> (<em>tuple</em>) – image dimension tuple =&gt; (img_height, img_width, input_channel)</p></li>
+<li><p><strong>optimizer</strong> (<em>optimizer object</em>) – optimization strategy</p></li>
+<li><p><strong>num_classes</strong> (<em>int</em>) – number of target classes</p></li>
+</ul>
+</dd>
+</dl>
+<p>:returns compiled Keras model
+:rtype: Keras model object</p>
 </dd></dl>
 
 </div>
@@ -1012,8 +1364,8 @@ Each key contains list of scores for every epoch.</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="components.datasets.html" class="btn btn-neutral float-right" title="components.datasets package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="components.cloud.html" class="btn btn-neutral float-left" title="components.cloud package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="components.computervision.inference.html" class="btn btn-neutral float-right" title="components.computervision.inference package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="components.html" class="btn btn-neutral float-left" title="components package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

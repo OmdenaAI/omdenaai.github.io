@@ -1,0 +1,21 @@
+components.nlp.Webscraping package
+==================================
+
+Submodules
+----------
+
+components.nlp.Webscraping.webscraping module
+---------------------------------------------
+
+.. automodule:: components.nlp.Webscraping.webscraping
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: components.nlp.Webscraping
+   :members:
+   :undoc-members:
+   :show-inheritance:

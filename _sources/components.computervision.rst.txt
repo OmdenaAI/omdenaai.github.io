@@ -1,6 +1,14 @@
 components.computervision package
 =================================
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   components.computervision.inference
+
 Submodules
 ----------
 
@@ -20,10 +28,34 @@ components.computervision.aug module
    :undoc-members:
    :show-inheritance:
 
+components.computervision.benchmark module
+------------------------------------------
+
+.. automodule:: components.computervision.benchmark
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+components.computervision.greenpixeldetection module
+----------------------------------------------------
+
+.. automodule:: components.computervision.greenpixeldetection
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 components.computervision.image\_features module
 ------------------------------------------------
 
 .. automodule:: components.computervision.image_features
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+components.computervision.loss\_functions\_semantic module
+----------------------------------------------------------
+
+.. automodule:: components.computervision.loss_functions_semantic
    :members:
    :undoc-members:
    :show-inheritance:
@@ -48,6 +80,14 @@ components.computervision.object\_detection module
 --------------------------------------------------
 
 .. automodule:: components.computervision.object_detection
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+components.computervision.semanticsegmentation module
+-----------------------------------------------------
+
+.. automodule:: components.computervision.semanticsegmentation
    :members:
    :undoc-members:
    :show-inheritance:

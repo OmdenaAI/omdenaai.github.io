@@ -1,8 +1,40 @@
 components.nlp package
 ======================
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   components.nlp.Webscraping
+
 Submodules
 ----------
+
+components.nlp.models module
+----------------------------
+
+.. automodule:: components.nlp.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+components.nlp.ner module
+-------------------------
+
+.. automodule:: components.nlp.ner
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+components.nlp.postprocess\_text module
+---------------------------------------
+
+.. automodule:: components.nlp.postprocess_text
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 components.nlp.preprocess\_text module
 --------------------------------------
@@ -11,8 +43,14 @@ components.nlp.preprocess\_text module
    :members:
    :undoc-members:
    :show-inheritance:
-   :special-members:
-   :exclude-members: __dict__,__weakref__, __module__
+
+components.nlp.twitter module
+-----------------------------
+
+.. automodule:: components.nlp.twitter
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 components.nlp.utils module
 ---------------------------
