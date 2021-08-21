@@ -42,7 +42,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Knowledge base" href="knowledge.html" />
-    <link rel="prev" title="components.remote_sensing package" href="components.remote_sensing.html" /> 
+    <link rel="prev" title="components.nlp.Webscraping package" href="components.nlp.Webscraping.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,11 +92,9 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">components</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="components.html">components package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="components.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="components.cloud.html">components.cloud package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="components.computervision.html">components.computervision package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="components.datasets.html">components.datasets package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="components.nlp.html">components.nlp package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="components.remote_sensing.html">components.remote_sensing package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">components.satellite_imagery package</a></li>
 </ul>
 </li>
@@ -204,6 +202,53 @@
 </dd></dl>
 
 </div>
+<div class="section" id="module-components.satellite_imagery.geom_to_json">
+<span id="components-satellite-imagery-geom-to-json-module"></span><h2>components.satellite_imagery.geom_to_json module<a class="headerlink" href="#module-components.satellite_imagery.geom_to_json" title="Permalink to this headline">¶</a></h2>
+<p>geom_to_json.py
+Converts a geometry, whether a shapefile or something else, into a JSON 
+construct.  This format is required by Google Earth Engine (GEE) for further 
+operation such as extracting a raster from satellite images.
+<a class="reference external" href="https://developers.google.com/earth-engine/guides/table_upload">https://developers.google.com/earth-engine/guides/table_upload</a></p>
+<p>This is a commen method of extracting datasets because it covers a certain 
+range of time rather than a single event. The geometry bounds this collection 
+to create a final raster that only contains attributes for the area of intereset 
+(AOI). Because it uses GEE, the type has to be converted to JSON.
+<a class="reference external" href="https://developers.google.com/earth-engine/tutorials/tutorial_api_04">https://developers.google.com/earth-engine/tutorials/tutorial_api_04</a></p>
+<p>NOTE ABOUT Google Earth Engine:
+This code assumes the user has the authorization and authentication to use GEE.
+<a class="reference external" href="https://developers.google.com/earth-engine/guides/python_install">https://developers.google.com/earth-engine/guides/python_install</a></p>
+<p>The code below is an extension from this Q&amp;A link (original code):
+<a class="reference external" href="https://gis.stackexchange.com/questions/333791/accessing-a-shapefile-with-googleearthengine-api-invalid-geojson-geometry/334400#334400">https://gis.stackexchange.com/questions/333791/accessing-a-shapefile-with-googleearthengine-api-invalid-geojson-geometry/334400#334400</a></p>
+<p>And syntax explanation from geopandas:
+<a class="reference external" href="https://geopandas.org/gallery/polygon_plotting_with_folium.html?highlight=to_json">https://geopandas.org/gallery/polygon_plotting_with_folium.html?highlight=to_json</a></p>
+<dl class="simple">
+<dt>Libraries:</dt><dd><p>Pandas
+Geopandas
+Google Earth Engine</p>
+</dd>
+<dt>API Calls:</dt><dd><p>gpd.GeoSeries()
+[gpd].to_json()
+ee.FeatureCollection()
+ee.Feature()</p>
+</dd>
+<dt>External Dependency:</dt><dd><p>None</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="components.satellite_imagery.geom_to_json.geom_to_json">
+<span class="sig-prename descclassname"><span class="pre">components.satellite_imagery.geom_to_json.</span></span><span class="sig-name descname"><span class="pre">geom_to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">ee.geometry.Geometry</span><a class="headerlink" href="#components.satellite_imagery.geom_to_json.geom_to_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts shapefile or any geometry input into JSON format for GEE.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>df:     panda dataframe containing shapefile contents
+i:      integer value indicating which row in the dataframe to process</p>
+</dd>
+<dt>Returns:</dt><dd><p>region: the JSON string
+admin:  label for the section of the geometry, useful for file associations or names</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
 <div class="section" id="module-components.satellite_imagery.preprocess_tiff">
 <span id="components-satellite-imagery-preprocess-tiff-module"></span><h2>components.satellite_imagery.preprocess_tiff module<a class="headerlink" href="#module-components.satellite_imagery.preprocess_tiff" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
@@ -236,6 +281,44 @@ visualising and storing in memory compared to having a single large
 image</p>
 </dd></dl>
 
+</dd></dl>
+
+</div>
+<div class="section" id="module-components.satellite_imagery.raster_summary">
+<span id="components-satellite-imagery-raster-summary-module"></span><h2>components.satellite_imagery.raster_summary module<a class="headerlink" href="#module-components.satellite_imagery.raster_summary" title="Permalink to this headline">¶</a></h2>
+<p>raster_summary.py
+Provides a summary of the raster metadata and plot the image.  
+User ensures the raster file path is known and pass into this function.
+Note the naming scheme, ‘.tif’ is the common type when raster is originally created.</p>
+<p><a class="reference external" href="https://rasterio.readthedocs.io/en/latest/topics/reading.html">https://rasterio.readthedocs.io/en/latest/topics/reading.html</a></p>
+<p>This function opens the file for reading then calls the close() method to end
+the process.  If this function gets called many times, this could slow down
+the process.  Remove the close() at the end or redesign the code to avoid
+process slowdown.</p>
+<dl class="simple">
+<dt>Libraries:</dt><dd><p>OS
+Pprint
+Rasterio</p>
+</dd>
+<dt>API Calls:</dt><dd><p>os.path.join()
+rasterio.open()
+pprint()
+show()</p>
+</dd>
+<dt>External Dependency:</dt><dd><p>None</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="components.satellite_imagery.raster_summary.raster_summary">
+<span class="sig-prename descclassname"><span class="pre">components.satellite_imagery.raster_summary.</span></span><span class="sig-name descname"><span class="pre">raster_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raster_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raster_file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.satellite_imagery.raster_summary.raster_summary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a raster file and outputs the metadata and image.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>raster_dir:     dir path location of the raster file
+raster_file:    raster file name</p>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -325,7 +408,7 @@ This is necessary as corner buildings will not be detected by countour detection
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="knowledge.html" class="btn btn-neutral float-right" title="Knowledge base" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="components.remote_sensing.html" class="btn btn-neutral float-left" title="components.remote_sensing package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="components.nlp.Webscraping.html" class="btn btn-neutral float-left" title="components.nlp.Webscraping package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

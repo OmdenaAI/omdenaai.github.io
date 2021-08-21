@@ -41,7 +41,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="components.remote_sensing package" href="components.remote_sensing.html" />
+    <link rel="next" title="components.nlp.Webscraping package" href="components.nlp.Webscraping.html" />
     <link rel="prev" title="components.datasets package" href="components.datasets.html" /> 
 </head>
 
@@ -92,11 +92,9 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">components</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="components.html">components package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="components.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="components.cloud.html">components.cloud package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="components.computervision.html">components.computervision package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="components.datasets.html">components.datasets package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">components.nlp package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="components.remote_sensing.html">components.remote_sensing package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="components.satellite_imagery.html">components.satellite_imagery package</a></li>
 </ul>
 </li>
@@ -184,8 +182,353 @@
             
   <div class="section" id="components-nlp-package">
 <h1>components.nlp package<a class="headerlink" href="#components-nlp-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="components.nlp.Webscraping.html">components.nlp.Webscraping package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="components.nlp.Webscraping.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components.nlp.Webscraping.html#module-components.nlp.Webscraping.webscraping">components.nlp.Webscraping.webscraping module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components.nlp.Webscraping.html#module-components.nlp.Webscraping">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-components.nlp.models">
+<span id="components-nlp-models-module"></span><h2>components.nlp.models module<a class="headerlink" href="#module-components.nlp.models" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.models.multiclass_classification">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.models.</span></span><span class="sig-name descname"><span class="pre">multiclass_classification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eval_set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eval_labels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.models.multiclass_classification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Train and evaluate a multilabel classification model.
+:param model_type: One of the model types from the supported models, <a class="reference external" href="https://simpletransformers.ai/docs/classification-specifics/#supported-model-types">https://simpletransformers.ai/docs/classification-specifics/#supported-model-types</a>
+:param model_type: str
+:param model_name: Name of the model to use. Find it on the official simpletransformer documentation, <a class="reference external" href="https://huggingface.co/transformers/pretrained_models.html">https://huggingface.co/transformers/pretrained_models.html</a>
+:type model_name: str
+:param epochs: Number of epochs to train.
+:type epochs: int
+:param train_set: Training set.
+:type train_set: List[str]
+:param train_labels: Training labels.
+:type train_labels: List[int]
+:param eval_set: Evaluation set.
+:type eval_set: List[str]
+:param eval_labels: Evaluation labels.
+:type eval_labels: List[int]
+:returns:</p>
+<blockquote>
+<div><p>model: fine-tuned simpletransformers model
+results: dict: ex: {“mcc”: 0.98, “eval_loss”: 0.15}
+mcc is Matthews correlation coefficient (<a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.matthews_corrcoef.html">https://scikit-learn.org/stable/modules/generated/sklearn.metrics.matthews_corrcoef.html</a>)</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.models.multilabel_classification">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.models.</span></span><span class="sig-name descname"><span class="pre">multilabel_classification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eval_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eval_set</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.models.multilabel_classification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Train and evaluate a multilabel classification model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_type</strong> – One of the model types from the supported models, <a class="reference external" href="https://simpletransformers.ai/docs/classification-specifics/#supported-model-types">https://simpletransformers.ai/docs/classification-specifics/#supported-model-types</a></p></li>
+<li><p><strong>model_type</strong> – str</p></li>
+<li><p><strong>model_name</strong> (<em>str</em>) – Name of the model to use. Find it on the official simpletransformer documentation, <a class="reference external" href="https://huggingface.co/transformers/pretrained_models.html">https://huggingface.co/transformers/pretrained_models.html</a></p></li>
+<li><p><strong>model_params</strong> (<em>dict</em>) – Model parameters.</p></li>
+<li><p><strong>train_params</strong> (<em>dict</em>) – Training parameters.</p></li>
+<li><p><strong>eval_params</strong> (<em>dict</em>) – Evaluation parameters.</p></li>
+<li><p><strong>train_set</strong> (<em>pandas.DataFrame</em>) – Training set.</p></li>
+<li><p><strong>eval_set</strong> (<em>pandas.DataFrame</em>) – Evaluation set.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>model: fine-tuned simpletransformers model
+results: dict: ex: {“LRAP”: 0.98, “eval_loss”: 0.15}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.models.voting_classifier">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.models.</span></span><span class="sig-name descname"><span class="pre">voting_classifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features_train</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features_test</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lgbm_params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf_params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xgb_params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catboost_params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">sklearn.VotingClassifier</span><a class="headerlink" href="#components.nlp.models.voting_classifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Train a voting classifier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>features_train</strong> (<em>numpy.ndarray</em>) – Training features.</p></li>
+<li><p><strong>labels_train</strong> (<em>List</em>) – Training labels.</p></li>
+<li><p><strong>features_test</strong> (<em>numpy.ndarray</em>) – Testing features.</p></li>
+<li><p><strong>lgbm_params</strong> (<em>dict</em>) – Parameters for lightgbm.</p></li>
+<li><p><strong>rf_params</strong> (<em>dict</em>) – Parameters for sklearn.ensemble.RandomForestClassifier.</p></li>
+<li><p><strong>xgb_params</strong> (<em>dict</em>) – Parameters for xgboost.</p></li>
+<li><p><strong>catboost_params</strong> (<em>dict</em>) – Parameters for catboost.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>model: fine-tuned voting classifier model</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-components.nlp.ner">
+<span id="components-nlp-ner-module"></span><h2>components.nlp.ner module<a class="headerlink" href="#module-components.nlp.ner" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="components.nlp.ner.TaggedCorpus">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.nlp.ner.</span></span><span class="sig-name descname"><span class="pre">TaggedCorpus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotations</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">spacy.tokenizer.Tokenizer</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.ner.TaggedCorpus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.ner.TaggedCorpus.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#components.nlp.ner.TaggedCorpus.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the entities in a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Dictionary with token sequences (ex: {entity_1: [ENT1, …], entity_2: [ENT2, …], …})</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.ner.TaggedCorpus.to_doc">
+<span class="sig-name descname"><span class="pre">to_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">spacy.tokens.Doc</span><a class="headerlink" href="#components.nlp.ner.TaggedCorpus.to_doc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the entities in an annotated spaCy document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>entity</strong> (<em>str</em>) – Optional parameter - if set, return document annotated with only selected entity</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SpaCy document annotated with entities</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.ner.TaggedCorpus.to_iob_list">
+<span class="sig-name descname"><span class="pre">to_iob_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#components.nlp.ner.TaggedCorpus.to_iob_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the entities in a list of entities (IOB format).
+:param entity: Optional parameter - if set, return document annotated with only selected entity
+:type entity: str
+:return: List of strings where each string represents the entity associated with the token</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.ner.TaggedCorpus.to_multi_iob_list">
+<span class="sig-name descname"><span class="pre">to_multi_iob_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#components.nlp.ner.TaggedCorpus.to_multi_iob_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all the entities in a list of entities (IOB format).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of tuples where each tuple contains one element for each entity present in the document</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.ner.TaggedCorpus.to_token_char_spans">
+<span class="sig-name descname"><span class="pre">to_token_char_spans</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#components.nlp.ner.TaggedCorpus.to_token_char_spans" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the character spans for each token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of character spans</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.ner.TaggedCorpus.to_tokens">
+<span class="sig-name descname"><span class="pre">to_tokens</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#components.nlp.ner.TaggedCorpus.to_tokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the token list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of tokens</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.ner.create_blank_nlp">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.ner.</span></span><span class="sig-name descname"><span class="pre">create_blank_nlp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">spacy.Language</span><a class="headerlink" href="#components.nlp.ner.create_blank_nlp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a blank NLP model for training</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>train_data</strong> (<em>pd.Series</em>) – Dataframe of training data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Spacy model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.ner.doc2ents">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.ner.</span></span><span class="sig-name descname"><span class="pre">doc2ents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">spacy.tokens.Doc</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#components.nlp.ner.doc2ents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take a spaCy <cite>Doc</cite> and return a list of IOB token-based entities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>doc</strong> (<em>spacy.tokens.Doc</em>) – Spacy document</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of entity strings</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.ner.generate_examples">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.ner.</span></span><span class="sig-name descname"><span class="pre">generate_examples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texts</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_offsets</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nlp</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">spacy.language.Language</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">spacy.training.Example</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#components.nlp.ner.generate_examples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate spacy <cite>Example</cite> objects for training</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>texts</strong> (<em>Iterable</em><em>[</em><em>str</em><em>]</em>) – List of texts to generate examples from</p></li>
+<li><p><strong>entity_offsets</strong> (<em>Iterable</em><em>[</em><em>Annotations</em><em>]</em>) – List of annotations for each text</p></li>
+<li><p><strong>nlp</strong> (<em>spacy.language.Language</em>) – Spacy model</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of spacy <cite>Example</cite> objects</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.ner.get_entities">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.ner.</span></span><span class="sig-name descname"><span class="pre">get_entities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#components.nlp.ner.get_entities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process annotations to get in the format of (start, stop, label)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>str</strong> (<em>str</em>) – String of annotations</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of tuples of the form (start, stop, label)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.ner.rm_colliding">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.ner.</span></span><span class="sig-name descname"><span class="pre">rm_colliding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#components.nlp.ner.rm_colliding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove any overlapping annotations (one token cannot have two entities)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>List</em><em>[</em><em>Tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>str</em><em>]</em><em>]</em>) – List of annotations</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of annotations with no overlapping annotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.ner.rm_groups">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.ner.</span></span><span class="sig-name descname"><span class="pre">rm_groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#components.nlp.ner.rm_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the group number info - ie: <cite>g2_response_rate</cite> becomes <cite>response_rate</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>a</strong> (<em>Annotations</em>) – Annotations</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Annotations with group number removed</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-components.nlp.postprocess_text">
+<span id="components-nlp-postprocess-text-module"></span><h2>components.nlp.postprocess_text module<a class="headerlink" href="#module-components.nlp.postprocess_text" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.postprocess_text.adjust_tags">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.postprocess_text.</span></span><span class="sig-name descname"><span class="pre">adjust_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tags</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag_set</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">512</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#components.nlp.postprocess_text.adjust_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keep only tags that were used in training and get all list of tokens to the same length.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tags</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – List of tags</p></li>
+<li><p><strong>tag_set</strong> (<em>Set</em><em>[</em><em>str</em><em>]</em>) – Set of tags to keep</p></li>
+<li><p><strong>length</strong> – Length of tokens to keep</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of tags</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.postprocess_text.df2jsonl">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.postprocess_text.</span></span><span class="sig-name descname"><span class="pre">df2jsonl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pmid</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'pmid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'text'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'start'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'stop'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'entity'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'entity_text'</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#components.nlp.postprocess_text.df2jsonl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the output format JSONL from a pandas dataframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) – Dataframe with entity information</p></li>
+<li><p><strong>path</strong> (<em>str</em>) – Destination file path (if None will return a string with equivalent JSONL</p></li>
+<li><p><strong>pmid</strong> (<em>str</em>) – Column name for PMID column</p></li>
+<li><p><strong>text</strong> (<em>str</em>) – Column name for text column</p></li>
+<li><p><strong>start</strong> (<em>str</em>) – Column name for start column</p></li>
+<li><p><strong>stop</strong> (<em>str</em>) – Column name for stop column</p></li>
+<li><p><strong>entity</strong> (<em>str</em>) – Column name for entity column</p></li>
+<li><p><strong>entity_text</strong> (<em>str</em>) – Column name for entity_text column</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None if path is provided (file is written to disk), JSONL string if path is None</p>
+</dd>
+</dl>
+<p>Output JSONL file has the shape <cite>{id:pmid, text: &lt;abstract&gt;, predictions: [{start: x, end: y, entity:x}, …]}</cite></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.postprocess_text.doc2df">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.postprocess_text.</span></span><span class="sig-name descname"><span class="pre">doc2df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">spacy.tokens.Doc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regex_pmid</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'PMID:</span> <span class="pre">(\\d+)'</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">pandas.core.frame.DataFrame</span><a class="headerlink" href="#components.nlp.postprocess_text.doc2df" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a dataframe from SpaCy <cite>Doc</cite> objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>doc</strong> (<em>spacy.tokens.Doc</em>) – A single spaCy <cite>Doc</cite> object with annotations (entities)</p></li>
+<li><p><strong>regex_pmid</strong> (<em>str</em>) – Raw string with regex to get the PMID numbers from text (defaults to <cite>r”PMID: (d+)”</cite></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pandas dataframe with columns [<cite>pmid</cite>,`text`,`start`,`stop`,`entity`,`entity_text`]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.postprocess_text.doc2df_wide">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.postprocess_text.</span></span><span class="sig-name descname"><span class="pre">doc2df_wide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">spacy.tokens.Doc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regex_pmid</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'PMID:</span> <span class="pre">(\\d+)'</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">pandas.core.frame.DataFrame</span><a class="headerlink" href="#components.nlp.postprocess_text.doc2df_wide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a wide dataframe from SpaCy <cite>Doc</cite> objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>doc</strong> (<em>spacy.tokens.Doc</em>) – A single spaCy <cite>Doc</cite> object with annotations (entities)</p></li>
+<li><p><strong>regex_pmid</strong> (<em>str</em>) – Raw string with regex to get the PMID numbers from text (defaults to <cite>r”PMID: (d+)”</cite></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pandas dataframe with one column for each {<cite>start</cite>,`stop`,`entity_text`} in entity</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.postprocess_text.list2iob">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.postprocess_text.</span></span><span class="sig-name descname"><span class="pre">list2iob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tags</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#components.nlp.postprocess_text.list2iob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Go from a list of strings to IOB list of tags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tags</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – List of tags</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of IOB tags</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 <div class="section" id="module-components.nlp.preprocess_text">
 <span id="components-nlp-preprocess-text-module"></span><h2>components.nlp.preprocess_text module<a class="headerlink" href="#module-components.nlp.preprocess_text" title="Permalink to this headline">¶</a></h2>
@@ -224,63 +567,6 @@
 </div>
 <p>Sample: [‘my name is $Yudhiesh’, ‘that house is far AWAY’, ‘the placement &#64;RT’]</p>
 <p>Cleaned: [‘yudhiesh’, ‘house far away’, ‘placement  rt’]</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="components.nlp.preprocess_text.TextPreprocessor.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos_tags_removal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacy_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_numbers</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_special_chars</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_stopwords</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lemmatize</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#components.nlp.preprocess_text.TextPreprocessor.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">param pos_tags_removal</dt>
-<dd class="field-odd"><p>list of PoS tags to remove</p>
-</dd>
-<dt class="field-even">type pos_tags_removal</dt>
-<dd class="field-even"><p>List[str]</p>
-</dd>
-<dt class="field-odd">param spacy_model</dt>
-<dd class="field-odd"><p>spaCy model to be used, default is en_core_web_sm</p>
-</dd>
-<dt class="field-even">param remove_numbers</dt>
-<dd class="field-even"><p>whether or not to remove numbers from the inputs</p>
-</dd>
-<dt class="field-odd">type remove_numbers</dt>
-<dd class="field-odd"><p>bool</p>
-</dd>
-<dt class="field-even">param remove_special_chars</dt>
-<dd class="field-even"><p>whether or not to remove the special</p>
-</dd>
-</dl>
-<p>characters
-:type remove_special_chars: bool
-:param remove_stopwords: whether or not to remove stopwords
-:type remove_stopwords: bool
-:param lemmatize: whether or not to lemmatize the inputs
-:type lemmatize: bool</p>
-<dl class="field-list simple">
-<dt class="field-odd">Example</dt>
-<dd class="field-odd"><p></p></dd>
-</dl>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">TextPreprocessor</span><span class="o">.</span><span class="n">load_model</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">preprocessor</span> <span class="o">=</span> <span class="n">TextPreprocessor</span><span class="p">(</span><span class="n">spacy_model</span><span class="o">=</span><span class="n">model</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">sample</span> <span class="o">=</span> <span class="s2">&quot;Hello wROld! I hAvE $400 Dollars in my checking account and I am sleeping&quot;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">clean</span> <span class="o">=</span> <span class="n">preprocessor</span><span class="o">.</span><span class="n">preprocess_text</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sample: </span><span class="si">{</span><span class="n">sample</span><span class="si">}</span>
-</pre></div>
-</div>
-</div></blockquote>
-<dl>
-<dt>Cleaned: {clean}”)</dt><dd><p>Sample: Hello wROld! I hAvE $400 Dollars in my checking account and I am sleeping
-Cleaned: hello wrold dollar checking account sleep</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;my name is $Yudhiesh&quot;</span><span class="p">,</span> <span class="s2">&quot;that house is far AWAY&quot;</span><span class="p">,</span> <span class="s2">&quot;the placement @RT&quot;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">cleaned_list</span> <span class="o">=</span> <span class="n">preprocessor</span><span class="o">.</span><span class="n">preprocess_text_lists</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sample: </span><span class="si">{</span><span class="n">my_list</span><span class="si">}</span>
-</pre></div>
-</div>
-</dd>
-<dt>Cleaned: {cleaned_list}”)</dt><dd><p>Sample: [‘my name is $Yudhiesh’, ‘that house is far AWAY’, ‘the placement &#64;RT’]
-Cleaned: [‘yudhiesh’, ‘house far away’, ‘placement  rt’]</p>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="components.nlp.preprocess_text.TextPreprocessor.download_spacy_model">
 <em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">download_spacy_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'en_core_web_sm'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.preprocess_text.TextPreprocessor.download_spacy_model" title="Permalink to this definition">¶</a></dt>
@@ -324,6 +610,123 @@ Cleaned: [‘yudhiesh’, ‘house far away’, ‘placement  rt’]</p>
 </dd></dl>
 
 </div>
+<div class="section" id="module-components.nlp.twitter">
+<span id="components-nlp-twitter-module"></span><h2>components.nlp.twitter module<a class="headerlink" href="#module-components.nlp.twitter" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="components.nlp.twitter.TwitterClient">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">components.nlp.twitter.</span></span><span class="sig-name descname"><span class="pre">TwitterClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tweets</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_to_read</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_words</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'en'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nlp</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">spacy.language.Language</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ngrams</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.twitter.TwitterClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Process and gain relevant information from tweets</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.twitter.TwitterClient.build_graph">
+<span class="sig-name descname"><span class="pre">build_graph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.twitter.TwitterClient.build_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build graph with networkx</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>graph</p>
+</dd>
+<dt class="field-even">Returntype</dt>
+<dd class="field-even"><p>networkx.nx.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.twitter.TwitterClient.clean_data">
+<span class="sig-name descname"><span class="pre">clean_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tweets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.twitter.TwitterClient.clean_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clean the tweets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tweets</strong> (<em>list</em>) – list of tweets</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of cleaned tweets</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.twitter.TwitterClient.compute_edge_weights">
+<span class="sig-name descname"><span class="pre">compute_edge_weights</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.twitter.TwitterClient.compute_edge_weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute edge weights for cooccurrences</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>edge weights</p>
+</dd>
+<dt class="field-even">Returntype</dt>
+<dd class="field-even"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.twitter.TwitterClient.dateExtractor">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">dateExtractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.twitter.TwitterClient.dateExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the date from a string</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>str</em>) – date string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>datetime.date2</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.twitter.TwitterClient.draw_graph">
+<span class="sig-name descname"><span class="pre">draw_graph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.twitter.TwitterClient.draw_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Visualize the graph</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.twitter.TwitterClient.find_cooccurrences">
+<span class="sig-name descname"><span class="pre">find_cooccurrences</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_words</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.twitter.TwitterClient.find_cooccurrences" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find cooccurrences of words in tweets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>query_words</strong> (<em>list</em>) – list of words to find cooccurrences</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>cooccurrences</p>
+</dd>
+<dt class="field-odd">Returntype</dt>
+<dd class="field-odd"><p>defaultdict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.twitter.TwitterClient.make_adjacency_list">
+<span class="sig-name descname"><span class="pre">make_adjacency_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.twitter.TwitterClient.make_adjacency_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make adjacency list with edge weights</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>adjacency list</p>
+</dd>
+<dt class="field-even">Returntype</dt>
+<dd class="field-even"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="components.nlp.twitter.TwitterClient.read_file">
+<span class="sig-name descname"><span class="pre">read_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.twitter.TwitterClient.read_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a file and return a list of tweets</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – file to read</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of tweets</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="section" id="module-components.nlp.utils">
 <span id="components-nlp-utils-module"></span><h2>components.nlp.utils module<a class="headerlink" href="#module-components.nlp.utils" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
@@ -347,6 +750,23 @@ default noise_list = [“is”, “a”, “this”, “the” , “an”]</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.utils.remove_hashtags">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.utils.</span></span><span class="sig-name descname"><span class="pre">remove_hashtags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.utils.remove_hashtags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removing hastags from the input text
+:param text: Input text to remove hastags from
+:type input_text: str
+:returns: output text without hastags</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">remove_hashtags</span><span class="p">(</span><span class="s2">&quot;I love #hashtags&quot;</span><span class="p">)</span>
+<span class="go">&quot;I love &quot;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="components.nlp.utils.remove_regex_pattern">
 <span class="sig-prename descclassname"><span class="pre">components.nlp.utils.</span></span><span class="sig-name descname"><span class="pre">remove_regex_pattern</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regex_pattern</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.utils.remove_regex_pattern" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove any regular expressions from the input text</p>
@@ -366,6 +786,23 @@ default noise_list = [“is”, “a”, “this”, “the” , “an”]</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">regex_pattern</span> <span class="o">=</span> <span class="s2">&quot;#[\w]*&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">remove_regex_pattern</span><span class="p">(</span><span class="s2">&quot;remove this #hastag&quot;</span> <span class="p">,</span> <span class="n">regex_pattern</span><span class="p">)</span>
 <span class="go">&quot;remove this  hastag&quot;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="components.nlp.utils.remove_url">
+<span class="sig-prename descclassname"><span class="pre">components.nlp.utils.</span></span><span class="sig-name descname"><span class="pre">remove_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.nlp.utils.remove_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removing urls from the input text
+:param text: Input text to remove urls from
+:type input_text: str
+:returns: text with standard words</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">remove_urls</span><span class="p">(</span><span class="s1">&#39;I like urls http://www.google.com&#39;</span><span class="p">)</span>
+<span class="go">&#39;I like urls &#39;</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -408,7 +845,7 @@ These pieces are not recognized by search engines and models.</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="components.remote_sensing.html" class="btn btn-neutral float-right" title="components.remote_sensing package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="components.nlp.Webscraping.html" class="btn btn-neutral float-right" title="components.nlp.Webscraping package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="components.datasets.html" class="btn btn-neutral float-left" title="components.datasets package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
