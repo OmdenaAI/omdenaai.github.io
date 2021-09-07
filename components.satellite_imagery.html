@@ -205,13 +205,13 @@
 <div class="section" id="module-components.satellite_imagery.geom_to_json">
 <span id="components-satellite-imagery-geom-to-json-module"></span><h2>components.satellite_imagery.geom_to_json module<a class="headerlink" href="#module-components.satellite_imagery.geom_to_json" title="Permalink to this headline">¶</a></h2>
 <p>geom_to_json.py
-Converts a geometry, whether a shapefile or something else, into a JSON 
-construct.  This format is required by Google Earth Engine (GEE) for further 
+Converts a geometry, whether a shapefile or something else, into a JSON
+construct.  This format is required by Google Earth Engine (GEE) for further
 operation such as extracting a raster from satellite images.
 <a class="reference external" href="https://developers.google.com/earth-engine/guides/table_upload">https://developers.google.com/earth-engine/guides/table_upload</a></p>
-<p>This is a commen method of extracting datasets because it covers a certain 
-range of time rather than a single event. The geometry bounds this collection 
-to create a final raster that only contains attributes for the area of intereset 
+<p>This is a commen method of extracting datasets because it covers a certain
+range of time rather than a single event. The geometry bounds this collection
+to create a final raster that only contains attributes for the area of intereset
 (AOI). Because it uses GEE, the type has to be converted to JSON.
 <a class="reference external" href="https://developers.google.com/earth-engine/tutorials/tutorial_api_04">https://developers.google.com/earth-engine/tutorials/tutorial_api_04</a></p>
 <p>NOTE ABOUT Google Earth Engine:
@@ -239,11 +239,11 @@ ee.Feature()</p>
 <span class="sig-prename descclassname"><span class="pre">components.satellite_imagery.geom_to_json.</span></span><span class="sig-name descname"><span class="pre">geom_to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">ee.geometry.Geometry</span><a class="headerlink" href="#components.satellite_imagery.geom_to_json.geom_to_json" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts shapefile or any geometry input into JSON format for GEE.</p>
 <dl class="simple">
-<dt>Args:</dt><dd><p>df:     panda dataframe containing shapefile contents
-i:      integer value indicating which row in the dataframe to process</p>
+<dt>Args:</dt><dd><p>df: panda dataframe containing shapefile contents
+i:  integer value indicating which row in the dataframe to process</p>
 </dd>
-<dt>Returns:</dt><dd><p>region: the JSON string
-admin:  label for the section of the geometry, useful for file associations or names</p>
+<dt>Returns:</dt><dd><p>region:     the JSON string
+admin:      label for the section of the geometry, useful for file associations or names</p>
 </dd>
 </dl>
 </dd></dl>
@@ -287,7 +287,7 @@ image</p>
 <div class="section" id="module-components.satellite_imagery.raster_summary">
 <span id="components-satellite-imagery-raster-summary-module"></span><h2>components.satellite_imagery.raster_summary module<a class="headerlink" href="#module-components.satellite_imagery.raster_summary" title="Permalink to this headline">¶</a></h2>
 <p>raster_summary.py
-Provides a summary of the raster metadata and plot the image.  
+Provides a summary of the raster metadata and plot the image.
 User ensures the raster file path is known and pass into this function.
 Note the naming scheme, ‘.tif’ is the common type when raster is originally created.</p>
 <p><a class="reference external" href="https://rasterio.readthedocs.io/en/latest/topics/reading.html">https://rasterio.readthedocs.io/en/latest/topics/reading.html</a></p>
@@ -313,8 +313,8 @@ show()</p>
 <span class="sig-prename descclassname"><span class="pre">components.satellite_imagery.raster_summary.</span></span><span class="sig-name descname"><span class="pre">raster_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raster_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raster_file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.satellite_imagery.raster_summary.raster_summary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads a raster file and outputs the metadata and image.</p>
 <dl class="simple">
-<dt>Args:</dt><dd><p>raster_dir:     dir path location of the raster file
-raster_file:    raster file name</p>
+<dt>Args:</dt><dd><p>raster_dir: dir path location of the raster file
+raster_file:        raster file name</p>
 </dd>
 <dt>Returns:</dt><dd><p>None</p>
 </dd>

@@ -41,7 +41,7 @@ Articles & Tutorials
 
 `Data Science and Satellite Imagery	<https://towardsdatascience.com/data-science-and-satellite-imagery-985229e1cd2f>`_
 
-`Satellite imagery analysis with Python	<https://medium.com/analytics-vidhya/satellite-imagery-analysis-with-python-3f8ccf8a7c32>`_ 
+`Satellite imagery analysis with Python	<https://medium.com/analytics-vidhya/satellite-imagery-analysis-with-python-3f8ccf8a7c32>`_
 
 `Precise Delineation of Small Water Bodies from Sentinel-1 Data using Support Vector Machine Classification	<https://www.tandfonline.com/doi/full/10.1080/07038992.2018.1478723?scroll=top&needAccess=true>`_
 

@@ -18,8 +18,8 @@ Why did you submit this PR? What are its benefits? - Use Issue Description as in
 
 ### Issue This PR Closes
 
-> This will link the PR to the relevant issue so merging the PR with automatically close the issue. Also, it helps others discover which issues have open PRs. **Note**: Don't change any of the wording in the line below or it won't work. (Remove this quote line once you have linked a PR to an issue.  
+> This will link the PR to the relevant issue so merging the PR with automatically close the issue. Also, it helps others discover which issues have open PRs. **Note**: Don't change any of the wording in the line below or it won't work. (Remove this quote line once you have linked a PR to an issue.
 
 This closes #`issue number`
 
-You can refer to pull request #57 to see get inspiration on how to write a good PR using this format. 
+You can refer to pull request #57 to see get inspiration on how to write a good PR using this format.

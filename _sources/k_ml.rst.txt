@@ -113,4 +113,3 @@ Research Papers
 `Support Vector Machine Accuracy Assessment for Extracting Green Urban Areas in Towns	<https://www.mdpi.com/2072-4292/11/6/655>`_
 
 `Unsupervised Learning for Image Classiffication	<https://helda.helsinki.fi/bitstream/handle/10138/159773/yao_thesis.pdf?sequence=2>`_
-

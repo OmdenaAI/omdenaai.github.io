@@ -260,10 +260,50 @@
 <span id="components-utils-module"></span><h2>components.utils module<a class="headerlink" href="#module-components.utils" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="components.utils.labels_to_class_weights">
-<span class="sig-prename descclassname"><span class="pre">components.utils.</span></span><span class="sig-name descname"><span class="pre">labels_to_class_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">80</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.utils.labels_to_class_weights" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">components.utils.</span></span><span class="sig-name descname"><span class="pre">labels_to_class_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.utils.labels_to_class_weights" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get class weights (inverse frequency) from training labels</p>
-<p>Parameters (list): list of labels</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> (<em>list</em><em>, </em><em>numpy.ndarray</em><em>,</em>) – <p>Target classes, list or numpy array if n-dimensional array then
+classes need to be in the 0-dim.
+examples:</p>
+<p>Labels can be list</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">labels</span> <span class="o">=</span>  <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> 
+</pre></div>
+</div>
+<p>or n-dim array</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">labels</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">class1</span><span class="p">,</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">],</span>
+<span class="go">               [class2,x1,y1,x2,y2],</span>
+<span class="go">              ...</span>
+<span class="go">             ]]</span>
+</pre></div>
+</div>
+</p></li>
+<li><p><strong>nc</strong> (<em>int</em>) – (Optional) Minimum count of class occurance.</p></li>
+</ul>
+</dd>
+</dl>
 <p>return(list) = list of weights</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">labels_to_class_weights</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+<span class="go">[0.27272727 0.09090909 0.13636364 0.13636364 0.27272727 0.09090909]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.5</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.4</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">labels_to_class_weights</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+<span class="go">[0.66666667 0.33333333]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">labels</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">labels_to_class_weights</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+<span class="go">[0.2 0.2 0.2 0.2 0.2]</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>

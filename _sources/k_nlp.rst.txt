@@ -153,5 +153,3 @@ Research Papers
 `Political Ideology Detection Using Recursive Neural Networks 	<https://www.aclweb.org/anthology/P14-1105/>`_
 
 `Automated check bait	<https://www.aclweb.org/anthology/2020.lrec-1.849.pdf>`_
-
-
