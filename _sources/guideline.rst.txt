@@ -53,7 +53,7 @@ OmdenaLore Structure
 
         d. DataSets
 
-        e. Satellite 
+        e. Satellite
 
         f. Cloud(aws, azure)
 
@@ -103,7 +103,7 @@ If you have a code block that can help collaborators in current or future projec
 
 2. After localizing the repository, we recommend that you open a issue explaining what you are working on. Since OmdenaLore is a collaborative platform, we wish to have great communication between you and fellow contributors and opening an issue is a good way to do so.
 
-     a. To open an issue, head to `dagshub.com/omdenalore <dagshub.com/omdenalore>`__ and click on the issue section. Create or find an issue according to your problem statement. 
+     a. To open an issue, head to `dagshub.com/omdenalore <dagshub.com/omdenalore>`__ and click on the issue section. Create or find an issue according to your problem statement.
 
 3. Once inside the local folder of the repository, make a new git branch from the main branch. Let’s say you are adding code to the nlp folder and you would like to make a **nlp-contrib** branch. You can do this with the following command - **git checkout -b nlp-contrib** . To quickly familiarize yourself with git branches, read this official primer `here <https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell>`__.
      a. We recommend that you make a branch with your own name or the issues that you are working on. Example branch names - issues_44, john_doe, ...
@@ -120,15 +120,15 @@ If you have a code block that can help collaborators in current or future projec
 6. Once you have pushed your branch successfully, it is time to open a Pull Request on DAGsHub.
 
      a. On the repository webpage, go to the Pull Requests section.
-    
+
      .. figure:: /images/dashboard.png
        :alt: dashboard
-     
+
      b. Click on **New Pull Request**
 
      .. figure:: /images/dashboard_newpr.png
        :alt: make a new PR
-     
+
      c. On the right side of the webpage, pick the branch you want to open a Pull Request with. This branch contains the changes you are requesting to be merged into the main branch of the repository. Search for the name of your branch and select it.
 
      .. figure:: /images/pickbranch.png
@@ -165,7 +165,7 @@ Guidelines to be followed for your code to get accepted
 
 3. Avoid global variable and it’s accessibility
 
-4. To keep in line with the style guide, keep module names short, lowercase, and be sure to avoid using special symbols 
+4. To keep in line with the style guide, keep module names short, lowercase, and be sure to avoid using special symbols
 
 5. Use time, tqdm and log decorators where necessary
 
@@ -175,7 +175,7 @@ Guidelines to be followed for your code to get accepted
 
 8. Constantly test your code by adding test cases in the tests module
 
-9. Never miss out on adding doc strings. This will help us to create documentation automatically once the package is done. 
+9. Never miss out on adding doc strings. This will help us to create documentation automatically once the package is done.
 
 10. Try to use `black`, `flake8` and `isort` for linting the code to ensure consistency across modules.
 
@@ -213,7 +213,7 @@ Function description doc string format
 .. figure:: /images/docs_string_example.png
     :alt: Function docstring
 
-The doc strings follows rst format. 
+The doc strings follows rst format.
 For more information and example visit these sites.
 
 `Thomas-cokelear <https://thomas-cokelaer.info/tutorials/sphinx/docstring_python.html>`_

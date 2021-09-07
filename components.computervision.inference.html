@@ -324,27 +324,75 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="components.computervision.inference.trtCalibINT8.EntropyCalibrator.get_batch">
 <span class="sig-name descname"><span class="pre">get_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.inference.trtCalibINT8.EntropyCalibrator.get_batch" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>returns a batch</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>names</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List[batch from self.batches iter]</p>
+</dd>
+<dt class="field-odd">Returntype</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="components.computervision.inference.trtCalibINT8.EntropyCalibrator.get_batch_size">
 <span class="sig-name descname"><span class="pre">get_batch_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.inference.trtCalibINT8.EntropyCalibrator.get_batch_size" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>returns batch size</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>batch size</p>
+</dd>
+<dt class="field-even">Returntype</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="components.computervision.inference.trtCalibINT8.EntropyCalibrator.read_batch_file">
 <span class="sig-name descname"><span class="pre">read_batch_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filenames</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.inference.trtCalibINT8.EntropyCalibrator.read_batch_file" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>reads batch files</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filenames</strong> (<em>List</em>) – list of file names</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>contiguous array</p>
+</dd>
+<dt class="field-odd">Returntype</dt>
+<dd class="field-odd"><p>np.ascontiguousarray</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="components.computervision.inference.trtCalibINT8.EntropyCalibrator.read_calibration_cache">
 <span class="sig-name descname"><span class="pre">read_calibration_cache</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.inference.trtCalibINT8.EntropyCalibrator.read_calibration_cache" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>reads calibration cache</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>file content from self.cache_file</p>
+</dd>
+<dt class="field-even">Returntype</dt>
+<dd class="field-even"><p>file.read()</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="components.computervision.inference.trtCalibINT8.EntropyCalibrator.write_calibration_cache">
 <span class="sig-name descname"><span class="pre">write_calibration_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cache</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#components.computervision.inference.trtCalibINT8.EntropyCalibrator.write_calibration_cache" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>writes cache to self.cache_file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cache</strong> (<em>str</em>) – cache to write</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
