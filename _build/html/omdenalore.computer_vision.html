@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>omdenalore.computer_vision package &mdash; OmdenaLore 0.2.8 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="omdenalore.datasets package" href="omdenalore.datasets.html" />
+    <link rel="prev" title="omdenalore package" href="omdenalore.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> OmdenaLore
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Omdenalore</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="omdenalore.html">omdenalore package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="omdenalore.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">omdenalore.computer_vision package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="omdenalore.datasets.html">omdenalore.datasets package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="omdenalore.natural_language_processing.html">omdenalore.natural_language_processing package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="omdenalore.satellite_imagery.html">omdenalore.satellite_imagery package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="omdenalore.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omdenalore.html#module-omdenalore.logger">omdenalore.logger module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="omdenalore.html#module-omdenalore">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="knowledge.html">Knowledge base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guideline.html">OmdenaLore Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coc.html">Code of Conduct</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OmdenaLore</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">Omdenalore</a> &raquo;</li>
+          <li><a href="omdenalore.html">omdenalore package</a> &raquo;</li>
+      <li>omdenalore.computer_vision package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/omdenalore.computer_vision.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="omdenalore-computer-vision-package">
+<h1>omdenalore.computer_vision package<a class="headerlink" href="#omdenalore-computer-vision-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-omdenalore.computer_vision.activation_functions">
+<span id="omdenalore-computer-vision-activation-functions-module"></span><h2>omdenalore.computer_vision.activation_functions module<a class="headerlink" href="#module-omdenalore.computer_vision.activation_functions" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.activation_functions.AconC">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">AconC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.activation_functions.AconC" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
+<p>ACON activation (activate or not).
+AconC: (p1*x-p2*x) * sigmoid(beta*(p1*x-p2*x)) + p2*x, beta is a learnable parameter
+according to “Activate or Not: Learning Customized Activation” &lt;<a class="reference external" href="https://arxiv.org/pdf/2009.04759.pdf">https://arxiv.org/pdf/2009.04759.pdf</a>&gt;.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.activation_functions.AconC.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.activation_functions.AconC.forward" title="Permalink to this definition"></a></dt>
+<dd><p>calling method for the activation function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – input tensor or value for the activation function</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.activation_functions.FReLU">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">FReLU</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.activation_functions.FReLU" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
+<p>Adding the FReLU activation function</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.activation_functions.FReLU.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.activation_functions.FReLU.forward" title="Permalink to this definition"></a></dt>
+<dd><p>calling method for the activation function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – input tensor or value for the activation function</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.activation_functions.Hardswish">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">Hardswish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.activation_functions.Hardswish" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
+<p>Adding the Hardswish activation function</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.activation_functions.Hardswish.forward">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.activation_functions.Hardswish.forward" title="Permalink to this definition"></a></dt>
+<dd><p>calling method for the activation function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – input tensor or value for the activation function</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.activation_functions.MemoryEfficientMish">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">MemoryEfficientMish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.activation_functions.MemoryEfficientMish" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
+<p>Adding the MemoryEfficientMish activation function</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.activation_functions.MemoryEfficientMish.F">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">F</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.activation_functions.MemoryEfficientMish.F" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.autograd.</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.activation_functions.MemoryEfficientMish.F.backward">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">backward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grad_output</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.activation_functions.MemoryEfficientMish.F.backward" title="Permalink to this definition"></a></dt>
+<dd><p>backpropagation method for MemoryEfficientMish activation function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ctx</strong> – </p></li>
+<li><p><strong>grad_output</strong> – gradient of the network parameters</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.activation_functions.MemoryEfficientMish.F.forward">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.activation_functions.MemoryEfficientMish.F.forward" title="Permalink to this definition"></a></dt>
+<dd><p>calling method for the activation function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ctx</strong> – </p></li>
+<li><p><strong>x</strong> – input tensor or value for the activation function</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.activation_functions.MemoryEfficientMish.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.activation_functions.MemoryEfficientMish.forward" title="Permalink to this definition"></a></dt>
+<dd><p>calling method for the activation function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – input tensor or value for the activation function</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.activation_functions.MetaAconC">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">MetaAconC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.activation_functions.MetaAconC" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
+<p>ACON activation (activate or not).
+MetaAconC: (p1*x-p2*x) * sigmoid(beta*(p1*x-p2*x)) + p2*x, beta is generated by a small network
+according to “Activate or Not: Learning Customized Activation” &lt;<a class="reference external" href="https://arxiv.org/pdf/2009.04759.pdf">https://arxiv.org/pdf/2009.04759.pdf</a>&gt;.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.activation_functions.MetaAconC.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.activation_functions.MetaAconC.forward" title="Permalink to this definition"></a></dt>
+<dd><p>calling method for the activation function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – input tensor or value for the activation function</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.activation_functions.Mish">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">Mish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.activation_functions.Mish" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
+<p>Adding the Mish activation function</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.activation_functions.Mish.forward">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.activation_functions.Mish.forward" title="Permalink to this definition"></a></dt>
+<dd><p>calling method for the activation function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – input tensor or value for the activation function</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.activation_functions.SiLU">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.activation_functions.</span></span><span class="sig-name descname"><span class="pre">SiLU</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.activation_functions.SiLU" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
+<p>Adding the SiLU activation function</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.activation_functions.SiLU.forward">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.activation_functions.SiLU.forward" title="Permalink to this definition"></a></dt>
+<dd><p>calling method for the activation function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> – input tensor or value for the activation function</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-omdenalore.computer_vision.augmentations">
+<span id="omdenalore-computer-vision-augmentations-module"></span><h2>omdenalore.computer_vision.augmentations module<a class="headerlink" href="#module-omdenalore.computer_vision.augmentations" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.augmentations.Augmenter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.augmentations.</span></span><span class="sig-name descname"><span class="pre">Augmenter</span></span><a class="headerlink" href="#omdenalore.computer_vision.augmentations.Augmenter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Basic augmentations for images</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.augmentations.Augmenter.get_basic_train_transforms">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_basic_train_transforms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">means</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stds</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.augmentations.Augmenter.get_basic_train_transforms" title="Permalink to this definition"></a></dt>
+<dd><p>Apply only basic training transformations such as Resize and Normalize.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>height</strong> – int specifying new height</p></li>
+<li><p><strong>width</strong> – int specifying new width</p></li>
+<li><p><strong>means</strong> – List of means for normalization</p></li>
+<li><p><strong>stds</strong> – List of stds for normalization</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Albumentation compose transform object for training dataset</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.augmentations import Augmenter
+import cv2</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">transform</span> <span class="o">=</span> <span class="n">Augmenter</span><span class="o">.</span><span class="n">get_basic_train_transforms</span><span class="p">(</span>
+<span class="go">        height=256,</span>
+<span class="go">        width=256,</span>
+<span class="go">        means=[0.485, 0.456, 0.406],</span>
+<span class="go">        stds=[0.229, 0.224, 0.225],</span>
+<span class="go">    )</span>
+</pre></div>
+</div>
+<p># Read an image with OpenCV and convert it to the RGB colorspace
+&gt;&gt;&gt; image = cv2.imread(“image.jpg”)
+&gt;&gt;&gt; image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)</p>
+<p># Augment an image
+&gt;&gt;&gt; transformed = transform(image=image)
+&gt;&gt;&gt; transformed_image = transformed[“image”]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.augmentations.Augmenter.get_mild_train_transforms">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_mild_train_transforms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">means</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stds</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.augmentations.Augmenter.get_mild_train_transforms" title="Permalink to this definition"></a></dt>
+<dd><p>Apply few mild training transformations such as Resize,
+horizontal and vertical, Gaussian Noise,
+Perspective Shift and Normalize.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>height</strong> – int specifying new height</p></li>
+<li><p><strong>width</strong> – int specifying new width</p></li>
+<li><p><strong>means</strong> – List of means for normalization</p></li>
+<li><p><strong>stds</strong> – List of stds for normalization</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Albumentation compose transform object for training dataset</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.augmentations import Augmenter
+import cv2</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">transform</span> <span class="o">=</span> <span class="n">Augmenter</span><span class="o">.</span><span class="n">get_mild_train_transforms</span><span class="p">(</span>
+<span class="go">        height=256,</span>
+<span class="go">        width=256,</span>
+<span class="go">        means=[0.485, 0.456, 0.406],</span>
+<span class="go">        stds=[0.229, 0.224, 0.225],</span>
+<span class="go">    )</span>
+</pre></div>
+</div>
+<p># Read an image with OpenCV and convert it to the RGB colorspace
+&gt;&gt;&gt; image = cv2.imread(“image.jpg”)
+&gt;&gt;&gt; image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)</p>
+<p># Augment an image
+&gt;&gt;&gt; transformed = transform(image=image)
+&gt;&gt;&gt; transformed_image = transformed[“image”]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.augmentations.Augmenter.get_val_transforms">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_val_transforms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">means</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stds</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.augmentations.Augmenter.get_val_transforms" title="Permalink to this definition"></a></dt>
+<dd><p>Apply only basic transformation such as Resize and Normalize.
+:param height: int specifying new height
+:param width: int specifying new width
+:param means: List of means for normalization
+:param stds: List of stds for normalization
+:returns: Albumentation compose transform object for validation dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.augmentations import Augmenter
+import cv2</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">transform</span> <span class="o">=</span> <span class="n">Augmenter</span><span class="o">.</span><span class="n">get_val_transforms</span><span class="p">(</span>
+<span class="go">        height=256,</span>
+<span class="go">        width=256,</span>
+<span class="go">        means=[0.485, 0.456, 0.406],</span>
+<span class="go">        stds=[0.229, 0.224, 0.225],</span>
+<span class="go">    )</span>
+</pre></div>
+</div>
+<p># Read an image with OpenCV and convert it to the RGB colorspace
+&gt;&gt;&gt; image = cv2.imread(“image.jpg”)
+&gt;&gt;&gt; image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)</p>
+<p># Augment an image
+&gt;&gt;&gt; transformed = transform(image=image)
+&gt;&gt;&gt; transformed_image = transformed[“image”]</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-omdenalore.computer_vision.benchmark">
+<span id="omdenalore-computer-vision-benchmark-module"></span><h2>omdenalore.computer_vision.benchmark module<a class="headerlink" href="#module-omdenalore.computer_vision.benchmark" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.benchmark.BenchmarkRunner">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.benchmark.</span></span><span class="sig-name descname"><span class="pre">BenchmarkRunner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_warm_iter</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_bench_iter</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'float16'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.benchmark.BenchmarkRunner" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class which can be extended to inference or traning benchmark.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_dir</strong> (<em>str</em>) – path to folder containing <cite>params.json</cite> file</p></li>
+<li><p><strong>num_warm_iter</strong> (<em>int</em>) – number of iterations as warmup</p></li>
+<li><p><strong>num_bench_iter</strong> (<em>int</em>) – number of iterations to benchmark</p></li>
+<li><p><strong>precision</strong> (<em>str</em>) – precision to use for benchmarking</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.benchmark.InferenceBenchmarkRunner">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.benchmark.</span></span><span class="sig-name descname"><span class="pre">InferenceBenchmarkRunner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_dir</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'float32'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.benchmark.InferenceBenchmarkRunner" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#omdenalore.computer_vision.benchmark.BenchmarkRunner" title="omdenalore.computer_vision.benchmark.BenchmarkRunner"><code class="xref py py-class docutils literal notranslate"><span class="pre">omdenalore.computer_vision.benchmark.BenchmarkRunner</span></code></a></p>
+<p>Inference class extended from <a class="reference internal" href="#omdenalore.computer_vision.benchmark.BenchmarkRunner" title="omdenalore.computer_vision.benchmark.BenchmarkRunner"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkRunner</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_dir</strong> (<em>str</em>) – path to folder containing <cite>params.json</cite> file</p></li>
+<li><p><strong>precision</strong> (<em>str</em>) – precision to use for benchmarking</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.benchmark.InferenceBenchmarkRunner.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.benchmark.InferenceBenchmarkRunner.run" title="Permalink to this definition"></a></dt>
+<dd><p>Run the neural network model</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.benchmark.count_params">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.benchmark.</span></span><span class="sig-name descname"><span class="pre">count_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">torch.nn.Module</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.benchmark.count_params" title="Permalink to this definition"></a></dt>
+<dd><p>returns the number of parameters of the model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model</strong> (<em>nn.Module</em>) – neural network model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.benchmark.cuda_timestamp">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.benchmark.</span></span><span class="sig-name descname"><span class="pre">cuda_timestamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sync</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.benchmark.cuda_timestamp" title="Permalink to this definition"></a></dt>
+<dd><p>synchronizes cuda device if sync is true</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sync</strong> (<em>boolean</em>) – boolean value deciding whether to sync</p></li>
+<li><p><strong>device</strong> (<em>torch.cuda.device</em>) – cuda device</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.benchmark.resolve_precision">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.benchmark.</span></span><span class="sig-name descname"><span class="pre">resolve_precision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.benchmark.resolve_precision" title="Permalink to this definition"></a></dt>
+<dd><p>Resolves the precision of the data type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>precision</strong> (<em>str</em>) – precision data type passed in</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.benchmark.timestamp">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.benchmark.</span></span><span class="sig-name descname"><span class="pre">timestamp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.benchmark.timestamp" title="Permalink to this definition"></a></dt>
+<dd><p>returns time.perf_counter</p>
+</dd></dl>
+
+</section>
+<section id="module-omdenalore.computer_vision.green_pixel_detection">
+<span id="omdenalore-computer-vision-green-pixel-detection-module"></span><h2>omdenalore.computer_vision.green_pixel_detection module<a class="headerlink" href="#module-omdenalore.computer_vision.green_pixel_detection" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.green_pixel_detection.GreenPixelDetector">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.green_pixel_detection.</span></span><span class="sig-name descname"><span class="pre">GreenPixelDetector</span></span><a class="headerlink" href="#omdenalore.computer_vision.green_pixel_detection.GreenPixelDetector" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Detect the green pixels in an image</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.green_pixel_detection.GreenPixelDetector.detect">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">detect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pretrained_weights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.green_pixel_detection.GreenPixelDetector.detect" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pretrained_weights</strong> (<em>numpy ndarray</em>) – pretrained weight matrix</p></li>
+<li><p><strong>input_size</strong> (<em>tuple</em>) – image dimension tuple</p></li>
+<li><p><strong>input_size</strong> – (img_height, img_width, input_channel)</p></li>
+<li><p><strong>optimizer</strong> (<em>optimizer object</em>) – optimization strategy</p></li>
+<li><p><strong>loss</strong> (<em>loss object</em>) – loss function</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>compiled Keras model</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Keras model object</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-omdenalore.computer_vision.image_features">
+<span id="omdenalore-computer-vision-image-features-module"></span><h2>omdenalore.computer_vision.image_features module<a class="headerlink" href="#module-omdenalore.computer_vision.image_features" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.image_features.ImageFeatures">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.image_features.</span></span><span class="sig-name descname"><span class="pre">ImageFeatures</span></span><a class="headerlink" href="#omdenalore.computer_vision.image_features.ImageFeatures" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class containing image feature methods</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.image_features.ImageFeatures.brief_features">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">brief_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.computer_vision.image_features.ImageFeatures.brief_features" title="Permalink to this definition"></a></dt>
+<dd><p>detect BRIEF features from an image path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image_path</strong> (<em>str</em>) – Path of the input image</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>BRIEF keypoints detected from an image</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.image_features import ImageFeatures
+&gt;&gt;&gt; ImageFeatures.brief_features(image_path=”sample.jpeg”)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.image_features.ImageFeatures.describe_zernike_moments">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">describe_zernike_moments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.computer_vision.image_features.ImageFeatures.describe_zernike_moments" title="Permalink to this definition"></a></dt>
+<dd><p>Calculates the Zernike moments of images inside a folder.
+Returns list of features and corresponding image names
+Zernike moments are great for describing shapes of objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image_path</strong> (<em>string</em>) – Path of images</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return a tuple of the contours and shapes</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.image_features import ImageFeatures
+&gt;&gt;&gt; ImageFeatures.describe_zernike_moments(image_path=”sample.jpeg”)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.image_features.ImageFeatures.find_contours">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">find_contours</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.computer_vision.image_features.ImageFeatures.find_contours" title="Permalink to this definition"></a></dt>
+<dd><p>Detect contours from an image path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_path</strong> (<em>str</em>) – Path of the input image</p></li>
+<li><p><strong>show</strong> (<em>boolean</em>) – Whether to show the contours on a plot using matplotlib</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>contours detected from an image</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.image_features import ImageFeatures
+&gt;&gt;&gt; ImageFeatures.find_contours(image_path=”sample.jpeg”, show=True)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.image_features.ImageFeatures.get_hough_lines">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_hough_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.computer_vision.image_features.ImageFeatures.get_hough_lines" title="Permalink to this definition"></a></dt>
+<dd><p>Detect lines from an image path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_path</strong> (<em>str</em>) – Path of the input image</p></li>
+<li><p><strong>show</strong> (<em>boolean</em>) – Whether to show the lines on a plot using matplotlib</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>lines detected from an image</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.image_features import ImageFeatures
+&gt;&gt;&gt; ImageFeatures.get_hough_lines(image_path=”sample.jpeg”, show=True)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.image_features.ImageFeatures.haralicks_features">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">haralicks_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.computer_vision.image_features.ImageFeatures.haralicks_features" title="Permalink to this definition"></a></dt>
+<dd><p>Detects Harlicks features from images in meaned four directions
+inside an folder with certain extensions
+and returns array of retrieved features</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image_path</strong> (<em>string</em>) – Path of the folder which contains the png images</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>array of extracted features - (image_name , features)</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.image_features import ImageFeatures
+&gt;&gt;&gt; ImageFeatures.haralicks_features(image_path=”sample.jpeg”)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.image_features.ImageFeatures.sift_features">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">sift_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grayscale</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.computer_vision.image_features.ImageFeatures.sift_features" title="Permalink to this definition"></a></dt>
+<dd><p>detect SIFT features from an image path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_path</strong> (<em>str</em>) – Path of the input image</p></li>
+<li><p><strong>grayscale</strong> (<em>boolean</em>) – converts image to grayscale</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SIFT keypoints detected from an image</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.image_features import ImageFeatures
+&gt;&gt;&gt; ImageFeatures.sift_features(image_path=”sample.jpeg”)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.image_features.ImageFeatures.surf_features">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">surf_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.computer_vision.image_features.ImageFeatures.surf_features" title="Permalink to this definition"></a></dt>
+<dd><p>detect SURF features from an image path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image_path</strong> (<em>str</em>) – Path of the input image</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SURF keypoints detected from an image</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.image_features import ImageFeatures
+&gt;&gt;&gt; ImageFeatures.surf_features(image_path=”sample.jpeg”)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-omdenalore.computer_vision.loss_functions_semantic">
+<span id="omdenalore-computer-vision-loss-functions-semantic-module"></span><h2>omdenalore.computer_vision.loss_functions_semantic module<a class="headerlink" href="#module-omdenalore.computer_vision.loss_functions_semantic" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.loss_functions_semantic.LossFunctions">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.loss_functions_semantic.</span></span><span class="sig-name descname"><span class="pre">LossFunctions</span></span><a class="headerlink" href="#omdenalore.computer_vision.loss_functions_semantic.LossFunctions" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Various loss functions using Keras</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.loss_functions_semantic.LossFunctions.class_tversky">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">class_tversky</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.loss_functions_semantic.LossFunctions.class_tversky" title="Permalink to this definition"></a></dt>
+<dd><p>Returns Tversky Class for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.loss_functions_semantic import LossFunctions
+&gt;&gt;&gt; y_true = [1.0, 2.0, 3.0]
+&gt;&gt;&gt; y_pred = [0.0, 1.0, 3.0]
+&gt;&gt;&gt; loss = LossFunctions.class_tversky(y_true,y_pred)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.loss_functions_semantic.LossFunctions.confusion_matrix">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">confusion_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.loss_functions_semantic.LossFunctions.confusion_matrix" title="Permalink to this definition"></a></dt>
+<dd><p>Returns confusion matrix for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.loss_functions_semantic import LossFunctions
+&gt;&gt;&gt; y_true = [1.0, 2.0, 3.0]
+&gt;&gt;&gt; y_pred = [0.0, 1.0, 3.0]
+&gt;&gt;&gt; confusion_matrix = LossFunctions.confusion_matrix(y_true, y_pred)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.loss_functions_semantic.LossFunctions.dice_coef">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">dice_coef</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.loss_functions_semantic.LossFunctions.dice_coef" title="Permalink to this definition"></a></dt>
+<dd><p>Returns dice coefficient for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.loss_functions_semantic import LossFunctions
+&gt;&gt;&gt; y_true = [1.0, 2.0, 3.0]
+&gt;&gt;&gt; y_pred = [0.0, 1.0, 3.0]
+&gt;&gt;&gt; dice_coef = LossFunctions.dice_coef(y_true, y_pred)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.loss_functions_semantic.LossFunctions.dice_coef_loss">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">dice_coef_loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.loss_functions_semantic.LossFunctions.dice_coef_loss" title="Permalink to this definition"></a></dt>
+<dd><p>Returns dice_coef_loss for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.loss_functions_semantic import LossFunctions
+&gt;&gt;&gt; y_true = [1.0, 2.0, 3.0]
+&gt;&gt;&gt; y_pred = [0.0, 1.0, 3.0]
+&gt;&gt;&gt; loss = LossFunctions.dice_coef_loss(y_true, y_pred)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.loss_functions_semantic.LossFunctions.dice_loss">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">dice_loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.loss_functions_semantic.LossFunctions.dice_loss" title="Permalink to this definition"></a></dt>
+<dd><p>Returns dice_loss for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">omdenalore.computer_vision.loss_functions_semantic</span> <span class="kn">import</span> <span class="n">LossFunctions</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">y_true</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_pred</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gdcl</span> <span class="o">=</span> <span class="n">LossFunctions</span><span class="o">.</span><span class="n">generalized_dice_coefficient_loss</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span>
+<span class="go">&gt;&gt;&gt;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.loss_functions_semantic.LossFunctions.focal_tversky">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">focal_tversky</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.loss_functions_semantic.LossFunctions.focal_tversky" title="Permalink to this definition"></a></dt>
+<dd><p>Returns focal Tversky loss for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.loss_functions_semantic import LossFunctions
+&gt;&gt;&gt; y_true = [1.0, 2.0, 3.0]
+&gt;&gt;&gt; y_pred = [0.0, 1.0, 3.0]
+&gt;&gt;&gt; focal_tversky = LossFunctions.focal_tversky(y_true, y_pred)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.loss_functions_semantic.LossFunctions.focal_tversky_loss">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">focal_tversky_loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.loss_functions_semantic.LossFunctions.focal_tversky_loss" title="Permalink to this definition"></a></dt>
+<dd><p>Returns focal Tversky loss for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.loss_functions_semantic import LossFunctions
+&gt;&gt;&gt; y_true = [1.0, 2.0, 3.0]
+&gt;&gt;&gt; y_pred = [0.0, 1.0, 3.0]
+&gt;&gt;&gt; loss = LossFunctions.focal_tversky_loss(y_true, y_pred)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.loss_functions_semantic.LossFunctions.generalized_dice_coefficient">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">generalized_dice_coefficient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.loss_functions_semantic.LossFunctions.generalized_dice_coefficient" title="Permalink to this definition"></a></dt>
+<dd><p>Returns generalized_dice_coefficient for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.loss_functions_semantic import LossFunctions</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">y_true</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y_pred</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gdc</span> <span class="o">=</span> <span class="n">LossFunctions</span><span class="o">.</span><span class="n">generalized_dice_coefficient</span><span class="p">(</span>
+<span class="go">        y_true, y_pred</span>
+<span class="go">    )</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.loss_functions_semantic.LossFunctions.log_cosh_dice_loss">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">log_cosh_dice_loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.loss_functions_semantic.LossFunctions.log_cosh_dice_loss" title="Permalink to this definition"></a></dt>
+<dd><p>Returns log_cosh_dice loss for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.loss_functions_semantic import LossFunctions
+&gt;&gt;&gt; y_true = [1.0, 2.0, 3.0]
+&gt;&gt;&gt; y_pred = [0.0, 1.0, 3.0]
+&gt;&gt;&gt; lcdl = LossFunctions.log_cosh_dice_loss(y_true, y_pred)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.loss_functions_semantic.LossFunctions.true_negative">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">true_negative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.loss_functions_semantic.LossFunctions.true_negative" title="Permalink to this definition"></a></dt>
+<dd><p>Returns true negetive for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.loss_functions_semantic import LossFunctions
+&gt;&gt;&gt; y_true = [1.0, 2.0, 3.0]
+&gt;&gt;&gt; y_pred = [0.0, 1.0, 3.0]
+&gt;&gt;&gt; tn = LossFunctions.true_negative(y_true, y_pred)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.loss_functions_semantic.LossFunctions.true_positive">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">true_positive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.loss_functions_semantic.LossFunctions.true_positive" title="Permalink to this definition"></a></dt>
+<dd><p>Returns True positives for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.loss_functions_semantic import LossFunctions
+&gt;&gt;&gt; y_true = [1.0, 2.0, 3.0]
+&gt;&gt;&gt; y_pred = [0.0, 1.0, 3.0]
+&gt;&gt;&gt; tp = LossFunctions.true_positive(y_true, y_pred)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.loss_functions_semantic.LossFunctions.tversky_index">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">tversky_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.loss_functions_semantic.LossFunctions.tversky_index" title="Permalink to this definition"></a></dt>
+<dd><p>Returns Tversky index for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.loss_functions_semantic import LossFunctions
+&gt;&gt;&gt; y_true = [1.0, 2.0, 3.0]
+&gt;&gt;&gt; y_pred = [0.0, 1.0, 3.0]
+&gt;&gt;&gt; tversky_index = LossFunctions.tversky_index(y_true, y_pred)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.loss_functions_semantic.LossFunctions.tversky_loss">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">tversky_loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.loss_functions_semantic.LossFunctions.tversky_loss" title="Permalink to this definition"></a></dt>
+<dd><p>Returns Tversky loss for truth vs prediction values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>tensor</em>) – A tensor of the same shape as <cite>y_pred</cite></p></li>
+<li><p><strong>y_pred</strong> (<em>tensor</em>) – A tensor resulting from a softmax</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output tensor.</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.loss_functions_semantic import LossFunctions
+&gt;&gt;&gt; y_true = [1.0, 2.0, 3.0]
+&gt;&gt;&gt; y_pred = [0.0, 1.0, 3.0]
+&gt;&gt;&gt; tversky_loss = LossFunctions.tversky_loss(y_true, y_pred)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-omdenalore.computer_vision.losses">
+<span id="omdenalore-computer-vision-losses-module"></span><h2>omdenalore.computer_vision.losses module<a class="headerlink" href="#module-omdenalore.computer_vision.losses" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.losses.LabelSmoothingCrossEntropy">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.losses.</span></span><span class="sig-name descname"><span class="pre">LabelSmoothingCrossEntropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.losses.LabelSmoothingCrossEntropy" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.</span></code></p>
+<p>NLL loss with label smoothing.
+Credits: timm library</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.losses.LabelSmoothingCrossEntropy.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.losses.LabelSmoothingCrossEntropy.forward" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="omdenalore-computer-vision-metrics-module">
+<h2>omdenalore.computer_vision.metrics module<a class="headerlink" href="#omdenalore-computer-vision-metrics-module" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-omdenalore.computer_vision.object_detection">
+<span id="omdenalore-computer-vision-object-detection-module"></span><h2>omdenalore.computer_vision.object_detection module<a class="headerlink" href="#module-omdenalore.computer_vision.object_detection" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.object_detection.ObjectDetection">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.object_detection.</span></span><span class="sig-name descname"><span class="pre">ObjectDetection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.object_detection.ObjectDetection" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Various object detection methods</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.object_detection.ObjectDetection.hog_detection">
+<span class="sig-name descname"><span class="pre">hog_detection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.computer_vision.object_detection.ObjectDetection.hog_detection" title="Permalink to this definition"></a></dt>
+<dd><p>Histogram of gradients-based people detection function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of (x,y,w,h) tuples for all the</p>
+</dd>
+</dl>
+<p>bbox of people detected in the image
+:rtype: list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.object_detection import ObjectDetection
+&gt;&gt;&gt; detector = ObjectDetection(image_path=”sample.jpeg”)
+&gt;&gt;&gt; hog_regions = detector.hog_detection()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.object_detection.ObjectDetection.mobile_net">
+<span class="sig-name descname"><span class="pre">mobile_net</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.computer_vision.object_detection.ObjectDetection.mobile_net" title="Permalink to this definition"></a></dt>
+<dd><p>Use MobileNet_SSD Object detector to detect classes as mentioned below</p>
+<p>[“background”, “aeroplane”, “bicycle”, “bird”, “boat”,”bottle”,
+“bus”, “car”, “cat”, “chair”, “cow”, “diningtable”,”dog”, “horse”,
+“motorbike”, “person”, “pottedplant”, “sheep”,”sofa”, “train”,
+“tvmonitor”]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image_path</strong> (<em>str</em>) – Path of the image</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of tuples and tuples are in the form (label, [bbox])</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of tuples</p>
+</dd>
+<dt class="field-even">Example</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.object_detection import ObjectDetection
+&gt;&gt;&gt; detector = ObjectDetection(image_path=”sample.jpeg”)
+&gt;&gt;&gt; results = detector.mobile_net()</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-omdenalore.computer_vision.semantic_segmentation">
+<span id="omdenalore-computer-vision-semantic-segmentation-module"></span><h2>omdenalore.computer_vision.semantic_segmentation module<a class="headerlink" href="#module-omdenalore.computer_vision.semantic_segmentation" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.semantic_segmentation.SemanticSegemtationModel">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.semantic_segmentation.</span></span><span class="sig-name descname"><span class="pre">SemanticSegemtationModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_classes</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">tensorflow.python.keras.optimizer_v2.optimizer_v2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_size</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.semantic_segmentation.SemanticSegemtationModel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Returns a Semantic segmentation model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pretrained_weights</strong> (<em>numpy ndarray</em>) – pretrained weight matrix</p></li>
+<li><p><strong>input_size</strong> (<em>tuple</em>) – img_height, img_width, input_channel</p></li>
+<li><p><strong>optimizer</strong> (<em>optimizer object</em>) – optimization strategy</p></li>
+<li><p><strong>num_classes</strong> (<em>int</em>) – number of target classes</p></li>
+</ul>
+</dd>
+</dl>
+<p>:returns compiled Keras model
+:rtype: Keras model object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.semantic_segmentation import
+SemanticSegemtationModel
+from tensorflow.keras.optimizers import Adam
+&gt;&gt;&gt; num_classes = 10
+&gt;&gt;&gt; optimizer = Adam(learning_rate=0.01)
+&gt;&gt;&gt; input_size = (224, 224, 3)
+&gt;&gt;&gt; semantic_segmentation_model = Model(num_classes, optimizer, input_size)
+&gt;&gt;&gt; model = semantic_segmentation_model()</p>
+</dd></dl>
+
+</section>
+<section id="module-omdenalore.computer_vision.utils">
+<span id="omdenalore-computer-vision-utils-module"></span><h2>omdenalore.computer_vision.utils module<a class="headerlink" href="#module-omdenalore.computer_vision.utils" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.utils.Params">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.utils.</span></span><span class="sig-name descname"><span class="pre">Params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.utils.Params" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class that loads hyperparameters from a json file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.utils import Params
+&gt;&gt;&gt; params = Params(json_path)
+&gt;&gt;&gt; print(params.learning_rate)
+&gt;&gt;&gt; params.learning_rate = 0.5
+# change the value of learning_rate in params</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.utils.Params.dict">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dict</span></span><a class="headerlink" href="#omdenalore.computer_vision.utils.Params.dict" title="Permalink to this definition"></a></dt>
+<dd><p>Gives dict-like access to Params instance by
+<cite>params.dict[‘learning_rate’]</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.utils.Params.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.utils.Params.save" title="Permalink to this definition"></a></dt>
+<dd><p>Saves parameters to json file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>json_path</strong> – patht to save files in</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.utils.Params.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.utils.Params.update" title="Permalink to this definition"></a></dt>
+<dd><p>Loads parameters from json file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>json_path</strong> – patht to save files in</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.utils.check_imshow">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.utils.</span></span><span class="sig-name descname"><span class="pre">check_imshow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.utils.check_imshow" title="Permalink to this definition"></a></dt>
+<dd><p>Check if environment supports image displays</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Return true of false if you can display image using opencv or not</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Boolean</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.utils import check_imshow
+&gt;&gt;&gt; imshow = check_imshow()</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.utils.compute_avg_precision">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.utils.</span></span><span class="sig-name descname"><span class="pre">compute_avg_precision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recall</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.computer_vision.utils.compute_avg_precision" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the average precision, given the recall and precision curves</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>recall</strong> – The recall curve (list)</p></li>
+<li><p><strong>precision</strong> – The precision curve (list)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>Average precision, precision curve, recall curve</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.utils import compute_avg_precision
+&gt;&gt;&gt; avg_precision, precision_curve, recall_curve = compute_avg_precision(</p>
+<blockquote>
+<div><blockquote>
+<div><p>recall,
+precision,</p>
+</div></blockquote>
+<p>)</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.utils.load_image">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.utils.</span></span><span class="sig-name descname"><span class="pre">load_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">PIL.Image.Image</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.computer_vision.utils.load_image" title="Permalink to this definition"></a></dt>
+<dd><p>Load an image at <cite>path</cite> using PIL and return the Image object
+and the width and height</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – path where the image to be loaded is</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>(PIL.Image.Image): Image object of the image</p></li>
+<li><p>(int): width of the image</p></li>
+<li><p>(int): height of the image</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.utils import load_image
+&gt;&gt;&gt; img, width, height = load_image(“sample.jpeg”)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.utils.show_cood">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.utils.</span></span><span class="sig-name descname"><span class="pre">show_cood</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">cv2.FONT_HERSHEY_SIMPLEX</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fontScale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thickness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(255,</span> <span class="pre">0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1,</span> <span class="pre">1)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.utils.show_cood" title="Permalink to this definition"></a></dt>
+<dd><p>Shows the coordinates of the cursor in the OpenCV window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>frame</strong> – OpenCV frame/window.</p></li>
+<li><p><strong>x</strong> – The x-coordinate of the point that is to be shown.</p></li>
+<li><p><strong>y</strong> – The y-coordinate of the point that is to be shown.</p></li>
+<li><p><strong>font</strong> – Coordinate text font.</p></li>
+<li><p><strong>fontScale</strong> – Font scale factor that is multiplied by</p></li>
+</ul>
+</dd>
+</dl>
+<p>the font-specific base size.
+:param color: Text color.
+:param flag: Default True, does not show coordinate values if False.
+:param thickness: Thickness of the lines used to draw a text.
+:param radius: Radius of the circular coordinate point.
+:param fill: Thickness of the circle outline, if positive.
+Negative values, like -1, mean that a filled circle is to be drawn.
+:param offset: Text offset relative to point coordinates.
+:returns:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Frame with point at coordinates (x,y).</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list,same as input frame.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;EXAMPLE_IMAGE.png&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frame</span> <span class="o">=</span> <span class="n">show_cursor_cood</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;frame&#39;</span><span class="p">,</span><span class="n">frame</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.utils.translate_boxes">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.utils.</span></span><span class="sig-name descname"><span class="pre">translate_boxes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">boxes</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.computer_vision.utils.translate_boxes" title="Permalink to this definition"></a></dt>
+<dd><p>Translates bounding box by moving its cooridantes left-wise by <cite>left</cite>
+pixels and top-wise by <cite>top</cite> pixels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>boxes</strong> (<em>sequence</em>) – list of box coordinates (label,left,top,right,bottom)</p></li>
+<li><p><strong>left</strong> – Number of pixels to subtract from horizontal coordinates</p></li>
+</ul>
+</dd>
+</dl>
+<p>of the bounding box. Moving bounding box to the left is done with
+<em>left</em> &gt; 0, and moving to the right with <em>left</em> &lt; 0
+:type left: int
+:param top: Number of pixels to subtract from vertical coordinates of
+the bounding box. Moving bounding box top is done with <em>top</em> &gt; 0,
+and moving it down with <em>top</em> &lt; 0.
+:type top: int
+:returns: list of new box coordinates
+:rtype: list,same as input</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.utils import translate_boxes
+&gt;&gt;&gt; translated_boxes = translate_boxes(boxes, left, top)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.utils.zoom_to_fill">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.utils.</span></span><span class="sig-name descname"><span class="pre">zoom_to_fill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">padding</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#omdenalore.computer_vision.utils.zoom_to_fill" title="Permalink to this definition"></a></dt>
+<dd><p>Use the mask to make the object as the center object of
+the image with paddings</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy.array</em>) – image from which the object is taken out of</p></li>
+<li><p><strong>mask</strong> (<em>numpy.array</em>) – 2d mask array</p></li>
+<li><p><strong>padding</strong> (<em>int</em>) – add black pixel padding around the image</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Image array</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.array</p>
+</dd>
+<dt class="field-even">Example</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.utils import zoom_to_fill
+&gt;&gt;&gt; padding = 1
+&gt;&gt;&gt; <a href="#id1"><span class="problematic" id="id2">image_</span></a> = zoom_to_fill(image, mask, padding)</p>
+</dd></dl>
+
+</section>
+<section id="module-omdenalore.computer_vision.visualisations">
+<span id="omdenalore-computer-vision-visualisations-module"></span><h2>omdenalore.computer_vision.visualisations module<a class="headerlink" href="#module-omdenalore.computer_vision.visualisations" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.visualisations.Plot">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.computer_vision.visualisations.</span></span><span class="sig-name descname"><span class="pre">Plot</span></span><a class="headerlink" href="#omdenalore.computer_vision.visualisations.Plot" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Plotting functionality for images</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.visualisations.Plot.plot_cm">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">plot_cm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">true</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preds</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">(8,</span> <span class="pre">6)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.visualisations.Plot.plot_cm" title="Permalink to this definition"></a></dt>
+<dd><p>Plot unnormalized confusion matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>true</strong> – List of targets</p></li>
+<li><p><strong>preds</strong> – List of predictions</p></li>
+<li><p><strong>classes</strong> – List of classes</p></li>
+<li><p><strong>figsize</strong> – Tuple specifying (height, width)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>matplotlib figure containing confusion matrix</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.visualisations import Plot
+&gt;&gt;&gt; true = [1.0, 2.0, 3.0]
+&gt;&gt;&gt; preds = [2.0, 2.0, 3.0]
+&gt;&gt;&gt; classes = [0, 1, 2]
+&gt;&gt;&gt; fig = Plot.plot_cm(true, preds, classes)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.visualisations.Plot.plot_hist">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">plot_hist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">history</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.visualisations.Plot.plot_hist" title="Permalink to this definition"></a></dt>
+<dd><p>Plotting train acc, loss and val acc and loss stored in history dict.
+History dict contains keys = {train_acc, val_acc, train_loss, val_loss}
+Each key contains list of scores for every epoch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>history</strong> – Dict</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>plot the loss and acc plots for train and val</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.visualisations import Plot
+&gt;&gt;&gt; history = model.fit() # Keras model
+&gt;&gt;&gt; Plot.plot_hist(history)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.computer_vision.visualisations.Plot.unnormalize_image">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">unnormalize_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">means</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stds</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.computer_vision.visualisations.Plot.unnormalize_image" title="Permalink to this definition"></a></dt>
+<dd><p>Convert normalized image to get unnormalized image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> – Tensor of shape (C, H, W)</p></li>
+<li><p><strong>means</strong> – List of means used for normalization</p></li>
+<li><p><strong>stds</strong> – List of stds used for normalization</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>unnormalized input tensor which can be used to display image</p>
+</dd>
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>from omdenalore.computer_vision.visualisations import Plot
+&gt;&gt;&gt; img = …
+&gt;&gt;&gt; means = [0.4948, 0.4910, 0.4921]
+&gt;&gt;&gt; stds = [0.2891, 0.2896, 0.2880]
+&gt;&gt;&gt; Plot.unnormalize_image(img, means, stds)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-omdenalore.computer_vision">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-omdenalore.computer_vision" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="omdenalore.html" class="btn btn-neutral float-left" title="omdenalore package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="omdenalore.datasets.html" class="btn btn-neutral float-right" title="omdenalore.datasets package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Kaushal.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

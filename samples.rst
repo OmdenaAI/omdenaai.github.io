@@ -1,0 +1,11 @@
+samples package
+===============
+
+Module contents
+---------------
+
+.. automodule:: samples
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

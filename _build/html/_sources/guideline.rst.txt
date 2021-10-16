@@ -1,0 +1,222 @@
+OmdenaLore Guidelines
+========================
+
+Introduction
+------------------------
+
+
+
+As the name suggests, OmdenaLore is a body of knowledge held by Omdena. OmdenaLore is a library/package that contains code knowledge base gathered in completed and ongoing projects. The code knowledge base increases and gets updated as collaborators add their knowledge in future projects. OmdenaLore is a collaborator sourced structured library. It is closed for Omdena community members.
+
+OmdenaLore Structure
+------------------------
+
+**OmdenaLore**
+
+     1. Configurations
+
+        a. CVconfig.py
+
+        b. NLPconfig.py
+
+     2. Readme.md
+
+     3. Requirements.txt
+
+     4. Setup.py
+
+     5. Tools
+
+        a. __init__.py (not allowed)
+
+     6. Docs
+
+        a. Changelog.txt
+
+     7. Sample
+
+     8. OmdenaLore (main components)
+
+        a. __init__.py
+
+        b. computerVision
+
+          i. __init__.py
+
+          ii. Utils.py
+
+          iii. Loadingimages.py
+
+          iv. Object_Detection.py
+
+        c. NLP
+
+        d. DataSets
+
+        e. Satellite
+
+        f. Cloud(aws, azure)
+
+        g. satellite
+
+        h. Utils.py
+
+        i. activation_functions.py
+
+     9. Tests
+
+        a. basic_text
+
+        b. advance
+
+     10. Makefile
+
+Description of Structure components
+------------------------------------
+
+1. **Configurations**: All config.py / config.json files containing static variable, paths etc to be stored here. The configs can be stored in different files for different subpackages/subcomponents.
+2. **Readme.MD** : Documentation of the code.
+3. **Requirements.py**: ``pip`` requirements and dependencies management.
+4. **Setup.py**: Package distribution and management/
+5. **Tools**: This is non non-accessible module of the package from the root directory. This is where files are stored that we don’t want package installers to see or use.
+6. **Docs**: This is where log and test cases will be stored. It will tell us where our project's last testing was done and what have we done yet.
+7. **Sample**: This folder contains all the code that are not functions but complete demos of a particular task. For example, a class or function that detects cars using a particular dataset is considered a demo / reference code and should be inserted in this directory.
+8. **Components**: This is where we will collect all the usable codes. The subcomponents can be added more to what we have defined yet. All helper functions can be separated into different modules or either store them in utils. If the helper functions are insignificant and are not lengthy, my suggestion is to keep them in ``utils.py`` file.
+9. **Test**: This is the module where we’ll keep all our test cases and files. As we move ahead the number of tests will increase. We can create as many test cases as possible to make sure that the functions do not crash with later updates.
+10. **Makefile**: Defining generic tasks for the project like ``pip install -r requirements.txt``
+
+Guidelines
+-----------
+
+How to contribute to OmdenaLore
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you have a code block that can help collaborators in current or future projects, you can add that code block to the OmdenaLore repository. The contributions to OmdenaLore repository go through peer-to-peer reviews, more details below. To make sure a valid contribution is made, please follow the steps below.
+
+
+1. Clone of the repository from DAGsHub https://dagshub.com/Omdena/OmdenaLore
+     a. You can clone the repository locally with the following command in your terminal/Powershell: **git clone https://dagshub.com/Omdena/OmdenaLore.git**
+     b. If you are not comfortable with the terminal, you can use the GitHub desktop option as well.
+
+     .. figure:: /images/clone.png
+       :alt: Cloning repository
+
+2. After localizing the repository, we recommend that you open a issue explaining what you are working on. Since OmdenaLore is a collaborative platform, we wish to have great communication between you and fellow contributors and opening an issue is a good way to do so.
+
+     a. To open an issue, head to `dagshub.com/omdenalore <dagshub.com/omdenalore>`__ and click on the issue section. Create or find an issue according to your problem statement.
+
+3. Once inside the local folder of the repository, make a new git branch from the main branch. Let’s say you are adding code to the nlp folder and you would like to make a **nlp-contrib** branch. You can do this with the following command - **git checkout -b nlp-contrib** . To quickly familiarize yourself with git branches, read this official primer `here <https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell>`__.
+     a. We recommend that you make a branch with your own name or the issues that you are working on. Example branch names - issues_44, john_doe, ...
+
+4. After you’ve made your desired changes in your branch, it is time to push the branch to the DAGsHub repository online. To push your changes you can use GitHub desktop to add, commit, and push your changes or use your terminal/Powershell. For more information on how to use git, please refer to these docs: https://github.com/git-guides/git-add, https://github.com/git-guides/git-commit, https://github.com/git-guides/git-push.
+
+5. If you are the first one to work on that branch, it does not exist yet on DAGsHub. When you try the **git push** command, you might hit this error:
+
+    .. figure:: /images/branch.png
+       :alt: branch error
+
+    In this example, the branch **example-branch** is unrecognized by the repository online. To fix this error, run the command git automatically recommends, which in the case shown above would be: **git push --set-upstream origin example-branch**
+
+6. Once you have pushed your branch successfully, it is time to open a Pull Request on DAGsHub.
+
+     a. On the repository webpage, go to the Pull Requests section.
+
+     .. figure:: /images/dashboard.png
+       :alt: dashboard
+
+     b. Click on **New Pull Request**
+
+     .. figure:: /images/dashboard_newpr.png
+       :alt: make a new PR
+
+     c. On the right side of the webpage, pick the branch you want to open a Pull Request with. This branch contains the changes you are requesting to be merged into the main branch of the repository. Search for the name of your branch and select it.
+
+     .. figure:: /images/pickbranch.png
+       :alt: choose the branch to open PR with
+
+     d. **IMPORTANT**: This step is of utmost importance for your Pull Request’s final phase. Make sure you are adequately documenting your Pull Request with clear and concise summary points on the changes you have made. You can even upload images in this process. This will help the Pull Request reviewers understand the changes and request any changes if required. In the example below, I am making a Pull Request for my **docs-update** branch. Please find more information on the PR template `here <https://omdenaai.github.io/pull_request_template.html>`__.
+
+     .. figure:: /images/write.png
+       :alt: Write about your PR
+
+     e. Notice the **Assignee** option on the right side. Here you can click on **Assign** and assign another collaborator you are working with if you wish to request feedback about the Pull Request or even request additional features on top of your changes. Here I assigned the Pull Request to my colleague to get this feedback on my changes.
+
+7. That’s it! Now you can click **Create Pull Request** and share your Pull Request link in the slack channel. One of the reviewers will get to it and share their feedback with you and request to make any adjustments if required. After that, your PR will be merged into the main branch.
+
+
+
+Pull request guidelines and templates
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Whenever a pull request (PR) is generated, it's highly recommended for collaborators to include these sections in the PR description.
+It makes PR approval and review process faster and efficient.
+
+.. toctree::
+   :maxdepth: 2
+
+   pull_request_template
+
+Guidelines to be followed for your code to get accepted
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. "TODO(author):" Add this when you have to take up an edit to a function in future.
+
+2. Try to avoid circular dependencies. In this case, include common dependencies in a single utils files
+
+3. Avoid global variable and it’s accessibility
+
+4. To keep in line with the style guide, keep module names short, lowercase, and be sure to avoid using special symbols
+
+5. Use time, tqdm and log decorators where necessary
+
+6. Keep return types immutable if possible
+
+7. If a function take an input of another function, extensively check the format and type of input to avoid any crashes in future
+
+8. Constantly test your code by adding test cases in the tests module
+
+9. Never miss out on adding doc strings. This will help us to create documentation automatically once the package is done.
+
+10. Try to use `black`, `flake8` and `isort` for linting the code to ensure consistency across modules.
+
+Please find the doc string format for functions at the end of this document.
+
+Additionally, please check your code for points below
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+1. Do not work on the main branch of the repository. Please create your own branch and merge it with a pull request.
+
+2. Do not publish your github ids or password in your code
+
+   a. Double check any configuration file which may contain any confidential information
+
+3. Make sure not to upload any datasets, images, csv or any files which are not code.
+
+   a. If you want to reference a dataset for your sample code, you can reference a public link of the dataset inside the doc string of your functions.
+
+4. Make sure your function is properly named and does not contain the same characters as another function in the same module.
+
+
+5. Please check if a similar function is available in the repository before pushing your code.
+
+
+6. Do not change the directory structure of the repository.
+
+7. Fetch from the main branch before making a pull request.
+
+
+Function description doc string format
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. figure:: /images/docs_string_example.png
+    :alt: Function docstring
+
+The doc strings follows rst format.
+For more information and example visit these sites.
+
+`Thomas-cokelear <https://thomas-cokelaer.info/tutorials/sphinx/docstring_python.html>`_
+
+`anaconda docs <https://docs.anaconda.com/restructuredtext/detailed/>`_
+

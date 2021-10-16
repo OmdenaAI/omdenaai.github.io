@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OmdenaLore Guidelines &mdash; OmdenaLore 0.2.8 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="pull_request_template.html" />
+    <link rel="prev" title="Machine Learning" href="k_ml.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> OmdenaLore
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Omdenalore</a></li>
+<li class="toctree-l1"><a class="reference internal" href="knowledge.html">Knowledge base</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">OmdenaLore Guidelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#omdenalore-structure">OmdenaLore Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description-of-structure-components">Description of Structure components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#guidelines">Guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-contribute-to-omdenalore">How to contribute to OmdenaLore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pull-request-guidelines-and-templates">Pull request guidelines and templates</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#guidelines-to-be-followed-for-your-code-to-get-accepted">Guidelines to be followed for your code to get accepted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additionally-please-check-your-code-for-points-below">Additionally, please check your code for points below</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#function-description-doc-string-format">Function description doc string format</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ and Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OmdenaLore</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>OmdenaLore Guidelines</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/guideline.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="omdenalore-guidelines">
+<h1>OmdenaLore Guidelines<a class="headerlink" href="#omdenalore-guidelines" title="Permalink to this headline"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
+<p>As the name suggests, OmdenaLore is a body of knowledge held by Omdena. OmdenaLore is a library/package that contains code knowledge base gathered in completed and ongoing projects. The code knowledge base increases and gets updated as collaborators add their knowledge in future projects. OmdenaLore is a collaborator sourced structured library. It is closed for Omdena community members.</p>
+</section>
+<section id="omdenalore-structure">
+<h2>OmdenaLore Structure<a class="headerlink" href="#omdenalore-structure" title="Permalink to this headline"></a></h2>
+<p><strong>OmdenaLore</strong></p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Configurations</p>
+<ol class="loweralpha simple">
+<li><p>CVconfig.py</p></li>
+<li><p>NLPconfig.py</p></li>
+</ol>
+</li>
+<li><p>Readme.md</p></li>
+<li><p>Requirements.txt</p></li>
+<li><p>Setup.py</p></li>
+<li><p>Tools</p>
+<ol class="loweralpha simple">
+<li><p>__init__.py (not allowed)</p></li>
+</ol>
+</li>
+<li><p>Docs</p>
+<ol class="loweralpha simple">
+<li><p>Changelog.txt</p></li>
+</ol>
+</li>
+<li><p>Sample</p></li>
+<li><p>OmdenaLore (main components)</p>
+<ol class="loweralpha simple">
+<li><p>__init__.py</p></li>
+<li><p>computerVision</p></li>
+</ol>
+<blockquote>
+<div><ol class="lowerroman simple">
+<li><p>__init__.py</p></li>
+<li><p>Utils.py</p></li>
+<li><p>Loadingimages.py</p></li>
+<li><p>Object_Detection.py</p></li>
+</ol>
+</div></blockquote>
+<ol class="loweralpha simple" start="3">
+<li><p>NLP</p></li>
+<li><p>DataSets</p></li>
+<li><p>Satellite</p></li>
+<li><p>Cloud(aws, azure)</p></li>
+<li><p>satellite</p></li>
+<li><p>Utils.py</p></li>
+<li><p>activation_functions.py</p></li>
+</ol>
+</li>
+<li><p>Tests</p>
+<ol class="loweralpha simple">
+<li><p>basic_text</p></li>
+<li><p>advance</p></li>
+</ol>
+</li>
+<li><p>Makefile</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="description-of-structure-components">
+<h2>Description of Structure components<a class="headerlink" href="#description-of-structure-components" title="Permalink to this headline"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Configurations</strong>: All config.py / config.json files containing static variable, paths etc to be stored here. The configs can be stored in different files for different subpackages/subcomponents.</p></li>
+<li><p><strong>Readme.MD</strong> : Documentation of the code.</p></li>
+<li><p><strong>Requirements.py</strong>: <code class="docutils literal notranslate"><span class="pre">pip</span></code> requirements and dependencies management.</p></li>
+<li><p><strong>Setup.py</strong>: Package distribution and management/</p></li>
+<li><p><strong>Tools</strong>: This is non non-accessible module of the package from the root directory. This is where files are stored that we don’t want package installers to see or use.</p></li>
+<li><p><strong>Docs</strong>: This is where log and test cases will be stored. It will tell us where our project’s last testing was done and what have we done yet.</p></li>
+<li><p><strong>Sample</strong>: This folder contains all the code that are not functions but complete demos of a particular task. For example, a class or function that detects cars using a particular dataset is considered a demo / reference code and should be inserted in this directory.</p></li>
+<li><p><strong>Components</strong>: This is where we will collect all the usable codes. The subcomponents can be added more to what we have defined yet. All helper functions can be separated into different modules or either store them in utils. If the helper functions are insignificant and are not lengthy, my suggestion is to keep them in <code class="docutils literal notranslate"><span class="pre">utils.py</span></code> file.</p></li>
+<li><p><strong>Test</strong>: This is the module where we’ll keep all our test cases and files. As we move ahead the number of tests will increase. We can create as many test cases as possible to make sure that the functions do not crash with later updates.</p></li>
+<li><p><strong>Makefile</strong>: Defining generic tasks for the project like <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p></li>
+</ol>
+</section>
+<section id="guidelines">
+<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline"></a></h2>
+<section id="how-to-contribute-to-omdenalore">
+<h3>How to contribute to OmdenaLore<a class="headerlink" href="#how-to-contribute-to-omdenalore" title="Permalink to this headline"></a></h3>
+<p>If you have a code block that can help collaborators in current or future projects, you can add that code block to the OmdenaLore repository. The contributions to OmdenaLore repository go through peer-to-peer reviews, more details below. To make sure a valid contribution is made, please follow the steps below.</p>
+<ol class="arabic">
+<li><dl>
+<dt>Clone of the repository from DAGsHub <a class="reference external" href="https://dagshub.com/Omdena/OmdenaLore">https://dagshub.com/Omdena/OmdenaLore</a></dt><dd><ol class="loweralpha simple">
+<li><p>You can clone the repository locally with the following command in your terminal/Powershell: <strong>git clone https://dagshub.com/Omdena/OmdenaLore.git</strong></p></li>
+<li><p>If you are not comfortable with the terminal, you can use the GitHub desktop option as well.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="Cloning repository" src="_images/clone.png" />
+</figure>
+</dd>
+</dl>
+</li>
+<li><p>After localizing the repository, we recommend that you open a issue explaining what you are working on. Since OmdenaLore is a collaborative platform, we wish to have great communication between you and fellow contributors and opening an issue is a good way to do so.</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>To open an issue, head to <a class="reference external" href="dagshub.com/omdenalore">dagshub.com/omdenalore</a> and click on the issue section. Create or find an issue according to your problem statement.</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><dl class="simple">
+<dt>Once inside the local folder of the repository, make a new git branch from the main branch. Let’s say you are adding code to the nlp folder and you would like to make a <strong>nlp-contrib</strong> branch. You can do this with the following command - <strong>git checkout -b nlp-contrib</strong> . To quickly familiarize yourself with git branches, read this official primer <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">here</a>.</dt><dd><ol class="loweralpha simple">
+<li><p>We recommend that you make a branch with your own name or the issues that you are working on. Example branch names - issues_44, john_doe, …</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>After you’ve made your desired changes in your branch, it is time to push the branch to the DAGsHub repository online. To push your changes you can use GitHub desktop to add, commit, and push your changes or use your terminal/Powershell. For more information on how to use git, please refer to these docs: <a class="reference external" href="https://github.com/git-guides/git-add">https://github.com/git-guides/git-add</a>, <a class="reference external" href="https://github.com/git-guides/git-commit">https://github.com/git-guides/git-commit</a>, <a class="reference external" href="https://github.com/git-guides/git-push">https://github.com/git-guides/git-push</a>.</p></li>
+<li><p>If you are the first one to work on that branch, it does not exist yet on DAGsHub. When you try the <strong>git push</strong> command, you might hit this error:</p>
+<blockquote>
+<div><figure class="align-default">
+<img alt="branch error" src="_images/branch.png" />
+</figure>
+<p>In this example, the branch <strong>example-branch</strong> is unrecognized by the repository online. To fix this error, run the command git automatically recommends, which in the case shown above would be: <strong>git push –set-upstream origin example-branch</strong></p>
+</div></blockquote>
+</li>
+<li><p>Once you have pushed your branch successfully, it is time to open a Pull Request on DAGsHub.</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>On the repository webpage, go to the Pull Requests section.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="dashboard" src="_images/dashboard.png" />
+</figure>
+<ol class="loweralpha simple" start="2">
+<li><p>Click on <strong>New Pull Request</strong></p></li>
+</ol>
+<figure class="align-default">
+<img alt="make a new PR" src="_images/dashboard_newpr.png" />
+</figure>
+<ol class="loweralpha simple" start="3">
+<li><p>On the right side of the webpage, pick the branch you want to open a Pull Request with. This branch contains the changes you are requesting to be merged into the main branch of the repository. Search for the name of your branch and select it.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="choose the branch to open PR with" src="_images/pickbranch.png" />
+</figure>
+<ol class="loweralpha simple" start="4">
+<li><p><strong>IMPORTANT</strong>: This step is of utmost importance for your Pull Request’s final phase. Make sure you are adequately documenting your Pull Request with clear and concise summary points on the changes you have made. You can even upload images in this process. This will help the Pull Request reviewers understand the changes and request any changes if required. In the example below, I am making a Pull Request for my <strong>docs-update</strong> branch. Please find more information on the PR template <a class="reference external" href="https://omdenaai.github.io/pull_request_template.html">here</a>.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="Write about your PR" src="_images/write.png" />
+</figure>
+<ol class="loweralpha simple" start="5">
+<li><p>Notice the <strong>Assignee</strong> option on the right side. Here you can click on <strong>Assign</strong> and assign another collaborator you are working with if you wish to request feedback about the Pull Request or even request additional features on top of your changes. Here I assigned the Pull Request to my colleague to get this feedback on my changes.</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>That’s it! Now you can click <strong>Create Pull Request</strong> and share your Pull Request link in the slack channel. One of the reviewers will get to it and share their feedback with you and request to make any adjustments if required. After that, your PR will be merged into the main branch.</p></li>
+</ol>
+</section>
+<section id="pull-request-guidelines-and-templates">
+<h3>Pull request guidelines and templates<a class="headerlink" href="#pull-request-guidelines-and-templates" title="Permalink to this headline"></a></h3>
+<p>Whenever a pull request (PR) is generated, it’s highly recommended for collaborators to include these sections in the PR description.
+It makes PR approval and review process faster and efficient.</p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="guidelines-to-be-followed-for-your-code-to-get-accepted">
+<h3>Guidelines to be followed for your code to get accepted<a class="headerlink" href="#guidelines-to-be-followed-for-your-code-to-get-accepted" title="Permalink to this headline"></a></h3>
+<ol class="arabic simple">
+<li><p>“TODO(author):” Add this when you have to take up an edit to a function in future.</p></li>
+<li><p>Try to avoid circular dependencies. In this case, include common dependencies in a single utils files</p></li>
+<li><p>Avoid global variable and it’s accessibility</p></li>
+<li><p>To keep in line with the style guide, keep module names short, lowercase, and be sure to avoid using special symbols</p></li>
+<li><p>Use time, tqdm and log decorators where necessary</p></li>
+<li><p>Keep return types immutable if possible</p></li>
+<li><p>If a function take an input of another function, extensively check the format and type of input to avoid any crashes in future</p></li>
+<li><p>Constantly test your code by adding test cases in the tests module</p></li>
+<li><p>Never miss out on adding doc strings. This will help us to create documentation automatically once the package is done.</p></li>
+<li><p>Try to use <cite>black</cite>, <cite>flake8</cite> and <cite>isort</cite> for linting the code to ensure consistency across modules.</p></li>
+</ol>
+<p>Please find the doc string format for functions at the end of this document.</p>
+</section>
+<section id="additionally-please-check-your-code-for-points-below">
+<h3>Additionally, please check your code for points below<a class="headerlink" href="#additionally-please-check-your-code-for-points-below" title="Permalink to this headline"></a></h3>
+<ol class="arabic simple">
+<li><p>Do not work on the main branch of the repository. Please create your own branch and merge it with a pull request.</p></li>
+<li><p>Do not publish your github ids or password in your code</p>
+<ol class="loweralpha simple">
+<li><p>Double check any configuration file which may contain any confidential information</p></li>
+</ol>
+</li>
+<li><p>Make sure not to upload any datasets, images, csv or any files which are not code.</p>
+<ol class="loweralpha simple">
+<li><p>If you want to reference a dataset for your sample code, you can reference a public link of the dataset inside the doc string of your functions.</p></li>
+</ol>
+</li>
+<li><p>Make sure your function is properly named and does not contain the same characters as another function in the same module.</p></li>
+<li><p>Please check if a similar function is available in the repository before pushing your code.</p></li>
+<li><p>Do not change the directory structure of the repository.</p></li>
+<li><p>Fetch from the main branch before making a pull request.</p></li>
+</ol>
+</section>
+<section id="function-description-doc-string-format">
+<h3>Function description doc string format<a class="headerlink" href="#function-description-doc-string-format" title="Permalink to this headline"></a></h3>
+<figure class="align-default">
+<img alt="Function docstring" src="_images/docs_string_example.png" />
+</figure>
+<p>The doc strings follows rst format.
+For more information and example visit these sites.</p>
+<p><a class="reference external" href="https://thomas-cokelaer.info/tutorials/sphinx/docstring_python.html">Thomas-cokelear</a></p>
+<p><a class="reference external" href="https://docs.anaconda.com/restructuredtext/detailed/">anaconda docs</a></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="k_ml.html" class="btn btn-neutral float-left" title="Machine Learning" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pull_request_template.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Kaushal.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
