@@ -18,7 +18,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="pull_request_template.html" />
+    <link rel="next" title="How to format your Pull Requests" href="pull_request_template.html" />
     <link rel="prev" title="Machine Learning" href="k_ml.html" /> 
 </head>
 
@@ -43,21 +43,27 @@
 <li class="toctree-l1"><a class="reference internal" href="knowledge.html">Knowledge base</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">OmdenaLore Guidelines</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#omdenalore-structure">OmdenaLore Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#description-of-structure-components">Description of Structure components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#guidelines">Guidelines</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#how-to-contribute-to-omdenalore">How to contribute to OmdenaLore</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pull-request-guidelines-and-templates">Pull request guidelines and templates</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="#pull-request-guidelines-and-templates">Pull request guidelines and templates</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pull_request_template.html">How to format your Pull Requests</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#guidelines-to-be-followed-for-your-code-to-get-accepted">Guidelines to be followed for your code to get accepted</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#additionally-please-check-your-code-for-points-below">Additionally, please check your code for points below</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#function-description-doc-string-format">Function description doc string format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#contribution-workflow">Contribution Workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setup-your-local-environment">Setup Your Local Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#during-code-development">During code development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#submit-your-contribution">Submit your contribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#review-process">Review Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#things-to-ensure">Things to ensure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-format-doc-strings">How to format doc strings</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coc.html">Code of Conduct</a></li>
 </ul>
 
         </div>
@@ -88,80 +94,9 @@
 <h1>OmdenaLore Guidelines<a class="headerlink" href="#omdenalore-guidelines" title="Permalink to this headline"></a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
-<p>As the name suggests, OmdenaLore is a body of knowledge held by Omdena. OmdenaLore is a library/package that contains code knowledge base gathered in completed and ongoing projects. The code knowledge base increases and gets updated as collaborators add their knowledge in future projects. OmdenaLore is a collaborator sourced structured library. It is closed for Omdena community members.</p>
-</section>
-<section id="omdenalore-structure">
-<h2>OmdenaLore Structure<a class="headerlink" href="#omdenalore-structure" title="Permalink to this headline"></a></h2>
-<p><strong>OmdenaLore</strong></p>
-<blockquote>
-<div><ol class="arabic">
-<li><p>Configurations</p>
-<ol class="loweralpha simple">
-<li><p>CVconfig.py</p></li>
-<li><p>NLPconfig.py</p></li>
-</ol>
-</li>
-<li><p>Readme.md</p></li>
-<li><p>Requirements.txt</p></li>
-<li><p>Setup.py</p></li>
-<li><p>Tools</p>
-<ol class="loweralpha simple">
-<li><p>__init__.py (not allowed)</p></li>
-</ol>
-</li>
-<li><p>Docs</p>
-<ol class="loweralpha simple">
-<li><p>Changelog.txt</p></li>
-</ol>
-</li>
-<li><p>Sample</p></li>
-<li><p>OmdenaLore (main components)</p>
-<ol class="loweralpha simple">
-<li><p>__init__.py</p></li>
-<li><p>computerVision</p></li>
-</ol>
-<blockquote>
-<div><ol class="lowerroman simple">
-<li><p>__init__.py</p></li>
-<li><p>Utils.py</p></li>
-<li><p>Loadingimages.py</p></li>
-<li><p>Object_Detection.py</p></li>
-</ol>
-</div></blockquote>
-<ol class="loweralpha simple" start="3">
-<li><p>NLP</p></li>
-<li><p>DataSets</p></li>
-<li><p>Satellite</p></li>
-<li><p>Cloud(aws, azure)</p></li>
-<li><p>satellite</p></li>
-<li><p>Utils.py</p></li>
-<li><p>activation_functions.py</p></li>
-</ol>
-</li>
-<li><p>Tests</p>
-<ol class="loweralpha simple">
-<li><p>basic_text</p></li>
-<li><p>advance</p></li>
-</ol>
-</li>
-<li><p>Makefile</p></li>
-</ol>
-</div></blockquote>
-</section>
-<section id="description-of-structure-components">
-<h2>Description of Structure components<a class="headerlink" href="#description-of-structure-components" title="Permalink to this headline"></a></h2>
-<ol class="arabic simple">
-<li><p><strong>Configurations</strong>: All config.py / config.json files containing static variable, paths etc to be stored here. The configs can be stored in different files for different subpackages/subcomponents.</p></li>
-<li><p><strong>Readme.MD</strong> : Documentation of the code.</p></li>
-<li><p><strong>Requirements.py</strong>: <code class="docutils literal notranslate"><span class="pre">pip</span></code> requirements and dependencies management.</p></li>
-<li><p><strong>Setup.py</strong>: Package distribution and management/</p></li>
-<li><p><strong>Tools</strong>: This is non non-accessible module of the package from the root directory. This is where files are stored that we don’t want package installers to see or use.</p></li>
-<li><p><strong>Docs</strong>: This is where log and test cases will be stored. It will tell us where our project’s last testing was done and what have we done yet.</p></li>
-<li><p><strong>Sample</strong>: This folder contains all the code that are not functions but complete demos of a particular task. For example, a class or function that detects cars using a particular dataset is considered a demo / reference code and should be inserted in this directory.</p></li>
-<li><p><strong>Components</strong>: This is where we will collect all the usable codes. The subcomponents can be added more to what we have defined yet. All helper functions can be separated into different modules or either store them in utils. If the helper functions are insignificant and are not lengthy, my suggestion is to keep them in <code class="docutils literal notranslate"><span class="pre">utils.py</span></code> file.</p></li>
-<li><p><strong>Test</strong>: This is the module where we’ll keep all our test cases and files. As we move ahead the number of tests will increase. We can create as many test cases as possible to make sure that the functions do not crash with later updates.</p></li>
-<li><p><strong>Makefile</strong>: Defining generic tasks for the project like <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p></li>
-</ol>
+<p>As the name suggests, OmdenaLore is a body of knowledge held by Omdena. OmdenaLore is a library/package that contains code knowledge base gathered in completed and ongoing projects.
+The code knowledge base increases and gets updated as collaborators add their knowledge.
+OmdenaLore is a collaborator sourced structured library.</p>
 </section>
 <section id="guidelines">
 <h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline"></a></h2>
@@ -239,49 +174,77 @@
 </section>
 <section id="pull-request-guidelines-and-templates">
 <h3>Pull request guidelines and templates<a class="headerlink" href="#pull-request-guidelines-and-templates" title="Permalink to this headline"></a></h3>
-<p>Whenever a pull request (PR) is generated, it’s highly recommended for collaborators to include these sections in the PR description.
+<p>Whenever a pull request (PR) is generated, it’s highly recommended for collaborators to include as many of these sections in the PR description.
 It makes PR approval and review process faster and efficient.</p>
 <div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pull_request_template.html">How to format your Pull Requests</a></li>
+</ul>
 </div>
 </section>
-<section id="guidelines-to-be-followed-for-your-code-to-get-accepted">
-<h3>Guidelines to be followed for your code to get accepted<a class="headerlink" href="#guidelines-to-be-followed-for-your-code-to-get-accepted" title="Permalink to this headline"></a></h3>
-<ol class="arabic simple">
-<li><p>“TODO(author):” Add this when you have to take up an edit to a function in future.</p></li>
-<li><p>Try to avoid circular dependencies. In this case, include common dependencies in a single utils files</p></li>
-<li><p>Avoid global variable and it’s accessibility</p></li>
-<li><p>To keep in line with the style guide, keep module names short, lowercase, and be sure to avoid using special symbols</p></li>
-<li><p>Use time, tqdm and log decorators where necessary</p></li>
-<li><p>Keep return types immutable if possible</p></li>
-<li><p>If a function take an input of another function, extensively check the format and type of input to avoid any crashes in future</p></li>
-<li><p>Constantly test your code by adding test cases in the tests module</p></li>
-<li><p>Never miss out on adding doc strings. This will help us to create documentation automatically once the package is done.</p></li>
-<li><p>Try to use <cite>black</cite>, <cite>flake8</cite> and <cite>isort</cite> for linting the code to ensure consistency across modules.</p></li>
-</ol>
-<p>Please find the doc string format for functions at the end of this document.</p>
 </section>
-<section id="additionally-please-check-your-code-for-points-below">
-<h3>Additionally, please check your code for points below<a class="headerlink" href="#additionally-please-check-your-code-for-points-below" title="Permalink to this headline"></a></h3>
-<ol class="arabic simple">
-<li><p>Do not work on the main branch of the repository. Please create your own branch and merge it with a pull request.</p></li>
-<li><p>Do not publish your github ids or password in your code</p>
-<ol class="loweralpha simple">
-<li><p>Double check any configuration file which may contain any confidential information</p></li>
-</ol>
+<section id="contribution-workflow">
+<h2>Contribution Workflow<a class="headerlink" href="#contribution-workflow" title="Permalink to this headline"></a></h2>
+<section id="setup-your-local-environment">
+<h3>Setup Your Local Environment<a class="headerlink" href="#setup-your-local-environment" title="Permalink to this headline"></a></h3>
+<ol class="arabic">
+<li><p>Create a conda or venv environment</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda create --name &lt;name&gt; <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7
+</pre></div>
+</div>
+<p>Make sure that you use python 3.7 ONLY</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3 -m venv &lt;myenvname&gt;
+</pre></div>
+</div>
 </li>
-<li><p>Make sure not to upload any datasets, images, csv or any files which are not code.</p>
-<ol class="loweralpha simple">
-<li><p>If you want to reference a dataset for your sample code, you can reference a public link of the dataset inside the doc string of your functions.</p></li>
-</ol>
-</li>
-<li><p>Make sure your function is properly named and does not contain the same characters as another function in the same module.</p></li>
-<li><p>Please check if a similar function is available in the repository before pushing your code.</p></li>
-<li><p>Do not change the directory structure of the repository.</p></li>
-<li><p>Fetch from the main branch before making a pull request.</p></li>
+<li><p>pip install -r requirements.txt</p></li>
+<li><p>Every time a new library is added you will need to update the requirements.txt</p></li>
 </ol>
 </section>
-<section id="function-description-doc-string-format">
-<h3>Function description doc string format<a class="headerlink" href="#function-description-doc-string-format" title="Permalink to this headline"></a></h3>
+<section id="during-code-development">
+<h3>During code development<a class="headerlink" href="#during-code-development" title="Permalink to this headline"></a></h3>
+<ol class="arabic">
+<li><p>Pull the latest from upstream:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">main</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="n">upstream</span> <span class="n">main</span>
+</pre></div>
+</div>
+</li>
+<li><p>Create a branch for the feature that you are working on(if the branch names for refactoring or testing are already planned out then follow them)</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="o">&lt;</span><span class="n">branch_name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Commit locally and add them to your branch</p></li>
+<li><p>Make sure that each commit contains a single logically piece of work and the commit message reflects what was done efficiently.</p></li>
+<li><p>We use pre-commit hooks when committing to make sure that the code passes some set rules.
+To get the pre-commit hooks up and running please refer to this <a class="reference external" href="https://dagshub.com/Omdena/OmdenaLore/pulls/85">PR</a></p></li>
+</ol>
+</section>
+<section id="submit-your-contribution">
+<h3>Submit your contribution<a class="headerlink" href="#submit-your-contribution" title="Permalink to this headline"></a></h3>
+<p>When you’re done, make a PR with the branch that you wish to merge with,
+for example if you are working on OmdenaLore 0.3.1 then this would be merged into OmdenaLore 0.3.x</p>
+<p>Check this section if you want to know how to create PR
+<a class="reference internal" href="#how-to-contribute-to-omdenalore"><span class="std std-ref">How to contribute to OmdenaLore</span></a> and <a class="reference internal" href="#pull-request-guidelines-and-templates"><span class="std std-ref">Pull request guidelines and templates</span></a></p>
+</section>
+<section id="review-process">
+<h3>Review Process<a class="headerlink" href="#review-process" title="Permalink to this headline"></a></h3>
+<p>The reviewing team will be reviewing each PR and will help you improve the implementation, documentation and style of the PR.</p>
+<p>If changes are needed, make the changes and push to the branch where the update will be reflected in the PR automatically.
+Once the PR is approved then the reviewing team will merge the PR.</p>
+</section>
+<section id="things-to-ensure">
+<h3>Things to ensure<a class="headerlink" href="#things-to-ensure" title="Permalink to this headline"></a></h3>
+<ol class="arabic simple">
+<li><p>All code should have tests</p></li>
+<li><p>All code should be documented, using the <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx format</a>.</p></li>
+<li><p>Setup your editor to follow <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a>.</p></li>
+<li><p>We use black for formatting and flake8 for linting</p></li>
+</ol>
+</section>
+<section id="how-to-format-doc-strings">
+<h3>How to format doc strings<a class="headerlink" href="#how-to-format-doc-strings" title="Permalink to this headline"></a></h3>
 <figure class="align-default">
 <img alt="Function docstring" src="_images/docs_string_example.png" />
 </figure>
@@ -298,7 +261,7 @@ For more information and example visit these sites.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="k_ml.html" class="btn btn-neutral float-left" title="Machine Learning" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="pull_request_template.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pull_request_template.html" class="btn btn-neutral float-right" title="How to format your Pull Requests" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

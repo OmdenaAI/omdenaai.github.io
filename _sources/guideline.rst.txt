@@ -6,84 +6,9 @@ Introduction
 
 
 
-As the name suggests, OmdenaLore is a body of knowledge held by Omdena. OmdenaLore is a library/package that contains code knowledge base gathered in completed and ongoing projects. The code knowledge base increases and gets updated as collaborators add their knowledge in future projects. OmdenaLore is a collaborator sourced structured library. It is closed for Omdena community members.
-
-OmdenaLore Structure
-------------------------
-
-**OmdenaLore**
-
-     1. Configurations
-
-        a. CVconfig.py
-
-        b. NLPconfig.py
-
-     2. Readme.md
-
-     3. Requirements.txt
-
-     4. Setup.py
-
-     5. Tools
-
-        a. __init__.py (not allowed)
-
-     6. Docs
-
-        a. Changelog.txt
-
-     7. Sample
-
-     8. OmdenaLore (main components)
-
-        a. __init__.py
-
-        b. computerVision
-
-          i. __init__.py
-
-          ii. Utils.py
-
-          iii. Loadingimages.py
-
-          iv. Object_Detection.py
-
-        c. NLP
-
-        d. DataSets
-
-        e. Satellite
-
-        f. Cloud(aws, azure)
-
-        g. satellite
-
-        h. Utils.py
-
-        i. activation_functions.py
-
-     9. Tests
-
-        a. basic_text
-
-        b. advance
-
-     10. Makefile
-
-Description of Structure components
-------------------------------------
-
-1. **Configurations**: All config.py / config.json files containing static variable, paths etc to be stored here. The configs can be stored in different files for different subpackages/subcomponents.
-2. **Readme.MD** : Documentation of the code.
-3. **Requirements.py**: ``pip`` requirements and dependencies management.
-4. **Setup.py**: Package distribution and management/
-5. **Tools**: This is non non-accessible module of the package from the root directory. This is where files are stored that we don’t want package installers to see or use.
-6. **Docs**: This is where log and test cases will be stored. It will tell us where our project's last testing was done and what have we done yet.
-7. **Sample**: This folder contains all the code that are not functions but complete demos of a particular task. For example, a class or function that detects cars using a particular dataset is considered a demo / reference code and should be inserted in this directory.
-8. **Components**: This is where we will collect all the usable codes. The subcomponents can be added more to what we have defined yet. All helper functions can be separated into different modules or either store them in utils. If the helper functions are insignificant and are not lengthy, my suggestion is to keep them in ``utils.py`` file.
-9. **Test**: This is the module where we’ll keep all our test cases and files. As we move ahead the number of tests will increase. We can create as many test cases as possible to make sure that the functions do not crash with later updates.
-10. **Makefile**: Defining generic tasks for the project like ``pip install -r requirements.txt``
+As the name suggests, OmdenaLore is a body of knowledge held by Omdena. OmdenaLore is a library/package that contains code knowledge base gathered in completed and ongoing projects. 
+The code knowledge base increases and gets updated as collaborators add their knowledge. 
+OmdenaLore is a collaborator sourced structured library.
 
 Guidelines
 -----------
@@ -148,66 +73,96 @@ If you have a code block that can help collaborators in current or future projec
 Pull request guidelines and templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Whenever a pull request (PR) is generated, it's highly recommended for collaborators to include these sections in the PR description.
+Whenever a pull request (PR) is generated, it's highly recommended for collaborators to include as many of these sections in the PR description.
 It makes PR approval and review process faster and efficient.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
+   :titlesonly:
+   :includehidden:
 
    pull_request_template
 
-Guidelines to be followed for your code to get accepted
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-1. "TODO(author):" Add this when you have to take up an edit to a function in future.
-
-2. Try to avoid circular dependencies. In this case, include common dependencies in a single utils files
-
-3. Avoid global variable and it’s accessibility
-
-4. To keep in line with the style guide, keep module names short, lowercase, and be sure to avoid using special symbols
-
-5. Use time, tqdm and log decorators where necessary
-
-6. Keep return types immutable if possible
-
-7. If a function take an input of another function, extensively check the format and type of input to avoid any crashes in future
-
-8. Constantly test your code by adding test cases in the tests module
-
-9. Never miss out on adding doc strings. This will help us to create documentation automatically once the package is done.
-
-10. Try to use `black`, `flake8` and `isort` for linting the code to ensure consistency across modules.
-
-Please find the doc string format for functions at the end of this document.
-
-Additionally, please check your code for points below
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-1. Do not work on the main branch of the repository. Please create your own branch and merge it with a pull request.
+Contribution Workflow
+---------------------
 
-2. Do not publish your github ids or password in your code
+Setup Your Local Environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   a. Double check any configuration file which may contain any confidential information
+#. Create a conda or venv environment 
 
-3. Make sure not to upload any datasets, images, csv or any files which are not code.
+   .. code-block:: shell
 
-   a. If you want to reference a dataset for your sample code, you can reference a public link of the dataset inside the doc string of your functions.
+      conda create --name <name> python=3.7
 
-4. Make sure your function is properly named and does not contain the same characters as another function in the same module.
+   Make sure that you use python 3.7 ONLY
 
+   .. code-block:: shell
 
-5. Please check if a similar function is available in the repository before pushing your code.
-
-
-6. Do not change the directory structure of the repository.
-
-7. Fetch from the main branch before making a pull request.
+      python3 -m venv <myenvname>
 
 
-Function description doc string format
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#. pip install -r requirements.txt
+
+#. Every time a new library is added you will need to update the requirements.txt
+
+
+During code development
+~~~~~~~~~~~~~~~~~~~~~~~
+
+#. Pull the latest from upstream:
+
+   .. code-block:: python3
+
+      git checkout main
+      git pull upstream main
+
+#. Create a branch for the feature that you are working on(if the branch names for refactoring or testing are already planned out then follow them)
+
+   .. code-block:: python3
+
+      git checkout -b <branch_name>
+
+#. Commit locally and add them to your branch
+
+#. Make sure that each commit contains a single logically piece of work and the commit message reflects what was done efficiently.
+
+#. We use pre-commit hooks when committing to make sure that the code passes some set rules. 
+   To get the pre-commit hooks up and running please refer to this `PR <https://dagshub.com/Omdena/OmdenaLore/pulls/85>`_
+
+Submit your contribution
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+When you’re done, make a PR with the branch that you wish to merge with, 
+for example if you are working on OmdenaLore 0.3.1 then this would be merged into OmdenaLore 0.3.x
+
+Check this section if you want to know how to create PR 
+:ref:`How to contribute to OmdenaLore` and :ref:`Pull request guidelines and templates`
+
+Review Process
+~~~~~~~~~~~~~~
+
+The reviewing team will be reviewing each PR and will help you improve the implementation, documentation and style of the PR.
+
+If changes are needed, make the changes and push to the branch where the update will be reflected in the PR automatically.
+Once the PR is approved then the reviewing team will merge the PR. 
+
+Things to ensure
+~~~~~~~~~~~~~~~~
+
+#. All code should have tests 
+
+#. All code should be documented, using the `Sphinx format <https://www.sphinx-doc.org/en/master/>`_.
+
+#. Setup your editor to follow `PEP 8 <https://www.python.org/dev/peps/pep-0008/>`_.
+
+#. We use black for formatting and flake8 for linting  
+
+
+How to format doc strings
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 .. figure:: /images/docs_string_example.png

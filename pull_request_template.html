@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>&lt;no title&gt; &mdash; OmdenaLore 0.2.8 documentation</title>
+  <title>How to format your Pull Requests &mdash; OmdenaLore 0.2.8 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -38,11 +38,26 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Omdenalore</a></li>
 <li class="toctree-l1"><a class="reference internal" href="knowledge.html">Knowledge base</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guideline.html">OmdenaLore Guidelines</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="guideline.html">OmdenaLore Guidelines</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="guideline.html#introduction">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="guideline.html#guidelines">Guidelines</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="guideline.html#how-to-contribute-to-omdenalore">How to contribute to OmdenaLore</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="guideline.html#pull-request-guidelines-and-templates">Pull request guidelines and templates</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">How to format your Pull Requests</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="guideline.html#guidelines-to-be-followed-for-your-code-to-get-accepted">Guidelines to be followed for your code to get accepted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="guideline.html#additionally-please-check-your-code-for-points-below">Additionally, please check your code for points below</a></li>
+<li class="toctree-l3"><a class="reference internal" href="guideline.html#function-description-doc-string-format">Function description doc string format</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coc.html">Code of Conduct</a></li>
 </ul>
 
         </div>
@@ -60,7 +75,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="guideline.html">OmdenaLore Guidelines</a> &raquo;</li>
-      <li>&lt;no title&gt;</li>
+      <li>How to format your Pull Requests</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/pull_request_template.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -70,23 +85,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <p>### Why This PR Adds Value</p>
+  <section id="how-to-format-your-pull-requests">
+<h1>How to format your Pull Requests<a class="headerlink" href="#how-to-format-your-pull-requests" title="Permalink to this headline"></a></h1>
+<p>Whenever a pull request (PR) is generated, it’s highly recommended for collaborators to include as many of these sections in the PR description.</p>
+<section id="why-this-pr-adds-value">
+<h2>Why This PR Adds Value<a class="headerlink" href="#why-this-pr-adds-value" title="Permalink to this headline"></a></h2>
 <p>Why did you submit this PR? What are its benefits? - Use Issue Description as inspiration</p>
-<p>### What This PR Adds</p>
+</section>
+<section id="what-this-pr-adds">
+<h2>What This PR Adds<a class="headerlink" href="#what-this-pr-adds" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Bullet point list of features - should be descriptive. Mention code variables, file names and/or selectors.</p></li>
 </ul>
-<p>&gt; Add a screenshot below of what your changes look like - especially if it changes the UI. Remove this line and add the alt text and image link accordingly. You can also upload images to DagsHub by dragging and dropping (or copying and pasting) the image. You can paste your images in [this HackMd file](<a class="reference external" href="https://hackmd.io/&#64;Rfh0JJiySWWEGO9LcWW7YA/r1QNx-BJY/edit">https://hackmd.io/&#64;Rfh0JJiySWWEGO9LcWW7YA/r1QNx-BJY/edit</a>) to get the image link if copy-pasting isn’t working.</p>
-<p>### Screenshot</p>
-<p><cite>![Image Alt Text](Image Link)</cite></p>
-<p>### How This PR Could Be Improved</p>
+<blockquote>
+<div><p>Add a screenshot below of what your changes look like - especially if it changes the UI. Remove this line and add the alt text and image link accordingly. You can also upload images to DagsHub by dragging and dropping (or copying and pasting) the image. You can paste your images in <a class="reference external" href="https://hackmd.io/&#64;Rfh0JJiySWWEGO9LcWW7YA/r1QNx-BJY/edit">this HackMd file</a> to get the image link if copy-pasting isn’t working.</p>
+</div></blockquote>
+</section>
+<section id="screenshot">
+<h2>Screenshot<a class="headerlink" href="#screenshot" title="Permalink to this headline"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">![Image</span> <span class="pre">Alt</span> <span class="pre">Text](Image</span> <span class="pre">Link)</span></code></p>
+</section>
+<section id="how-this-pr-could-be-improved">
+<h2>How This PR Could Be Improved<a class="headerlink" href="#how-this-pr-could-be-improved" title="Permalink to this headline"></a></h2>
 <ul class="simple">
-<li><p><strong>Improvement Area</strong> - Add details of what the improvement is, why it would be an improvement and if there are any blockers or issues preventing you from implementing it (lack of knowledge, isn’t possible, haven’t got to it yet or dependent on another issue (if so link to the issue using <cite>#issue number</cite>). This is the place to ask for help if needed. Looking for help from a fellow OmdenaLore member with a specific skill set? Mention it here.</p></li>
+<li><p><strong>Improvement Area</strong> - Add details of what the improvement is, why it would be an improvement and if there are any blockers or issues preventing you from implementing it (lack of knowledge, isn’t possible, haven’t got to it yet or dependent on another issue (if so link to the issue using <code class="docutils literal notranslate"><span class="pre">#issue</span> <span class="pre">number</span></code>). This is the place to ask for help if needed. Looking for help from a fellow OmdenaLore member with a specific skill set? Mention it here.</p></li>
 </ul>
-<p>### Issue This PR Closes</p>
-<p>&gt; This will link the PR to the relevant issue so merging the PR with automatically close the issue. Also, it helps others discover which issues have open PRs. <strong>Note</strong>: Don’t change any of the wording in the line below or it won’t work. (Remove this quote line once you have linked a PR to an issue.</p>
-<p>This closes #`issue number`</p>
+</section>
+<section id="issue-this-pr-closes">
+<h2>Issue This PR Closes<a class="headerlink" href="#issue-this-pr-closes" title="Permalink to this headline"></a></h2>
+<blockquote>
+<div><p>This will link the PR to the relevant issue so merging the PR with automatically close the issue. Also, it helps others discover which issues have open PRs. <strong>Note</strong>: Don’t change any of the wording in the line below or it won’t work. (Remove this quote line once you have linked a PR to an issue.</p>
+</div></blockquote>
+<p>This closes #<code class="docutils literal notranslate"><span class="pre">issue</span> <span class="pre">number</span></code></p>
 <p>You can refer to pull request #57 to see get inspiration on how to write a good PR using this format.</p>
+</section>
+</section>
 
 
            </div>

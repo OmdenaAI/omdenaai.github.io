@@ -1,3 +1,7 @@
+# How to format your Pull Requests
+
+Whenever a pull request (PR) is generated, it's highly recommended for collaborators to include as many of these sections in the PR description.
+
 ### Why This PR Adds Value
 
 Why did you submit this PR? What are its benefits? - Use Issue Description as inspiration
