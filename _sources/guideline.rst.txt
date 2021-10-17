@@ -4,8 +4,6 @@ OmdenaLore Guidelines
 Introduction
 ------------------------
 
-
-
 As the name suggests, OmdenaLore is a body of knowledge held by Omdena. OmdenaLore is a library/package that contains code knowledge base gathered in completed and ongoing projects. 
 The code knowledge base increases and gets updated as collaborators add their knowledge. 
 OmdenaLore is a collaborator sourced structured library.
@@ -83,6 +81,7 @@ It makes PR approval and review process faster and efficient.
 
    pull_request_template
 
+------------
 
 
 Contribution Workflow
@@ -152,7 +151,10 @@ Once the PR is approved then the reviewing team will merge the PR.
 Things to ensure
 ~~~~~~~~~~~~~~~~
 
-#. All code should have tests 
+#. All code should have tests. 
+
+   Check this section for more information -> 
+   :ref:`Testing your code`
 
 #. All code should be documented, using the `Sphinx format <https://www.sphinx-doc.org/en/master/>`_.
 
@@ -175,3 +177,15 @@ For more information and example visit these sites.
 
 `anaconda docs <https://docs.anaconda.com/restructuredtext/detailed/>`_
 
+------------
+
+Testing your code
+-----------------
+
+To Test your code, follow the documentation below
+
+.. toctree::
+   :maxdepth: 2
+   :titlesonly:
+
+   testing

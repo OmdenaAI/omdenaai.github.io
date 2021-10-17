@@ -1,0 +1,22 @@
+Testing Guidelines
+==================
+
+#. Testing the code will follow this `format <https://dagshub.com/Omdena/OmdenaLore/issues/102>`_.
+
+#. Apart from the code some of the documentation is incorrect and needs to be updated with the correct format and proper examples showcasing the right way to use a function. You can refer to `this function <https://dagshub.com/Omdena/OmdenaLore/src/main/omdenalore/computer_vision/object_detection.py#L92>`_ for an example. 
+
+#. Testing the code does not necessarily have to be extensive, if the underlying implementation relies on another library like OpenCV2 then the actual implementation should be correct but we need to make sure that the code behaves correctly when:
+
+    #. User passes the wrong arguments
+
+    #. User passes no arguments
+
+#. If the code does not behave correctly for example:
+
+    #. If the return types or input types are incorrect
+
+    #. The actual implementation is wrong
+
+#. Then, the code changes need to be made to fix them
+
+#. Some code is difficult to test such as building a model, in these cases a minimal amount of tests are sufficient. 
