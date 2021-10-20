@@ -1,0 +1,37 @@
+omdenalore.time\_series package
+===============================
+
+Submodules
+----------
+
+omdenalore.time\_series.auto\_regression module
+-----------------------------------------------
+
+.. automodule:: omdenalore.time_series.auto_regression
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+omdenalore.time\_series.metrics module
+--------------------------------------
+
+.. automodule:: omdenalore.time_series.metrics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+omdenalore.time\_series.plots module
+------------------------------------
+
+.. automodule:: omdenalore.time_series.plots
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: omdenalore.time_series
+   :members:
+   :undoc-members:
+   :show-inheritance:

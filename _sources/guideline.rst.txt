@@ -83,6 +83,26 @@ It makes PR approval and review process faster and efficient.
 
 ------------
 
+Branching Conventions
+~~~~~~~~~~~~~~~~~~~~~
+
+**The main Python version of the package will be 3.7**
+
+#. main branch contains the published repository code
+
+#. The rest of the branches will correspond to specific omdenalore versions such as 0.2.x, 0.3.x, etc.
+
+#. A branch will be created for each feature/bug fix where a single thing is being done only. 
+
+   For example ```0.2.3``` consists of refactoring optical_character_recognition once it is done it is merge with ```0.2.x``` which will contain the main code for version ```0.2```
+
+#. After the refactoring and testing stage is completed all branches, except version numbers and the main branch will be deleted from the entire repository
+
+#. Collaborators will have to create a virtual environment and then install all the packages using the ```requirements.txt``` file and if new libraries are installed they have to be added to the ```requirements.txt```
+
+
+------------
+
 
 Contribution Workflow
 ---------------------

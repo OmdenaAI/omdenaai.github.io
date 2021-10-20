@@ -92,11 +92,273 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
 </section>
-<section id="omdenalore-natural-language-processing-ner-module">
-<h2>omdenalore.natural_language_processing.ner module<a class="headerlink" href="#omdenalore-natural-language-processing-ner-module" title="Permalink to this headline"></a></h2>
+<section id="module-omdenalore.natural_language_processing.ner">
+<span id="omdenalore-natural-language-processing-ner-module"></span><h2>omdenalore.natural_language_processing.ner module<a class="headerlink" href="#module-omdenalore.natural_language_processing.ner" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.ner.TaggedCorpus">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.natural_language_processing.ner.</span></span><span class="sig-name descname"><span class="pre">TaggedCorpus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotations</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">spacy.tokenizer.Tokenizer</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.natural_language_processing.ner.TaggedCorpus" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.ner.TaggedCorpus.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.natural_language_processing.ner.TaggedCorpus.to_dict" title="Permalink to this definition"></a></dt>
+<dd><p>Get the entities in a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Dictionary with token sequences (ex: {entity_1: [ENT1, …], entity_2: [ENT2, …], …})</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.ner.TaggedCorpus.to_doc">
+<span class="sig-name descname"><span class="pre">to_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">spacy.tokens.Doc</span></span></span><a class="headerlink" href="#omdenalore.natural_language_processing.ner.TaggedCorpus.to_doc" title="Permalink to this definition"></a></dt>
+<dd><p>Get the entities in an annotated spaCy document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>entity</strong> (<em>str</em>) – Optional parameter - if set, return document annotated with only selected entity</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SpaCy document annotated with entities</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.ner.TaggedCorpus.to_iob_list">
+<span class="sig-name descname"><span class="pre">to_iob_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.natural_language_processing.ner.TaggedCorpus.to_iob_list" title="Permalink to this definition"></a></dt>
+<dd><p>Get the entities in a list of entities (IOB format).
+:param entity: Optional parameter - if set, return document annotated with only selected entity
+:type entity: str
+:return: List of strings where each string represents the entity associated with the token</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.ner.TaggedCorpus.to_multi_iob_list">
+<span class="sig-name descname"><span class="pre">to_multi_iob_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.natural_language_processing.ner.TaggedCorpus.to_multi_iob_list" title="Permalink to this definition"></a></dt>
+<dd><p>Get all the entities in a list of entities (IOB format).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of tuples where each tuple contains one element for each entity present in the document</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.ner.TaggedCorpus.to_token_char_spans">
+<span class="sig-name descname"><span class="pre">to_token_char_spans</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.natural_language_processing.ner.TaggedCorpus.to_token_char_spans" title="Permalink to this definition"></a></dt>
+<dd><p>Get the character spans for each token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of character spans</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.ner.TaggedCorpus.to_tokens">
+<span class="sig-name descname"><span class="pre">to_tokens</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.natural_language_processing.ner.TaggedCorpus.to_tokens" title="Permalink to this definition"></a></dt>
+<dd><p>Get the token list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of tokens</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.ner.create_blank_nlp">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.natural_language_processing.ner.</span></span><span class="sig-name descname"><span class="pre">create_blank_nlp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">train_data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">spacy.Language</span></span></span><a class="headerlink" href="#omdenalore.natural_language_processing.ner.create_blank_nlp" title="Permalink to this definition"></a></dt>
+<dd><p>Create a blank NLP model for training</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>train_data</strong> (<em>pd.Series</em>) – Dataframe of training data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Spacy model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.ner.doc2ents">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.natural_language_processing.ner.</span></span><span class="sig-name descname"><span class="pre">doc2ents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">spacy.tokens.Doc</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.natural_language_processing.ner.doc2ents" title="Permalink to this definition"></a></dt>
+<dd><p>Take a spaCy <cite>Doc</cite> and return a list of IOB token-based entities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>doc</strong> (<em>spacy.tokens.Doc</em>) – Spacy document</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of entity strings</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.ner.generate_examples">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.natural_language_processing.ner.</span></span><span class="sig-name descname"><span class="pre">generate_examples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texts</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_offsets</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nlp</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">spacy.language.Language</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">spacy.training.Example</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.natural_language_processing.ner.generate_examples" title="Permalink to this definition"></a></dt>
+<dd><p>Generate spacy <cite>Example</cite> objects for training</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>texts</strong> (<em>Iterable</em><em>[</em><em>str</em><em>]</em>) – List of texts to generate examples from</p></li>
+<li><p><strong>entity_offsets</strong> (<em>Iterable</em><em>[</em><em>Annotations</em><em>]</em>) – List of annotations for each text</p></li>
+<li><p><strong>nlp</strong> (<em>spacy.language.Language</em>) – Spacy model</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of spacy <cite>Example</cite> objects</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.ner.get_entities">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.natural_language_processing.ner.</span></span><span class="sig-name descname"><span class="pre">get_entities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.natural_language_processing.ner.get_entities" title="Permalink to this definition"></a></dt>
+<dd><p>Process annotations to get in the format of (start, stop, label)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>str</strong> (<em>str</em>) – String of annotations</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of tuples of the form (start, stop, label)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.ner.rm_colliding">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.natural_language_processing.ner.</span></span><span class="sig-name descname"><span class="pre">rm_colliding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.natural_language_processing.ner.rm_colliding" title="Permalink to this definition"></a></dt>
+<dd><p>Remove any overlapping annotations (one token cannot have two entities)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>List</em><em>[</em><em>Tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>str</em><em>]</em><em>]</em>) – List of annotations</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of annotations with no overlapping annotations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.ner.rm_groups">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.natural_language_processing.ner.</span></span><span class="sig-name descname"><span class="pre">rm_groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.natural_language_processing.ner.rm_groups" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the group number info - ie: <cite>g2_response_rate</cite> becomes <cite>response_rate</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>a</strong> (<em>Annotations</em>) – Annotations</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Annotations with group number removed</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
-<section id="omdenalore-natural-language-processing-postprocess-text-module">
-<h2>omdenalore.natural_language_processing.postprocess_text module<a class="headerlink" href="#omdenalore-natural-language-processing-postprocess-text-module" title="Permalink to this headline"></a></h2>
+<section id="module-omdenalore.natural_language_processing.postprocess_text">
+<span id="omdenalore-natural-language-processing-postprocess-text-module"></span><h2>omdenalore.natural_language_processing.postprocess_text module<a class="headerlink" href="#module-omdenalore.natural_language_processing.postprocess_text" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.postprocess_text.adjust_tags">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.natural_language_processing.postprocess_text.</span></span><span class="sig-name descname"><span class="pre">adjust_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tags</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag_set</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">512</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.natural_language_processing.postprocess_text.adjust_tags" title="Permalink to this definition"></a></dt>
+<dd><p>Keep only tags that were used in training
+and get all list of tokens to the same length.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tags</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – List of tags</p></li>
+<li><p><strong>tag_set</strong> (<em>Set</em><em>[</em><em>str</em><em>]</em>) – Set of tags to keep</p></li>
+<li><p><strong>length</strong> – Length of tokens to keep</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of tags</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.postprocess_text.df2jsonl">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.natural_language_processing.postprocess_text.</span></span><span class="sig-name descname"><span class="pre">df2jsonl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pmid</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'pmid'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'text'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'start'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'stop'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'entity'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'entity_text'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.natural_language_processing.postprocess_text.df2jsonl" title="Permalink to this definition"></a></dt>
+<dd><p>Get the output format JSONL from a pandas dataframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) – Dataframe with entity information</p></li>
+<li><p><strong>path</strong> – Destination file path</p></li>
+</ul>
+</dd>
+</dl>
+<p>(if None will return a string with equivalent JSONL
+:type path: str
+:param pmid: Column name for PMID column
+:type pmid: str
+:param text: Column name for text column
+:type text: str
+:param start: Column name for start column
+:type start: str
+:param stop: Column name for stop column
+:type stop: str
+:param entity: Column name for entity column
+:type entity: str
+:param entity_text: Column name for entity_text column
+:type entity_text: str
+:return: None if path is provided (file is written to disk),
+JSONL string if path is None
+Output JSONL file has the shape <cite>{id:pmid, text: &lt;abstract&gt;,
+predictions: [{start: x, end: y, entity:x}, …]}</cite></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.postprocess_text.doc2df">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.natural_language_processing.postprocess_text.</span></span><span class="sig-name descname"><span class="pre">doc2df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">spacy.tokens.doc.Doc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regex_pmid</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'PMID:</span> <span class="pre">(\\d+)'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.DataFrame</span></span></span><a class="headerlink" href="#omdenalore.natural_language_processing.postprocess_text.doc2df" title="Permalink to this definition"></a></dt>
+<dd><p>Get a dataframe from SpaCy <cite>Doc</cite> objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>doc</strong> (<em>spacy.tokens.Doc</em>) – A single spaCy <cite>Doc</cite> object with annotations (entities)</p></li>
+<li><p><strong>regex_pmid</strong> – Raw string with regex to get the PMID numbers</p></li>
+</ul>
+</dd>
+</dl>
+<p>from text (defaults to <cite>r”PMID: (d+)”</cite>
+:type regex_pmid: str
+:return: Pandas dataframe with columns
+[<cite>pmid</cite>,`text`,`start`,`stop`,`entity`,`entity_text`]</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.postprocess_text.doc2df_wide">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.natural_language_processing.postprocess_text.</span></span><span class="sig-name descname"><span class="pre">doc2df_wide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">spacy.tokens.doc.Doc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regex_pmid</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'PMID:</span> <span class="pre">(\\d+)'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.DataFrame</span></span></span><a class="headerlink" href="#omdenalore.natural_language_processing.postprocess_text.doc2df_wide" title="Permalink to this definition"></a></dt>
+<dd><p>Get a wide dataframe from SpaCy <cite>Doc</cite> objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>doc</strong> (<em>spacy.tokens.Doc</em>) – A single spaCy <cite>Doc</cite> object with annotations (entities)</p></li>
+<li><p><strong>regex_pmid</strong> – Raw string with regex to get the PMID numbers</p></li>
+</ul>
+</dd>
+</dl>
+<p>from text (defaults to <cite>r”PMID: (d+)”</cite>
+:type regex_pmid: str
+:return: Pandas dataframe with one column for each
+{<cite>start</cite>,`stop`,`entity_text`} in entity</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="omdenalore.natural_language_processing.postprocess_text.list2iob">
+<span class="sig-prename descclassname"><span class="pre">omdenalore.natural_language_processing.postprocess_text.</span></span><span class="sig-name descname"><span class="pre">list2iob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tags</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#omdenalore.natural_language_processing.postprocess_text.list2iob" title="Permalink to this definition"></a></dt>
+<dd><p>Go from a list of strings to IOB list of tags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tags</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – List of tags</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of IOB tags</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="module-omdenalore.natural_language_processing.preprocess_text">
 <span id="omdenalore-natural-language-processing-preprocess-text-module"></span><h2>omdenalore.natural_language_processing.preprocess_text module<a class="headerlink" href="#module-omdenalore.natural_language_processing.preprocess_text" title="Permalink to this headline"></a></h2>

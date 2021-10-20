@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>omdenalore.time_series package &mdash; OmdenaLore 0.2.8 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> OmdenaLore
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Omdenalore</a></li>
+<li class="toctree-l1"><a class="reference internal" href="knowledge.html">Knowledge base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guideline.html">OmdenaLore Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coc.html">Code of Conduct</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OmdenaLore</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>omdenalore.time_series package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/omdenalore.time_series.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="omdenalore-time-series-package">
+<h1>omdenalore.time_series package<a class="headerlink" href="#omdenalore-time-series-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-omdenalore.time_series.auto_regression">
+<span id="omdenalore-time-series-auto-regression-module"></span><h2>omdenalore.time_series.auto_regression module<a class="headerlink" href="#module-omdenalore.time_series.auto_regression" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.time_series.auto_regression.AutoRegressive">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.time_series.auto_regression.</span></span><span class="sig-name descname"><span class="pre">AutoRegressive</span></span><a class="headerlink" href="#omdenalore.time_series.auto_regression.AutoRegressive" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Generic class to generate time-series auto regressive datasets
+and to plot auto-correlation function</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.auto_regression.AutoRegressive.gen_ar1_dataset">
+<span class="sig-name descname"><span class="pre">gen_ar1_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">600</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#omdenalore.time_series.auto_regression.AutoRegressive.gen_ar1_dataset" title="Permalink to this definition"></a></dt>
+<dd><p>Generate AR(1) dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n</strong> (<em>int</em>) – number of samples</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ar1 dataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.auto_regression.AutoRegressive.gen_ar2_dataset">
+<span class="sig-name descname"><span class="pre">gen_ar2_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">600</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#omdenalore.time_series.auto_regression.AutoRegressive.gen_ar2_dataset" title="Permalink to this definition"></a></dt>
+<dd><p>Generate AR(2) dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n</strong> (<em>int</em><em>, </em><em>optional</em>) – number of samples</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ar3 dataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.auto_regression.AutoRegressive.gen_ar3_dataset">
+<span class="sig-name descname"><span class="pre">gen_ar3_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">600</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#omdenalore.time_series.auto_regression.AutoRegressive.gen_ar3_dataset" title="Permalink to this definition"></a></dt>
+<dd><p>Generate AR(3) dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n</strong> (<em>int</em><em>, </em><em>optional</em>) – number of samples</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ar3 dataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.auto_regression.AutoRegressive.plotds">
+<span class="sig-name descname"><span class="pre">plotds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_signal</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nlag</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_size</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">(12,</span> <span class="pre">10)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#omdenalore.time_series.auto_regression.AutoRegressive.plotds" title="Permalink to this definition"></a></dt>
+<dd><p>Function to plot signal, ACF and PACF</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xt</strong> (<em>series</em>) – input signal</p></li>
+<li><p><strong>nlag</strong> – An int or array of lag values, used on horizontal axis.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Uses np.arange(lags) when lags is an int.
+If not provided, lags=np.arange(len(corr)) is used.
+:type nlag: int, array (optional)
+:param fig_size: figure size
+:type fig_size: tuple
+:returns: None</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-omdenalore.time_series.metrics">
+<span id="omdenalore-time-series-metrics-module"></span><h2>omdenalore.time_series.metrics module<a class="headerlink" href="#module-omdenalore.time_series.metrics" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.time_series.metrics.</span></span><span class="sig-name descname"><span class="pre">ComputeMetrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actual</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predicted</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Generic class to evaluate &amp; compute time series metrics
+between predicted values and true values</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.bias">
+<span class="sig-name descname"><span class="pre">bias</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.bias" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute mean forecast error(or Forecast Bias)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result mean forecast error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.gmae">
+<span class="sig-name descname"><span class="pre">gmae</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.gmae" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute geometric mean absolute error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result geometric mean absolute error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.gmrae">
+<span class="sig-name descname"><span class="pre">gmrae</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">benchmark</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.gmrae" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute geometric mean relative absolute error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>benchmark</strong> (<em>np.ndarray</em>) – array for benchmark values</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result geometric mean relative absolute error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.inrse">
+<span class="sig-name descname"><span class="pre">inrse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.inrse" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute integral normalized root squared error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result integral normalized root squared error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.maape">
+<span class="sig-name descname"><span class="pre">maape</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.maape" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute mean arctangent absolute percentage error
+Note: result is NOT multiplied by 100</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result mean arctangent absolute percentage error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.mad">
+<span class="sig-name descname"><span class="pre">mad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actual</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predicted</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.mad" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute mean absolute deviation (it is the same as MAE)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>actual</strong> (<em>np.ndarray</em>) – array for true values</p></li>
+<li><p><strong>predicted</strong> (<em>np.ndarray</em>) – array for predicted values</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>mean absolute deviation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.mae">
+<span class="sig-name descname"><span class="pre">mae</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actual</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predicted</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.mae" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute mean absolute error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>actual</strong> (<em>np.ndarray</em>) – array for true values</p></li>
+<li><p><strong>predicted</strong> (<em>np.ndarray</em>) – array for predicted values</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result mean absolute error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.map">
+<span class="sig-name descname"><span class="pre">map</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.map" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute mean absolute percentage error
+Properties:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Easy to interpret</p></li>
+<li><p>Scale independent</p></li>
+</ul>
+<ul class="simple">
+<li><p>Biased, not symmetric</p></li>
+<li><p>Undefined when actual[t] == 0</p></li>
+</ul>
+</div></blockquote>
+<p>Note: result is NOT multiplied by 100</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result mean absolute percentage error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.mase">
+<span class="sig-name descname"><span class="pre">mase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seasonality</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.mase" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute mean absolute scaled error
+Baseline (benchmark) is computed with naive forecasting
+(shifted by &#64;seasonality)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>seasonality</strong> (<em>int</em>) – sample period</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result mean absolute scaled error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.mbrae">
+<span class="sig-name descname"><span class="pre">mbrae</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">benchmark</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.mbrae" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute mean bounded relative absolute error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>benchmark</strong> (<em>np.ndarray</em>) – array for benchmark values</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result mean bounded relative absolute error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.mda">
+<span class="sig-name descname"><span class="pre">mda</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.mda" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute mean directional accuracy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result mean directional accuracy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.mdae">
+<span class="sig-name descname"><span class="pre">mdae</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.mdae" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute median absolute error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result gmedian absolute error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.mdape">
+<span class="sig-name descname"><span class="pre">mdape</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.mdape" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute median absolute percentage error
+Note: result is NOT multiplied by 100</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result median absolute percentage error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.mdrae">
+<span class="sig-name descname"><span class="pre">mdrae</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">benchmark</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.mdrae" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute median relative absolute error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>benchmark</strong> (<em>np.ndarray</em>) – array for benchmark values</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result median relative absolute error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.me">
+<span class="sig-name descname"><span class="pre">me</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.me" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute mean error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result mean error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.mpe">
+<span class="sig-name descname"><span class="pre">mpe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.mpe" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute mean percentage error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result mean percentage error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.mrae">
+<span class="sig-name descname"><span class="pre">mrae</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">benchmark</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.mrae" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute mean relative absolute error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>benchmark</strong> (<em>np.ndarray</em>) – array for benchmark values</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result mean relative absolute error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.mre">
+<span class="sig-name descname"><span class="pre">mre</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">benchmark</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.mre" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute mean relative error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>benchmark</strong> (<em>np.ndarray</em>) – array for benchmark values</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result mean relative error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.mse">
+<span class="sig-name descname"><span class="pre">mse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.mse" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute mean squared error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result mean squared error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.nrmse">
+<span class="sig-name descname"><span class="pre">nrmse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.nrmse" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute normalized root mean squared error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result normalized root mean squared error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.r2_score">
+<span class="sig-name descname"><span class="pre">r2_score</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.r2_score" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute r2 score</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result r2 score</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.rae">
+<span class="sig-name descname"><span class="pre">rae</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.rae" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute relative absolute error (aka Approximation Error)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result relative absolute error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.rmdspe">
+<span class="sig-name descname"><span class="pre">rmdspe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.rmdspe" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute root median squared percentage error
+Note: result is NOT multiplied by 100</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result root median squared percentage error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.rmse">
+<span class="sig-name descname"><span class="pre">rmse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.rmse" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute root mean squared error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result root mean squared error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.rmspe">
+<span class="sig-name descname"><span class="pre">rmspe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.rmspe" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute root mean squared percentage error
+Note: result is NOT multiplied by 100</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result root mean squared percentage error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.rmsse">
+<span class="sig-name descname"><span class="pre">rmsse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seasonality</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.rmsse" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute root mean squared scaled error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>seasonality</strong> (<em>int</em>) – sample period</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result root mean squared scaled error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.rrse">
+<span class="sig-name descname"><span class="pre">rrse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.rrse" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute root relative squared error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result root relative squared error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.smape">
+<span class="sig-name descname"><span class="pre">smape</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.smape" title="Permalink to this definition"></a></dt>
+<dd><p>mehod to compute symmetric mean absolute percentage error
+Note: result is NOT multiplied by 100</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result symmetric mean absolute percentage error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.smdape">
+<span class="sig-name descname"><span class="pre">smdape</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.smdape" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute symmetric median absolute percentage error
+Note: result is NOT multiplied by 100</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result symmetric median absolute percentage error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.std_ae">
+<span class="sig-name descname"><span class="pre">std_ae</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.std_ae" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute normalized absolute error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result normalized absolute error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.std_ape">
+<span class="sig-name descname"><span class="pre">std_ape</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.std_ape" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute normalized absolute percentage error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result normalized absolute percentage error</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.ComputeMetrics.umbrae">
+<span class="sig-name descname"><span class="pre">umbrae</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">benchmark</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.ComputeMetrics.umbrae" title="Permalink to this definition"></a></dt>
+<dd><p>method to compute unscaled mean bounded relative absolute error</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>benchmark</strong> (<em>np.ndarray</em>) – array for benchmark values</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result unscaled mean bounded relative absolute error</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.EvaluateMetrics">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.time_series.metrics.</span></span><span class="sig-name descname"><span class="pre">EvaluateMetrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actual</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predicted</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.EvaluateMetrics" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#omdenalore.time_series.metrics.ComputeMetrics" title="omdenalore.time_series.metrics.ComputeMetrics"><code class="xref py py-class docutils literal notranslate"><span class="pre">omdenalore.time_series.metrics.ComputeMetrics</span></code></a></p>
+<p>Generic class to evaluate error metrics</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.EvaluateMetrics.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('mae',</span> <span class="pre">'rmse',</span> <span class="pre">'map')</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.EvaluateMetrics.evaluate" title="Permalink to this definition"></a></dt>
+<dd><p>Evaluate mentioned metrics</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>metrics</strong> (<em>tuple</em><em>, </em><em>default=</em><em>(</em><em>&quot;mae&quot;</em><em>, </em><em>&quot;rmse&quot;</em><em>, </em><em>&quot;map&quot;</em><em>)</em>) – type of metrics to calculate</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result dictionary</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>select metrics from this list = {
+“mse”: mse,
+“rmse”: rmse,
+“nrmse”: nrmse,
+“me”: me,
+“mae”: mae,
+“mad”: mad,
+“gmae”: gmae,
+“mdae”: mdae,
+“mpe”: mpe,
+“map”: map,
+“mdape”: mdape,
+“smape”: smape,
+“smdape”: smdape,
+“maape”: maape,
+“mase”: mase,
+“std_ae”: std_ae,
+“std_ape”: std_ape,
+“rmspe”: rmspe,
+“rmdspe”: rmdspe,
+“rmsse”: rmsse,
+“inrse”: inrse,
+“rrse”: rrse,
+“mre”: mre,
+“rae”: rae,
+“mrae”: mrae,
+“mdrae”: mdrae,
+“gmrae”: gmrae,
+“mbrae”: mbrae,
+“umbrae”: umbrae,
+“mda”: mda,
+“bias”: bias,
+“r2”: r2_score,
+}</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.metrics.EvaluateMetrics.evaluate_all">
+<span class="sig-name descname"><span class="pre">evaluate_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#omdenalore.time_series.metrics.EvaluateMetrics.evaluate_all" title="Permalink to this definition"></a></dt>
+<dd><p>Evaluate all metrics from the list below</p>
+<p>“mse”: mse,
+“rmse”: rmse,
+“nrmse”: nrmse,
+“me”: me,
+“mae”: mae,
+“mad”: mad,
+“gmae”: gmae,
+“mpe”: mpe,
+“mdae”: mdae,
+“map”: map,
+“mdape”: mdape,
+“smape”: smape,
+“smdape”: smdape,
+“maape”: maape,
+“mase”: mase,
+“std_ae”: std_ae,
+“std_ape”: std_ape,
+“rmspe”: rmspe,
+“rmdspe”: rmdspe,
+“rmsse”: rmsse,
+“inrse”: inrse,
+“rrse”: rrse,
+“mre”: mre,
+“rae”: rae,
+“mrae”: mrae,
+“mdrae”: mdrae,
+“gmrae”: gmrae,
+“mbrae”: mbrae,
+“umbrae”: umbrae,
+“mda”: mda,
+“bias”: bias,
+“r2”: r2_score,</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>actual</strong> (<em>np.ndarray</em>) – array for true values</p></li>
+<li><p><strong>predicted</strong> (<em>np.ndarray</em>) – array for predict values</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-omdenalore.time_series.plots">
+<span id="omdenalore-time-series-plots-module"></span><h2>omdenalore.time_series.plots module<a class="headerlink" href="#module-omdenalore.time_series.plots" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="omdenalore.time_series.plots.PlotMetrics">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">omdenalore.time_series.plots.</span></span><span class="sig-name descname"><span class="pre">PlotMetrics</span></span><a class="headerlink" href="#omdenalore.time_series.plots.PlotMetrics" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Generic class to plot bar chart for time-series metrics
+(MAE, RMSE, MAP, R2)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="omdenalore.time_series.plots.PlotMetrics.bar_metrics">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">bar_metrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figure_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(20,</span> <span class="pre">15)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#omdenalore.time_series.plots.PlotMetrics.bar_metrics" title="Permalink to this definition"></a></dt>
+<dd><p>Plots different bar metrics</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>results_dict</strong> – Calculated metrics</p></li>
+<li><p><strong>save_path</strong> (<em>str</em>) – Path to store the figures</p></li>
+<li><p><strong>figure_size</strong> (<em>tuple 1x2</em>) – Size of the output plots</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-omdenalore.time_series">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-omdenalore.time_series" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Kaushal.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

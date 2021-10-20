@@ -49,6 +49,7 @@
 <li class="toctree-l4"><a class="reference internal" href="pull_request_template.html">How to format your Pull Requests</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#branching-conventions">Branching Conventions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#contribution-workflow">Contribution Workflow</a><ul>
@@ -185,6 +186,20 @@ It makes PR approval and review process faster and efficient.</p>
 <li class="toctree-l1"><a class="reference internal" href="pull_request_template.html">How to format your Pull Requests</a></li>
 </ul>
 </div>
+</section>
+<hr class="docutils" />
+<section id="branching-conventions">
+<h3>Branching Conventions<a class="headerlink" href="#branching-conventions" title="Permalink to this headline"></a></h3>
+<p><strong>The main Python version of the package will be 3.7</strong></p>
+<ol class="arabic">
+<li><p>main branch contains the published repository code</p></li>
+<li><p>The rest of the branches will correspond to specific omdenalore versions such as 0.2.x, 0.3.x, etc.</p></li>
+<li><p>A branch will be created for each feature/bug fix where a single thing is being done only.</p>
+<p>For example <code class="docutils literal notranslate"><span class="pre">`0.2.3`</span></code> consists of refactoring optical_character_recognition once it is done it is merge with <code class="docutils literal notranslate"><span class="pre">`0.2.x`</span></code> which will contain the main code for version <code class="docutils literal notranslate"><span class="pre">`0.2`</span></code></p>
+</li>
+<li><p>After the refactoring and testing stage is completed all branches, except version numbers and the main branch will be deleted from the entire repository</p></li>
+<li><p>Collaborators will have to create a virtual environment and then install all the packages using the <code class="docutils literal notranslate"><span class="pre">`requirements.txt`</span></code> file and if new libraries are installed they have to be added to the <code class="docutils literal notranslate"><span class="pre">`requirements.txt`</span></code></p></li>
+</ol>
 </section>
 </section>
 <hr class="docutils" />
